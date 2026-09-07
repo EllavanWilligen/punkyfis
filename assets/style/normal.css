@@ -1,14 +1,41 @@
-/* HIER KOMT JOUW CSS */
 @font-face {
-  font-family: "Comic Relief";
-  src: url(../type/ComicRelief-Regular.woff2);
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Comic Relief";
+    src: url(../type/ComicRelief-Regular.woff2);
+    font-weight: 400;
+    font-style: normal;
 }
 
-body {
-  font-family: "Comic Relief", system-ui;
-  background-color: Canvas;
-  color: CanvasText;
-  color-scheme: light dark;
+@font-face {
+    font-family: "Baksoap";
+    src: url(../type/Baksoap.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+.navbar ul {
+    /* background-color: #ff69b4; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar li {
+    float: right;
 }
