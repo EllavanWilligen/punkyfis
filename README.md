@@ -39,3 +39,24 @@ Ook heb ik aangepast hoe de CSS werkt. Ik heb één CSS waarin de algemene dinge
 
 
 ### Schetsen
+
+
+## 07 sep - Sprintplanning
+
+Blijkbaar moeten we elke Deep-Dive doen, dit wist ik niet. Deze maak ik later, nu ik dat weet hebben we oppeens zo veel werk!
+Mijn vriend heeft water over mijn laptop gegooid dus dat is ook een tijdelijke setback. Ik ben opzoek naar een nieuwe
+alleen is dit erg duur. Ik hoop dat de laptop het volhoud tot ik een nieuwe heb. 
+
+1. Leg uit wat een digital garden is en waarom dat anders is dan een reguliere website.
+    Het is persoonlijk, het gaat over iets waar jij passie voor hebt. Ook plan je het niet van tevoren, het groeit terwijl je
+    bezig bent.
+
+2. Leg uit wat een website 'webby' maakt en welke websites jou het meeste inspireren.
+    
+
+3. Vertel waar jij mee aan de slag wilt gaan bij het maken van jouw eigen digital garden 
+let op: dit zijn jouw eerste ideeën, dit kan en mag veranderen in de loop van het programma.
+
+## 10 sep - Thuiswerk
+
+Helaas kon ik gister niet bij de les zijn omdat ik die dag een afspraak had, ik wist niet aan wie ik dat moest melden omdat er zo veel docenten zijn dit blok. Morgen ga ik naar een van de docenten om te vragen naar wie een afmelding voortaan moet. 
