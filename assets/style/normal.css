@@ -16,13 +16,23 @@
 html {
 	color-scheme:light dark;
 
-	--background:light-dark(White, Crimson);
-	--color:light-dark(Maroon, White);
+	--background:light-dark(White, black);
+	--color:light-dark(black, White);
 
-	--background-button:light-dark(Crimson, Maroon);
-	--color-button:light-dark(White, White);
+    --cls-1:light-dark(#d16993, red);
+    --cls-2:light-dark(#a7446c, red);
+    --cls-3:light-dark(#883d55, red);
+    --cls-4:light-dark(#cbc7c6, red);
+    --cls-5:light-dark(#587da7, red);
+    --cls-6:light-dark(#7c4f49, red);
+    --cls-7:light-dark(#ac5d74, red);
+    --cls-8:light-dark(#fcfff2, red);
+    --cls-9:light-dark(#fcfff2, red);
+    --cls-10:light-dark(#c36987, red);
+    --cls-11:light-dark(#713244, red);
+    --cls-12:light-dark(#fcfff2, red);
 
-	accent-color:light-dark(Crimson, White);
+	accent-color:light-dark(black, White);
 }
 
 /* de toggles */
