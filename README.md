@@ -73,3 +73,13 @@ Helaas kon ik gister niet bij de les zijn omdat ik die dag een afspraak had, ik 
 
 Na heel lang vastzitten op hoe ik de schermen in de svg krijg en ze mee laat gaan als het formaat van het scherm heb ik het aan AI gevraagd. Het bleek heel makkelijk te kunnen met de juiste procenten. Omdat ik met em probeerde te werken lukte het niet, het was te vaag
 
+## 14 sep - Maandag 
+
+### Opdracht 16
+Layout is goed, misschien de letters iets groter maken voor als het scherm kleiner word, nu kan het moeilijk leesbaar zijn.
+
+### Opdracht 17
+
+#### 3 interessante websites
+https://crency.agency/ - 
+
