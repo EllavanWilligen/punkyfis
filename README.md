@@ -83,3 +83,16 @@ Layout is goed, misschien de letters iets groter maken voor als het scherm klein
 #### 3 interessante websites
 https://crency.agency/ - 
 
+
+Leg uit wanneer een website 'lelijk' wordt en geef voorbeelden wat je kan doen om deze 'lelijke' onderdelen te fixen?
+Plaatjes te groot - in CSS de img een ander formaat geven
+Geen CSS - CSS bestand toevoegen
+Te weinig whitespace - gaps en breaks toevoegen (padding en margin ook maar dat mag niet in dit project)
+
+Vertel welke volgende stap je neemt om je website responsive te maken.
+- Grid
+- Geen px gebruiken maar dingen zoals em en %
+- @media gebruiken
+
+
+Kun je het ontwerp en de bouw van je eigen Garden (zo uit je hoofd) onderbouwen in Webby vocabulair?
