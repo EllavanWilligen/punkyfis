@@ -1,6 +1,6 @@
 # Model
 
-Link naar de site: https://punkyfis.nl/HTML/index.html
+Link naar de site: url="https://punkyfis.nl"
 
 
 # Learning Log

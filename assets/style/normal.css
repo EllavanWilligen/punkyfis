@@ -15,56 +15,48 @@
 /* light en dark mode */
 
 html {
-    color-scheme: light dark;
-
-    --background: light-dark(White, black);
-    --color: light-dark(black, White);
-
-
-    /* 3DS SVG */
-    --cls-1: light-dark(#d16993, #587da7);
-    --cls-2: light-dark(#a7446c, #587da7);
-    --cls-3: light-dark(#883d55, #292841);
-    --cls-4: light-dark(#cbc7c6, #cbc7c6);
-    --cls-5: light-dark(#a75878, #405171);
-    --cls-6: light-dark(#7c4f49, #292841);
-    --cls-7: light-dark(#ac5d74, #405171);
-    --cls-8: light-dark(#fcfff2, #fcfff2);
-    --cls-9: light-dark(#fcfff2, #fcfff2);
-    --cls-10: light-dark(#c36987, #587da7);
-    --cls-11: light-dark(#713244, #292841);
-    --cls-12: light-dark(#fcfff2, #fcfff2);
-
-    /* accent-color:light-dark(black, White); */
+    --background: White;
 }
 
-/* de toggles */
-
-html:has([value="light-theme"]:checked) {
-    color-scheme: light;
-}
-
-html:has([value="dark-theme"]:checked) {
-    color-scheme: dark;
-}
-
-
-
-
-
-/* de elementen */
 
 body {
-    background-color: var(--background);
-    color: var(--color);
+    --background: red;
+
+    /* 3DS SVG */
+    --cls-1: #d16993;
+    --cls-2: #a7446c;
+    --cls-3: #883d55;
+    --cls-4: #cbc7c6;
+    --cls-5: #a75878;
+    --cls-6: #7c4f49;
+    --cls-7: #ac5d74;
+    --cls-8: #fcfff2;
+    --cls-9: #fcfff2;
+    --cls-10: #c36987;
+    --cls-11: #713244;
+    --cls-12: #fcfff2;
 }
 
-button {
-    background: var(--background-button);
-    color: var(--color-button);
+.dark-theme {
+    --background: blue;
+    --color: White;
+
+    /* 3DS SVG */
+    --cls-1: #587da7;
+    --cls-2: #587da7;
+    --cls-3: #292841;
+    --cls-4: #cbc7c6;
+    --cls-5: #405171;
+    --cls-6: #292841;
+    --cls-7: #405171;
+    --cls-8: #fcfff2;
+    --cls-9: #fcfff2;
+    --cls-10: #587da7;
+    --cls-11: #292841;
+    --cls-12: #fcfff2;
+
+    /* accent-color:#fcfff2; */
 }
-
-
 
 /* DS */
 #DS {
@@ -180,7 +172,6 @@ button {
     height: 37.5%;
 }
 
-
 /* Bottom scherm */
 #bottomScherm {
     background-color: limegreen;
@@ -191,3 +182,75 @@ button {
     width: 54.5%;
     height: 38.7%;
 }
+
+#home {
+    position: absolute;
+    z-index: 2;
+    top: 95%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reserves */
+
+/* 3DS SVG */
+/* --cls-1: #d16993;
+    --cls-2: #a7446c;
+    --cls-3: #883d55;
+    --cls-4: #cbc7c6;
+    --cls-5: #a75878;
+    --cls-6: #7c4f49;
+    --cls-7: #ac5d74;
+    --cls-8: #fcfff2;
+    --cls-9: #fcfff2;
+    --cls-10: #c36987;
+    --cls-11: #713244;
+    --cls-12: #fcfff2; */
+/* color-scheme: light dark;
+
+    --background: light-dark(White, black);
+    --color: light-dark(black, White); */
+
+
+/* 3DS SVG */
+/* --cls-1: light-dark(#d16993, #587da7);
+    --cls-2: light-dark(#a7446c, #587da7);
+    --cls-3: light-dark(#883d55, #292841);
+    --cls-4: light-dark(#cbc7c6, #cbc7c6);
+    --cls-5: light-dark(#a75878, #405171);
+    --cls-6: light-dark(#7c4f49, #292841);
+    --cls-7: light-dark(#ac5d74, #405171);
+    --cls-8: light-dark(#fcfff2, #fcfff2);
+    --cls-9: light-dark(#fcfff2, #fcfff2);
+    --cls-10: light-dark(#c36987, #587da7);
+    --cls-11: light-dark(#713244, #292841);
+    --cls-12: light-dark(#fcfff2, #fcfff2); */
+
+/* accent-color:light-dark(black, White); */
+/* } */
+
+/* de toggles */
+
+/* html:has([value="light-theme"]:checked) {
+    color-scheme: light;
+}
+
+html:has([value="dark-theme"]:checked) {
+    color-scheme: dark;
+} */

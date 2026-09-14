@@ -10,27 +10,15 @@
     <title>Punkyfis</title>
     <link rel="stylesheet" href="../assets/style/normal.css" />
     <link rel="stylesheet" href="../assets/style/index.css" />
-    <script src="../js.js"></script>
+    <script src="../assets/javascript/main.js"></script>
     <link rel="icon" type="image" href="../assets/fotos/laly.gif"> <!-- Het icoontje van de site (Favicon) -->
     <!-- Importeer het webring component, voeg jouw eigen domein toe in data-page -->
-    <script data-page="[https://punkyfis.nl]" src="https://digitaaltuintje.nl/webring.js" defer></script>
+    <script data-page="https://punkyfis.nl" src="https://digitaaltuintje.nl/webring.js" defer></script>
 </head>
 <!-- 3DS flipphone -->
 
 <body>
     <header>
-        <form>
-            <label>
-                <input type="radio" name="theme" value="auto-theme" checked> auto
-            </label>
-            <label>
-                <input type="radio" name="theme" value="light-theme"> licht
-            </label>
-            <label>
-                <input type="radio" name="theme" value="dark-theme"> donker
-            </label>
-        </form>
-
         <nav class="navbar">
             <ul>
                 <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li>
@@ -803,11 +791,24 @@
 
             <!-- Bottom scherm-->
             <div id="bottomScherm">
-                <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</p>
-                <span id="bar"> </span>
-                
+                <span id="bar">
+                    <button onclick="lightDark()">O</button>
+                </span>
+                <div id="pages">
+                    <ul>
+                        <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
+                         <li><a href="about.html">-About-</a></li>
+                         <li><a href="spellen.html">-Spellen-</a></li>                        
+                         <li><a href="log.html">-Log-</a></li>
+                         <li><a href="muziek.html">-Muziek-</a></li>
+                         <li><a href="recepten.html">-Recepten-</a></li>
+                        <li><a href="contact.html">-Contact-</a></li>
+
+                    </ul>
+                </div>
             </div>
-        </div>
+            <button id="home" href="index.html">-Home-</button>
+        </div> 
     </main>
 
     <footer>
