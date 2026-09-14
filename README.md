@@ -1,6 +1,7 @@
 # Model
 
-Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door studenten worden gemaakt.
+Link naar de site: https://punkyfis.nl/HTML/index.html
+
 
 # Learning Log
 
@@ -52,7 +53,7 @@ alleen is dit erg duur. Ik hoop dat de laptop het volhoud tot ik een nieuwe heb.
     bezig bent.
 
 2. Leg uit wat een website 'webby' maakt en welke websites jou het meeste inspireren.
-    
+
 
 3. Vertel waar jij mee aan de slag wilt gaan bij het maken van jouw eigen digital garden 
 let op: dit zijn jouw eerste ideeën, dit kan en mag veranderen in de loop van het programma.
@@ -60,3 +61,15 @@ let op: dit zijn jouw eerste ideeën, dit kan en mag veranderen in de loop van h
 ## 10 sep - Thuiswerk
 
 Helaas kon ik gister niet bij de les zijn omdat ik die dag een afspraak had, ik wist niet aan wie ik dat moest melden omdat er zo veel docenten zijn dit blok. Morgen ga ik naar een van de docenten om te vragen naar wie een afmelding voortaan moet. 
+
+## 11 sep  - School en deep dive
+
+
+
+### Grid 101
+
+
+## 13 sep - Thuiswerk
+
+Na heel lang vastzitten op hoe ik de schermen in de svg krijg en ze mee laat gaan als het formaat van het scherm heb ik het aan AI gevraagd. Het bleek heel makkelijk te kunnen met de juiste procenten. Omdat ik met em probeerde te werken lukte het niet, het was te vaag
+

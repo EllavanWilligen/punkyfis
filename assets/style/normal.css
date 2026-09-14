@@ -11,38 +11,41 @@
     font-weight: 400;
     font-style: normal;
 }
-/* de thema's */
+
+/* light en dark mode */
 
 html {
-	color-scheme:light dark;
+    color-scheme: light dark;
 
-	--background:light-dark(White, black);
-	--color:light-dark(black, White);
+    --background: light-dark(White, black);
+    --color: light-dark(black, White);
 
-    --cls-1:light-dark(#d16993, red);
-    --cls-2:light-dark(#a7446c, red);
-    --cls-3:light-dark(#883d55, red);
-    --cls-4:light-dark(#cbc7c6, red);
-    --cls-5:light-dark(#587da7, red);
-    --cls-6:light-dark(#7c4f49, red);
-    --cls-7:light-dark(#ac5d74, red);
-    --cls-8:light-dark(#fcfff2, red);
-    --cls-9:light-dark(#fcfff2, red);
-    --cls-10:light-dark(#c36987, red);
-    --cls-11:light-dark(#713244, red);
-    --cls-12:light-dark(#fcfff2, red);
 
-	accent-color:light-dark(black, White);
+    /* 3DS SVG */
+    --cls-1: light-dark(#d16993, #587da7);
+    --cls-2: light-dark(#a7446c, #587da7);
+    --cls-3: light-dark(#883d55, #292841);
+    --cls-4: light-dark(#cbc7c6, #cbc7c6);
+    --cls-5: light-dark(#a75878, #405171);
+    --cls-6: light-dark(#7c4f49, #292841);
+    --cls-7: light-dark(#ac5d74, #405171);
+    --cls-8: light-dark(#fcfff2, #fcfff2);
+    --cls-9: light-dark(#fcfff2, #fcfff2);
+    --cls-10: light-dark(#c36987, #587da7);
+    --cls-11: light-dark(#713244, #292841);
+    --cls-12: light-dark(#fcfff2, #fcfff2);
+
+    /* accent-color:light-dark(black, White); */
 }
 
 /* de toggles */
 
 html:has([value="light-theme"]:checked) {
-	color-scheme:light;
+    color-scheme: light;
 }
 
 html:has([value="dark-theme"]:checked) {
-	color-scheme:dark;
+    color-scheme: dark;
 }
 
 
@@ -52,16 +55,94 @@ html:has([value="dark-theme"]:checked) {
 /* de elementen */
 
 body {
-	background-color:var(--background);
-	color:var(--color);
+    background-color: var(--background);
+    color: var(--color);
 }
 
 button {
-	background: var(--background-button);
-	color:var(--color-button);
+    background: var(--background-button);
+    color: var(--color-button);
 }
 
 
+
+/* DS */
+#DS {
+    position: relative;
+    width: 100%;
+}
+
+/* 3DS SVG */
+
+#Layer_1 {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cls-1 {
+    fill: var(--cls-1);
+}
+
+.cls-2 {
+    fill: var(--cls-2);
+}
+
+.cls-3 {
+    fill: var(--cls-3);
+}
+
+.cls-4 {
+    fill: var(--cls-4);
+}
+
+.cls-5 {
+    fill: var(--cls-5);
+}
+
+.cls-6 {
+    fill: var(--cls-6);
+}
+
+.cls-7 {
+    fill: var(--cls-7);
+}
+
+.cls-8 {
+    font-family: SinhalaMN-Bold, 'Sinhala MN';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cls-8,
+.cls-9 {
+    fill: var(--cls-8);
+}
+
+.cls-10 {
+    fill: var(--cls-10);
+}
+
+.cls-11 {
+    fill: var(--cls-11);
+}
+
+.cls-12 {
+    fill: var(--cls-12);
+}
+
+.cls-13 {
+    fill: var(--cls-13);
+}
+
+.cls-14 {
+    fill: var(--cls-14);
+}
+
+
+/* Navbar */
 
 .navbar ul {
     /* background-color: #ff69b4; */
@@ -86,4 +167,27 @@ button {
 
 .navbar li {
     float: right;
+}
+
+/* Top scherm */
+#topScherm {
+    background-color: hotpink;
+    position: absolute;
+    z-index: 2;
+    top: 7.5%;
+    left: 16.5%;
+    width: 67%;
+    height: 37.5%;
+}
+
+
+/* Bottom scherm */
+#bottomScherm {
+    background-color: limegreen;
+    position: absolute;
+    z-index: 2;
+    top: 55.3%;
+    left: 22.8%;
+    width: 54.5%;
+    height: 38.7%;
 }
