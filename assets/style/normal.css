@@ -16,6 +16,7 @@
 
 html {
     font-family: "Baksoap", system-ui;
+    outline: 2px solid rgb(49, 141, 164);
 }
 
 
@@ -152,16 +153,11 @@ body {
     left: 16.5%;
     width: 67%;
     height: 37.5%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: auto;
-    grid-template-rows: auto auto;
-    gap: 1em;
 }
 
 /* Bottom scherm */
 #bottomScherm {
-    background-color: limegreen;
+    background-color: rgb(169, 169, 169);
     position: absolute;
     z-index: 0;
     top: 55.3%;
@@ -176,9 +172,15 @@ body {
 
 #home {
     position: absolute;
-    z-index: 2;
-    top: 95%;
-    text-align: center;
+    z-index: 3;
+    top: 94.2%;
+    left: 46.2%;
+    width: 7.5%;
+    height: 5%;
+    display: block;
+    color: transparent;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 span {
@@ -240,7 +242,7 @@ ul {
     list-style-type: none;
 }
 
-#pages {
+#menu {
     position: relative;
     z-index: 2;
     flex: 1 1 auto;
@@ -255,7 +257,7 @@ ul {
     align-items: start;
 }
 
-#pages li {
+#menu li {
     min-width: 0;
     aspect-ratio: 1 / 1;
     max-width: 100%;
@@ -263,163 +265,48 @@ ul {
     box-sizing: border-box;
     display: grid;
     place-items: center;
-    padding: clamp(0.15em, 1vw, 0.4em);
+    padding: 0;
     background: linear-gradient(145deg, #ffffff, #e9edeb);
     border: 1px solid #aeb8b7;
     border-radius: 1.5em;
     box-shadow: 2px 3px 4px rgb(53 63 65 / 35%), inset 1px 1px #ffffff;
 }
 
-#pages li:nth-of-type(1) {
-    background: linear-gradient(145deg, #fffdf8, #f4c96b);
+#menu li:nth-of-type(1) {
+    background-image: url(../fotos/MIIAbout.png);
+    background-size: cover;
 }
 
-#pages li:nth-of-type(2) {
-    background: linear-gradient(145deg, #fbfffd, #83d6c1);
+#menu li:nth-of-type(2) {
+    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
 }
 
-#pages li:nth-of-type(3) {
-    background: linear-gradient(145deg, #fffdfd, #f58a83);
+#menu li:nth-of-type(3) {
+    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
 }
 
-#pages li:nth-of-type(4) {
-    background: linear-gradient(145deg, #fbfdff, #82bde8);
+#menu li:nth-of-type(4) {
+    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
 }
 
-#pages li:nth-of-type(5) {
-    background: linear-gradient(145deg, #fffefb, #f0c778);
+#menu li:nth-of-type(5) {
+    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
 }
 
-#pages li:nth-of-type(6) {
-    background: linear-gradient(145deg, #fbfdff, #8bb8df);
+#menu li:nth-of-type(6) {
+    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
 }
 
-#pages a {
-    display: block;
+#menu a {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
     color: #344343;
-    font-size: clamp(0.55rem, 1.6vw, 0.95rem);
+    font-size: 0;
     text-decoration: none;
-    overflow-wrap: anywhere;
 }
 
-/* li {
-    background-color: #f1f1f1;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 30px;
-    text-align: center;
-    padding: 5em;
-    background-color: var(--liBackground);
-    border-radius: 10px;
-} */
-
-li:nth-of-type(1) {
-    background: lightpink;
+.home{
+    z-index: 3;
 }
-
-li:nth-of-type(2) {
-    background: lightgreen;
-}
-
-li:nth-of-type(3) {
-    background: lightblue;
-}
-
-li:nth-of-type(4) {
-    background: lightcoral;
-}
-
-li:nth-of-type(5) {
-    background: lightgoldenrodyellow;
-}
-
-li:nth-of-type(6) {
-    background: lightgray;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Reserves */
-
-/* 3DS SVG */
-/* --cls-1: #d16993;
-    --cls-2: #a7446c;
-    --cls-3: #883d55;
-    --cls-4: #cbc7c6;
-    --cls-5: #a75878;
-    --cls-6: #7c4f49;
-    --cls-7: #ac5d74;
-    --cls-8: #fcfff2;
-    --cls-9: #fcfff2;
-    --cls-10: #c36987;
-    --cls-11: #713244;
-    --cls-12: #fcfff2; */
-/* color-scheme: light dark;
-
-    --background: light-dark(White, black);
-    --color: light-dark(black, White); */
-
-
-/* 3DS SVG */
-/* --cls-1: light-dark(#d16993, #587da7);
-    --cls-2: light-dark(#a7446c, #587da7);
-    --cls-3: light-dark(#883d55, #292841);
-    --cls-4: light-dark(#cbc7c6, #cbc7c6);
-    --cls-5: light-dark(#a75878, #405171);
-    --cls-6: light-dark(#7c4f49, #292841);
-    --cls-7: light-dark(#ac5d74, #405171);
-    --cls-8: light-dark(#fcfff2, #fcfff2);
-    --cls-9: light-dark(#fcfff2, #fcfff2);
-    --cls-10: light-dark(#c36987, #587da7);
-    --cls-11: light-dark(#713244, #292841);
-    --cls-12: light-dark(#fcfff2, #fcfff2); */
-
-/* accent-color:light-dark(black, White); */
-/* } */
-
-/* de toggles */
-
-/* html:has([value="light-theme"]:checked) {
-    color-scheme: light;
-}
-
-html:has([value="dark-theme"]:checked) {
-    color-scheme: dark;
-} */
-
-
-/* Navbar */
-/* 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.navbar a {
-    text-decoration: none;
-    margin: 0;
-    padding: 15px;
-    display: block;
-    text-align: center;
-    color: white;
-}
-
-.navbar a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.navbar li {
-    float: right;
-} */
