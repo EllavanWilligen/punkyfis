@@ -75,15 +75,19 @@ Na heel lang vastzitten op hoe ik de schermen in de svg krijg en ze mee laat gaa
 
 ## 14 sep - Maandag 
 
+
+
 ### Opdracht 16
-Layout is goed, misschien de letters iets groter maken voor als het scherm kleiner word, nu kan het moeilijk leesbaar zijn.
+Feedback van Feyza: Layout is goed, misschien de letters iets groter maken voor als het scherm kleiner word, nu kan het moeilijk leesbaar zijn.
 
 ### Opdracht 17
 
 #### 3 interessante websites
-https://crency.agency/ - 
+1. https://crency.agency/ - 
+2. 
+3. 
 
-
+### Check out (met Joëlle)
 Leg uit wanneer een website 'lelijk' wordt en geef voorbeelden wat je kan doen om deze 'lelijke' onderdelen te fixen?
 Plaatjes te groot - in CSS de img een ander formaat geven
 Geen CSS - CSS bestand toevoegen
@@ -94,5 +98,5 @@ Vertel welke volgende stap je neemt om je website responsive te maken.
 - Geen px gebruiken maar dingen zoals em en %
 - @media gebruiken
 
-
 Kun je het ontwerp en de bouw van je eigen Garden (zo uit je hoofd) onderbouwen in Webby vocabulair?
+
