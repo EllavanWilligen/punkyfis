@@ -26,8 +26,12 @@ body {
 
 
     /* Licht theme */
-    --background: rgb(220, 208, 182);
-    --liBackground: rgb(255, 195, 209);
+    --background: rgb(255, 219, 238);
+    --liBackground: linear-gradient(145deg, #e2e2e2, #b0b0b0);
+    --BSBackground: rgb(169, 169, 169);
+    --border: #aeb8b7;
+    --shadow: rgb(53 63 65 / 35%);
+    --bar: linear-gradient(#f8faf9, #dfe5e4);
 
     /* 3DS SVG */
     --cls-1: #d16993;
@@ -42,13 +46,20 @@ body {
     --cls-10: #c36987;
     --cls-11: #713244;
     --cls-12: #fcfff2;
+    --cls-13: #7c4f49;
+    --cls-14: #7c4f49;
 
 
 }
 
 .dark-theme {
     --background: rgb(56, 58, 89);
-    --liBackground: rgb(41, 40, 65);
+    --liBackground: linear-gradient(145deg, #4a4a4a, #3b3b3b);
+    --BSBackground: #606060;
+    --border: #3a3d3d;
+    --shadow: rgb(52, 56, 56);
+    --bar: linear-gradient(#353535, #323434);
+
 
     /* 3DS SVG */
     --cls-1: #587da7;
@@ -63,6 +74,8 @@ body {
     --cls-10: #587da7;
     --cls-11: #292841;
     --cls-12: #fcfff2;
+    --cls-13: #292841;
+    --cls-14: #292841;
 
     /* accent-color:#fcfff2; */
 }
@@ -83,6 +96,8 @@ body {
     height: auto;
     pointer-events: none;
 }
+
+
 
 .cls-1 {
     fill: var(--cls-1);
@@ -144,20 +159,9 @@ body {
 }
 
 
-/* Top scherm */
-#topScherm {
-    background-color: hotpink;
-    position: absolute;
-    z-index: 0;
-    top: 7.5%;
-    left: 16.5%;
-    width: 67%;
-    height: 37.5%;
-}
-
 /* Bottom scherm */
 #bottomScherm {
-    background-color: rgb(169, 169, 169);
+    background-color: var(--BSBackground);
     position: absolute;
     z-index: 0;
     top: 55.3%;
@@ -205,8 +209,8 @@ span {
     justify-content: flex-start;
     gap: clamp(0.15em, 1vw, 0.45em);
     padding: clamp(0.2em, 1vw, 0.45em);
-    background: linear-gradient(#f8faf9, #dfe5e4);
-    border-bottom: 1px solid #aeb8b7;
+    background: var(--bar);
+    border-bottom: 1px solid var(--border);
     box-shadow: 0 1px 3px rgb(53 63 65 / 35%);
 }
 
@@ -234,10 +238,6 @@ ul {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
-    /* display: grid;
-    grid-template-columns: auto auto auto;
-    padding: auto;
-    grid-template-rows: auto auto;*/
     gap: 1em;
     list-style-type: none;
 }
@@ -266,10 +266,10 @@ ul {
     display: grid;
     place-items: center;
     padding: 0;
-    background: linear-gradient(145deg, #ffffff, #e9edeb);
-    border: 1px solid #aeb8b7;
+    background: var(--liBackground);
+    border: 1px solid var(--border);
     border-radius: 1.5em;
-    box-shadow: 2px 3px 4px rgb(53 63 65 / 35%), inset 1px 1px #ffffff;
+    box-shadow: 2px 3px 4px var(--shadow), inset 1px 1px var(--shadow);
 }
 
 #menu li:nth-of-type(1) {
@@ -277,25 +277,25 @@ ul {
     background-size: cover;
 }
 
-#menu li:nth-of-type(2) {
-    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
+/* #menu li:nth-of-type(2) {
+    
 }
 
 #menu li:nth-of-type(3) {
-    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
+
 }
 
 #menu li:nth-of-type(4) {
-    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
+
 }
 
 #menu li:nth-of-type(5) {
-    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
+
 }
 
 #menu li:nth-of-type(6) {
-    background: linear-gradient(145deg, #e2e2e2, #b0b0b0);
-}
+
+} */
 
 #menu a {
     display: grid;

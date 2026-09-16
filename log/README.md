@@ -762,6 +762,25 @@ Het volgende wat ik moest doen is een foto toevoegen, uiteindelijk moeten ze all
 Ik heb de text van de knoppen gehaald, ook heb ik de achtergrond tijdelijk grijs gemaakt. Later wil ik de achtergrond misschien roze of oranje maken maar voor nu hou ik het even neutraal. Nu ziet het er zo uit:
 ![image](TW15c.png)
 
+Tot slot heb ik ervoor gezorgd dat de home knop op je DS je naar home stuurt, uiteindelijk wil ik dat de site bestuurbaar is met de DS en alle knoppen van de DS ook echt werken. Maar voor nu is dat heel lastig, veel lastiger dan ik dacht dat het ging zijn.
 
 
 Vandaag heb ik ook mijn README aangevuld, ik ben nog niet helemaal klaar want die foto's zijn zo veel werk om erin te zetten! Maar verder ben ik klaar!
+
+
+## 16 sep - Woensdag les
+
+
+Onderaan had ik de webring en de random link staan. Ik kon deze nergens vinden in de code. In de les heb ik hulp gevraag van de studentmentor (?), hij kwam erachter dat de lege footer de reden was dat de webring er stond. Hij begreep ook niet hoe, we hebben de link uit inspect gehaald en die in mijn site gezet, maar deze leidde alleen naar 1 dezelfde site. Daarom heb ik nu tijdelijk de https://digitaaltuintje.nl erin gezet. Zo is het niet random maar kan je wel naar alle andere tuintjes. Om de "Random" link er weer in te zetten moet ik alleen een footer in de HTMl zetten. Later wil ik wel de "Random" terug maar op de 🌐 in de bar (waar nu https://digitaaltuintje.nl staat)
+
+Verder heb ik de CSS gefixt, #topScherm staat nu in de indivuele CSS files in plaats van in normal.CSS waar alle code staat die op elke site hetzelfde is. 
+
+### Check out
+1. Noem 3 Gestaltprincipes op en laat de ander uitleggen wat ze betekenen en doen.<br>
+   Nabijheid - Dingen die bij elkaar staan worden vaak gezien als één groep
+   Sluiting - Mensen vullen automatisch een vorm aan, dus als er alleen delen van staan zien menssen nogsteeds de hele vorm erin
+   Gelijkheid - Vormen die op elkaar lijken worden vaak gezien als één groep
+2. Een grid biedt ruimte om te spelen (vrijheid), maar tegelijkertijd ook eenheid en structuur (vastigheid). Wat wordt hiermee bedoeld? <br>
+   Een grid maakt de site in kolommen, zo plan je het uit en word het een eenheid en structuur, maar wat je in welke kolommen zet en wat je leeg houd geeft je de ruimte om te spelen, de kolommen hoeven ook niet allemaal even groot en dezelfde vorm te zijn.
+3. Welk principe neem je mee in een laatste iteratie van je ontwerp? <br>
+   Allemaal? Alle principes zijn belangrijk en moeten rekening gehouden mee worden, ik denk dat ik de vraag niet helemaal begrijp.

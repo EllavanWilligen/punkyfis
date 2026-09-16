@@ -1,0 +1,9 @@
+#topScherm {
+    background-color: hotpink;
+    position: absolute;
+    z-index: 0;
+    top: 7.5%;
+    left: 16.5%;
+    width: 67%;
+    height: 37.5%;
+}
