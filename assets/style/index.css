@@ -1,9 +1,122 @@
+body {
+    --TSBackground: url(../fotos/groenStip.jpg);
+}
+
+.dark-theme {
+    --TSBackground: url(../fotos/lolly.jpg);
+}
+
 #topScherm {
-    background-color: hotpink;
+    background-image: var(--TSBackground);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     z-index: 0;
     top: 7.5%;
     left: 16.5%;
     width: 67%;
     height: 37.5%;
+}
+
+#TSBalk {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 1rem 2rem;
+    box-sizing: border-box;
+    background: linear-gradient(#f3f3f3, #e7e7e700);
+    border-radius: 0.18rem 0.18rem 0 0;
+    /* height: 3rem; */
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+#TSBalk li {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    min-height: 1rem;
+}
+
+#TSBalk li:nth-child(1) {
+    margin-right: 0.1rem;
+}
+
+#TSBalk li:nth-child(2) {
+    margin-right: 0.1rem;
+}
+
+#TSBalk li:nth-child(3) {
+    margin-left: auto;
+    padding-right: 0.35rem;
+}
+
+#TSBalk li:nth-child(4) {
+    margin-left: 0;
+    padding-right: 0.25rem;
+}
+
+#TSBalk li:nth-child(5) {
+    margin-left: 0.2rem;
+    justify-content: flex-end;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+}
+
+.battery-shell {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.16rem;
+    padding: 0.16rem 0.32rem 0.16rem 0.18rem;
+    border: 0.12rem solid #1d1d1d;
+    border-radius: 0.16rem;
+    background: rgba(255, 255, 255, 0.28);
+    box-sizing: border-box;
+    height: 1.2rem;
+}
+
+.battery-shell::after {
+    content: "";
+    position: absolute;
+    right: -0.25rem;
+    top: 0.32rem;
+    width: 0.18rem;
+    height: 0.4rem;
+    background: #1d1d1d;
+    border-radius: 0 0.09rem 0.09rem 0;
+}
+
+.battery-segment {
+    width: 0.28rem;
+    height: 0.54rem;
+    border-radius: 0.06rem;
+    background: rgba(29, 29, 29, 0.18);
+    border: 0.02rem solid rgba(29, 29, 29, 0.18);
+    box-sizing: border-box;
+}
+
+.battery-segment.is-full {
+    background: #35d66c;
+    border-color: #1ea558;
+}
+
+.battery-shell.is-low {
+    border-color: #c62828;
+}
+
+.battery-segment.is-low {
+    background: #ff4d4d;
+    border-color: #c62828;
 }

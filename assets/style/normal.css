@@ -12,26 +12,58 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "RodinNTLG M";
+    src: url(../type/FOT-RodinNTLG\ Pro\ M.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RodinNTLG B";
+    src: url(../type/FOT-RodinNTLG\ Pro\ B.otf.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "RodinBokutoh M";
+    src: url(../type/FOT-RodinBokutoh\ Pro\ M.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: "Rodin";
+    src: url(../type/FOT-RodinNTLG\ Pro\ M.otf);
+    font-weight: 400;
+    font-style: normal;
+} */
+
 /* light en dark mode */
 
 html {
-    font-family: "Baksoap", system-ui;
+    font-family: "RodinNTLG M", system-ui;
     outline: 2px solid rgb(49, 141, 164);
 }
 
 
 body {
-    background: var(--background);
-
-
+    --pageBackground: rgb(255, 219, 238);
+    background: var(--pageBackground);
 
     /* Licht theme */
-    --background: rgb(255, 219, 238);
-    --liBackground: linear-gradient(145deg, #e2e2e2, #b0b0b0);
+    --liBackground: linear-gradient(145deg, #ffffff, #cdcdcd);
+    /* --liOverlay: transparent; */
     --BSBackground: rgb(169, 169, 169);
-    --border: #aeb8b7;
+    --border: #6c706f;
     --shadow: rgb(53 63 65 / 35%);
     --bar: linear-gradient(#f8faf9, #dfe5e4);
+    --liIcoon1: url(../fotos/MIIAbout3.png);
+    --liIcoon2: ;
+    --liIcoon3: ;
+    --liIcoon4: url("../fotos/muziekIcoon2.png");
+    --liIcoon5: ;
+    --liIcoon6: ;
 
     /* 3DS SVG */
     --cls-1: #d16993;
@@ -53,12 +85,19 @@ body {
 }
 
 .dark-theme {
-    --background: rgb(56, 58, 89);
+    --pageBackground: rgb(56, 58, 89);
     --liBackground: linear-gradient(145deg, #4a4a4a, #3b3b3b);
+    /* --liOverlay: rgb(0 0 0 / 12%); */
     --BSBackground: #606060;
     --border: #3a3d3d;
     --shadow: rgb(52, 56, 56);
     --bar: linear-gradient(#353535, #323434);
+    --liIcoon1: url(../fotos/MIIAboutDark.png);
+    --liIcoon2: ;
+    --liIcoon3: ;
+    --liIcoon4: url(../fotos/MuziekIcoonDark.png);
+    --liIcoon5: ;
+    --liIcoon6: ;
 
 
     /* 3DS SVG */
@@ -187,11 +226,8 @@ body {
     cursor: pointer;
 }
 
-span {
-    font-family: "Comic Relief", system-ui;
+#bar span {
     font-size: 1.5em;
-    color: var(--cls-8);
-    background-color: var(--cls-3);
     width: 100%;
     box-sizing: border-box;
     padding: 0.35em;
@@ -225,10 +261,7 @@ span {
     background: linear-gradient(#ffffff, #e7eceb);
     border: 1px solid #aeb8b7;
     border-radius: 0.35em;
-    box-shadow: inset 0 1px #ffffff, 0 1px 2px rgb(53 63 65 / 35%);
-}
-
-button {
+    box-shadow: inset 0 1px #ffffff, 0 1px 2px rgb(53 63 65 / 35%);    
     grid-template-columns: auto auto auto auto auto auto;
     gap: 30px;
     padding: 20px;
@@ -267,35 +300,36 @@ ul {
     place-items: center;
     padding: 0;
     background: var(--liBackground);
+    /* background-color: var(--liOverlay); */
     border: 1px solid var(--border);
-    border-radius: 1.5em;
+    border-radius: 2.5em;
     box-shadow: 2px 3px 4px var(--shadow), inset 1px 1px var(--shadow);
-}
-
-#menu li:nth-of-type(1) {
-    background-image: url(../fotos/MIIAbout.png);
     background-size: cover;
 }
 
-/* #menu li:nth-of-type(2) {
-    
+#menu li:nth-of-type(1) {
+    background-image: var(--liIcoon1), var(--liBackground);
+}
+
+#menu li:nth-of-type(2) {
+    background-image: var(--liIcoon2), var(--liBackground);
 }
 
 #menu li:nth-of-type(3) {
-
+    background-image: var(--liIcoon3), var(--liBackground);
 }
 
 #menu li:nth-of-type(4) {
-
+    background-image: var(--liIcoon4), var(--liBackground);
 }
 
 #menu li:nth-of-type(5) {
-
+    background-image: var(--liIcoon5), var(--liBackground);
 }
 
 #menu li:nth-of-type(6) {
-
-} */
+    background-image: var(--liIcoon6), var(--liBackground);
+}
 
 #menu a {
     display: grid;

@@ -784,3 +784,12 @@ Verder heb ik de CSS gefixt, #topScherm staat nu in de indivuele CSS files in pl
    Een grid maakt de site in kolommen, zo plan je het uit en word het een eenheid en structuur, maar wat je in welke kolommen zet en wat je leeg houd geeft je de ruimte om te spelen, de kolommen hoeven ook niet allemaal even groot en dezelfde vorm te zijn.
 3. Welk principe neem je mee in een laatste iteratie van je ontwerp? <br>
    Allemaal? Alle principes zijn belangrijk en moeten rekening gehouden mee worden, ik denk dat ik de vraag niet helemaal begrijp.
+
+
+Thuis ben ik verder gaan werken 
+
+3DS font:
+https://archive.org/download/Fontworks/Fonts/
+
+ACNH:
+https://www.reddit.com/r/AnimalCrossing/comments/gmz7u2/ever_wondered_what_font_they_use_in_new_horizons/

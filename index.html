@@ -7,7 +7,7 @@
     <meta name="author" content="[jouw naam]" />
     <meta name="color-scheme" content="dark ulght" />
 
-    <title>Punkyfis</title>    
+    <title>Punkyfis</title>
     <link rel="stylesheet" href="../assets/style/index.css" />
     <link rel="stylesheet" href="../assets/style/normal.css" />
     <script src="../assets/javascript/main.js"></script>
@@ -456,7 +456,7 @@
                         <path class="cls-6"
                             d="M451.27,933.09l-15.26-.03-.23-8.56c-.37-.64-2.32-.93-2.97-1.49l10.62-8.9,10.73,9.12c-.63.15-2.7.5-2.72,1.3l-.17,8.56ZM440.33,923.93l-.13,5.53,6.61.16.13-5.53-6.61-.16Z" />
                         <path class="cls-6"
-                                d="M427.43,938.89c-7.42-.05-13.72-7.63-13.17-14.81.32-4.14,1.83-7.19,4.61-9.47-3.2,5.74-3.35,10.9-.64,15.82s8.01,6.95,14.01,6.9l25.9-.22c5.97-.05,9.9-3.47,11.92-9.18,2.58-7.28-2.57-16.44-11.13-17.39l-28.41-.45c-2.04-.03-4.09.05-5.66.88l-5.62,2.97,4.43-4.87c1.89-2.08,5.93-1.51,8.52-1.57l21.96-.52c5.5-.13,10.81.81,14.74,4.81,3.42,3.48,5.87,9.14,4.81,14.38-1.7,8.41-10.8,12.94-19.6,12.89l-26.68-.16Z" />
+                            d="M427.43,938.89c-7.42-.05-13.72-7.63-13.17-14.81.32-4.14,1.83-7.19,4.61-9.47-3.2,5.74-3.35,10.9-.64,15.82s8.01,6.95,14.01,6.9l25.9-.22c5.97-.05,9.9-3.47,11.92-9.18,2.58-7.28-2.57-16.44-11.13-17.39l-28.41-.45c-2.04-.03-4.09.05-5.66.88l-5.62,2.97,4.43-4.87c1.89-2.08,5.93-1.51,8.52-1.57l21.96-.52c5.5-.13,10.81.81,14.74,4.81,3.42,3.48,5.87,9.14,4.81,14.38-1.7,8.41-10.8,12.94-19.6,12.89l-26.68-.16Z" />
                         <path class="cls-10"
                             d="M470.07,927.93c-.6-.31-.98-1.23-.82-2.65.67-5.78-2.84-13.07-9.3-13.13l-33.66-.3c-.94,0-1.5-.16-1.43-.87,1.57-.83,3.63-.91,5.66-.88l28.41.45c8.55.95,13.7,10.11,11.13,17.39Z" />
                         <path class="cls-1"
@@ -779,8 +779,19 @@
 
             <!-- Top scherm -->
             <div id="topScherm">
-                
-
+                <ul id="TSBalk">
+                    <li>🛜Streetpass</li>
+                    <li>🩰7000</li>
+                    <li id="currentDate">da/tum</li>
+                    <li id="currentTime">ti:jd</li>
+                    <li class="battery" aria-label="Batterij">
+                        <span class="battery-shell" aria-hidden="true">
+                            <span class="battery-segment"></span>
+                            <span class="battery-segment"></span>
+                            <span class="battery-segment"></span>
+                        </span>
+                    </li>
+                </ul>
             </div>
 
             <!-- Bottom scherm-->
@@ -791,23 +802,24 @@
                     <button>✎</button> <!-- potlood -->
                     <button>:]</button> <!-- smiley -->
                     <button>☰</button> <!-- textwolk -->
-                    <button><a class="digiTuin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-</button> <!-- internet wereldbol -->
+                    <button>
+                        <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
+                    </button> <!-- internet wereldbol -->
                 </span>
-                <!-- <div> -->
-                    <ul id="menu">
-                        <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
-                         <li><a href="about.html">About</a></li>   <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
-                         <li><a href="spellen.html">Spellen</a></li>                        
-                         <li><a href="log.html">Log</a></li>  <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
-                         <li><a href="muziek.html">Muziek</a></li>
-                         <li><a href="recepten.html">Recepten</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                <!-- </div> -->
+                <ul id="menu">
+                    <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
+                    <li><a href="about.html">About</a></li> <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
+                    <li><a href="spellen.html">Spellen</a></li>
+                    <li><a href="log.html">Log</a></li> <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
+                    <li><a href="muziek.html">Muziek</a></li>
+                    <li><a href="recepten.html">Recepten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </div> 
+        </div>
     </main>
+
+    <footer id="webringTarget" aria-label="Digitaal Tuintje webring" hidden></footer>
 </body>
 
 </html>
