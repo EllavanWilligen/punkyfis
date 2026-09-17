@@ -4,7 +4,7 @@ Link naar de site: url="https://punkyfis.nl"
 
 
 # Knowledge base
-![image](TW15b.png)
+![image](log/TW15b.png)
 
 # Learning Log
 
@@ -28,8 +28,8 @@ Helaas was ik door een een zware ochtend met veel onvoorspelde gebeurtenissen ee
 typography.com
 
 Voor de opdracht moesten we fonts zoeken die bij Dolly Parton passen (naar onze mening, gebasseerd op de woorden op het bord). We moesten eerst een web maken maar daar was ik niet bij. De volgende fonts heb ik gekozen, ik vind ze passen bij western en glam.
-![image](DP1.png)
-![image](DP2.png)
+![image](log/DP1.png)
+![image](log/DP2.png)
 
 ### CSS: fonts met kleur en effecten
 
@@ -371,23 +371,23 @@ alleen is dit erg duur. Ik hoop dat de laptop het volhoud tot ik een nieuwe heb.
 ## 11 sep  - School en deep dive      ^-^
 
 We moesten vandaag ons idee vertellen. Ik vertelde oven mijn idee om de site een 3DS te maken en hij vond het een goed idee en vertelde me dat ik moest gaan tekenen, dat had ik nog niet gedaan. In het begin werd verteld dat dit juist niet moest? Desalniettemin ben ik meteen gaan tekenen:
-![image](idee.PNG)
+![image](log/idee.PNG)
 
 ### Grid 101                           ^-^    
 
 Deze deepdive bestaat aan 3 opdrachten waarin je leert met grid werken.
 
 #### Opdracht 1
-![image](DD11a.png)
-![image](DD11b.png)
-![image](DD11c.png)
-![image](DD11d.png)
-![image](DD11e.png)
-![image](DD11g.png)
-![image](DD11h.png)
-![image](DD11i.png)
-![image](DD11j.png)
-![image](DD11k.png)
+![image](log/DD11a.png)
+![image](log/DD11b.png)
+![image](log/DD11c.png)
+![image](log/DD11d.png)
+![image](log/DD11e.png)
+![image](log/DD11g.png)
+![image](log/DD11h.png)
+![image](log/DD11i.png)
+![image](log/DD11j.png)
+![image](log/DD11k.png)
 
 ## 13 sep - Thuiswerk
 
@@ -704,7 +704,7 @@ Ook ben ik begonnen met de indeling van het onderste scherm, ik heb in totaal 6 
 Nog maar 1 button werkt, dat is de light/dark toggle, van "internet wereldbol" wil ik de random link maken die onderaan de site staat, maar ik kan de code hiervoor niet vinden.
 
 Om te testen of alles werkte heb ik eerst elke li een andere kleur gegeven:
-![image](SW14c.png)
+![image](log/SW14c.png)
 Dit werkte allemaal prima dus ik kon verder met de individuele opmaak van elke li
 
 De li van ul id="menu" worden vormgegeven met de juiste CSS selectoren. Hierdoor kan ik ze later allemaal individueel vormgeven, al hebben ze nu tijdelijk hetzelfde uiterlijk allemaal. Als later blijkt dat ik de achtergrond wel overal dezelfde kleur doe maak ik dit netter en zet ik de line gewoon in #menu li.
@@ -750,7 +750,7 @@ De li van ul id="menu" worden vormgegeven met de juiste CSS selectoren. Hierdoor
 ```
 
 Dit ziet er als volgt uit:  
-![image](TW15a.png)
+![image](log/TW15a.png)
 
 Het volgende wat ik moest doen is een foto toevoegen, uiteindelijk moeten ze allemaal een plaatje hebben. Voor het plaatje van 'About' wil ik de MII die ik heb gemaakt. Hiervoor gebruik ik de volgende code
 ```
@@ -760,7 +760,7 @@ Het volgende wat ik moest doen is een foto toevoegen, uiteindelijk moeten ze all
 }
 ```
 Ik heb de text van de knoppen gehaald, ook heb ik de achtergrond tijdelijk grijs gemaakt. Later wil ik de achtergrond misschien roze of oranje maken maar voor nu hou ik het even neutraal. Nu ziet het er zo uit:
-![image](TW15c.png)
+![image](log/TW15c.png)
 
 Tot slot heb ik ervoor gezorgd dat de home knop op je DS je naar home stuurt, uiteindelijk wil ik dat de site bestuurbaar is met de DS en alle knoppen van de DS ook echt werken. Maar voor nu is dat heel lastig, veel lastiger dan ik dacht dat het ging zijn.
 
@@ -786,10 +786,18 @@ Verder heb ik de CSS gefixt, #topScherm staat nu in de indivuele CSS files in pl
    Allemaal? Alle principes zijn belangrijk en moeten rekening gehouden mee worden, ik denk dat ik de vraag niet helemaal begrijp.
 
 
-Thuis ben ik verder gaan werken 
+Thuis ben ik verder gaan werken aan de Javascript. 
+
+
+Batterij:
+https://dev.to/docy/how-to-check-battery-status-with-javascript-full-guide-52mb
 
 3DS font:
 https://archive.org/download/Fontworks/Fonts/
 
 ACNH:
 https://www.reddit.com/r/AnimalCrossing/comments/gmz7u2/ever_wondered_what_font_they_use_in_new_horizons/
+
+## 17 sep - Thuiswerk
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form 

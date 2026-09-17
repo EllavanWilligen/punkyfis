@@ -1,9 +1,108 @@
+:root {
+  --step--2: clamp(0.4297rem, 1.0279rem + -0.6646cqi, 0.8784rem);
+  --step--1: clamp(0.6953rem, 1.0178rem + -0.3584cqi, 0.9372rem);
+  --step-0: clamp(1rem, 0.9583rem + 0.1852cqi, 1.125rem);
+  --step-1: clamp(1.067rem, 0.8159rem + 1.1159cqi, 1.8203rem);
+  --step-2: clamp(1.1385rem, 0.5363rem + 2.6766cqi, 2.9452rem);
+  --step-3: clamp(1.2148rem, 0.0313rem + 5.26cqi, 4.7653rem);
+  --step-4: clamp(1.2962rem, -0.8419rem + 9.5023cqi, 7.7102rem);
+  --step-5: clamp(1.383rem, -2.3144rem + 16.4328cqi, 12.4751rem);
+}
+
+
+
+
 #topScherm {
-    background-color: hotpink;
+    background: var(--TSBackground);
     position: absolute;
-    z-index: 0;
+    z-index: 2;
     top: 7.5%;
     left: 16.5%;
     width: 67%;
     height: 37.5%;
 }
+
+
+body{
+   --TSBackground: linear-gradient(145deg, #ffffff, #b6d2ca);
+   --aboutMe: linear-gradient(145deg, hotpink, rgb(155, 51, 103));
+   --antwoord: white;
+}
+
+.dark-theme{
+   --TSBackground: linear-gradient(145deg, #6a6a6a, #303030);
+   --aboutMe: linear-gradient(145deg, hotpink, rgb(155, 51, 103));
+   --antwoord: rgb(99, 99, 99);
+}
+
+#topScherm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    container-type: inline-size;
+}
+
+#miiHoofd {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    width: min(42%, 400px);
+    max-width: 42%;
+    max-height: 90%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    transform: translateY(-50%);
+    background: var(--aboutMe);
+    border-radius: 1em;
+    box-shadow: 1rem 1rem 1em rgb(53 63 65 / 35%);
+}
+
+h1 {
+    position: absolute;
+    top: 72%;
+    left: 2%;
+    font-family: "RodinNTLG B", system-ui;
+    font-size: 3.2cqi;
+}
+
+h2 {
+   position: absolute;
+   top: 83%;
+   left: 2%;
+   font-family: "RodinNTLG N", system-ui;
+    font-size: 1.6cqi;
+}
+
+.AM {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 50%;
+    max-width: 50%;
+    gap: 0.3rem;
+}
+
+.AM #V {
+    color: var(--antwoord);
+    background: var(--aboutMe);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 1px 1px 1rem rgb(53 63 65 / 35%);
+    font-size: 1.5cqi;
+    overflow-wrap: anywhere;
+}
+
+.AM #A {
+    color: var(--aboutMe);
+    background: var(--TSBackground);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 1px 1px 1rem rgb(53 63 65 / 35%);
+    font-size: 1.5cqi;
+    overflow-wrap: anywhere;
+}
+
+

@@ -1,132 +1,129 @@
 
-// Light en dark mode toggle
+// Licht en donkere modus wisselen
 function lightDark() {
-   var element = document.body;
+   const element = document.body;
    element.classList.toggle("dark-theme");
 }
 
 
-// Huidige dag en maand
-function updateDateTime() {
-   const dateEl = document.getElementById('currentDate');
-   const timeEl = document.getElementById('currentTime');
+// Huidige datum en tijd
+function updateDatumTijd() {
+   const datumElement = document.getElementById('currentDate');
+   const tijdElement = document.getElementById('currentTime');
 
-   if (!dateEl || !timeEl) return;
+   if (!datumElement || !tijdElement) return;
 
-   const now = new Date();
+   const nu = new Date();
 
-   const dateText = now.toLocaleDateString('nl-NL', {
+   datumElement.textContent = nu.toLocaleDateString('nl-NL', {
       day: '2-digit',
       month: '2-digit'
    });
 
-   const timeText = now.toLocaleTimeString('nl-NL', {
+   tijdElement.textContent = nu.toLocaleTimeString('nl-NL', {
       hour: '2-digit',
       minute: '2-digit'
    });
-
-   dateEl.textContent = dateText;
-   timeEl.textContent = timeText;
 }
 
 
 
 // Batterij
-function setBatteryLevel(level) {
-   const safeLevel = Math.min(100, Math.max(0, level));
-   localStorage.setItem('punkyfis-battery', String(safeLevel));
+function zetBatterijNiveau(niveau) {
+   const veiligNiveau = Math.min(100, Math.max(0, niveau));
+   localStorage.setItem('punkyfis-battery', String(veiligNiveau));
 
-   const segments = document.querySelectorAll('.battery-segment');
-   let segmentsToFill = 0;
+   const segmenten = document.querySelectorAll('.battery-segment');
+   let aantalSegmentenVol = 0;
 
-   if (safeLevel <= 10) {
-      segmentsToFill = 1;
-   } else if (safeLevel <= 33) {
-      segmentsToFill = 1;
-   } else if (safeLevel <= 66) {
-      segmentsToFill = 2;
+   if (veiligNiveau <= 10) {
+      aantalSegmentenVol = 1;
+   } else if (veiligNiveau <= 33) {
+      aantalSegmentenVol = 1;
+   } else if (veiligNiveau <= 66) {
+      aantalSegmentenVol = 2;
    } else {
-      segmentsToFill = 3;
+      aantalSegmentenVol = 3;
    }
 
-   segments.forEach((segment, index) => {
-      const isFilled = index < segmentsToFill;
-      segment.classList.toggle('is-full', isFilled);
-      segment.classList.toggle('is-low', safeLevel <= 10 && isFilled);
+   segmenten.forEach((segment, index) => {
+      const isVol = index < aantalSegmentenVol;
+      segment.classList.toggle('is-full', isVol);
+      segment.classList.toggle('is-low', veiligNiveau <= 10 && isVol);
    });
 
-   const batteryShell = document.querySelector('.battery-shell');
-   if (batteryShell) {
-      batteryShell.classList.toggle('is-low', safeLevel <= 10); // Als betterij minder dan 10% is
+   const batterijShell = document.querySelector('.battery-shell');
+   if (batterijShell) {
+      batterijShell.classList.toggle('is-low', veiligNiveau <= 10);
    }
 
-   const batteryEl = document.querySelector('.battery');
-   if (batteryEl) {
-      batteryEl.setAttribute('title', `Batterij ${safeLevel}%`);
+   const batterijElement = document.querySelector('.battery');
+   if (batterijElement) {
+      batterijElement.setAttribute('title', `Batterij ${veiligNiveau}%`);
    }
 }
 
 
-async function bindBatteryStatus() {
+async function koppelBatterijStatus() {
    if (navigator.getBattery) {
       try {
-         const battery = await navigator.getBattery();
-         const update = () => setBatteryLevel(Math.round(battery.level * 100));
-         update();
-         battery.addEventListener('levelchange', update);
-         battery.addEventListener('chargingchange', update);
+         const batterij = await navigator.getBattery();
+         const werkBij = () => zetBatterijNiveau(Math.round(batterij.level * 100));
+         werkBij();
+         batterij.addEventListener('levelchange', werkBij);
+         batterij.addEventListener('chargingchange', werkBij);
          return;
       } catch (error) {
-         console.warn('Battery API unavailable:', error);
+         console.warn('Batterij-API niet beschikbaar:', error);
       }
    }
 
-   const storedLevel = Number(localStorage.getItem('punkyfis-battery'));
-   setBatteryLevel(Number.isFinite(storedLevel) ? storedLevel : 80);
+   const opgeslagenNiveau = Number(localStorage.getItem('punkyfis-battery'));
+   zetBatterijNiveau(Number.isFinite(opgeslagenNiveau) ? opgeslagenNiveau : 80);
 }
 
 
 
 // Event Listener
 document.addEventListener('DOMContentLoaded', () => {
-   updateDateTime();
-   setBatteryLevel(Number(localStorage.getItem('punkyfis-battery')) || 80);
-   setInterval(updateDateTime, 1000);
+   updateDatumTijd();
+   zetBatterijNiveau(Number(localStorage.getItem('punkyfis-battery')) || 80);
+   setInterval(updateDatumTijd, 1000);
 
-   bindBatteryStatus();
-   bindDigituinWeBring();
+   koppelBatterijStatus();
+   koppelDigituinWeBring();
 });
 
 
 
 
-// Webring //
-function bindDigituinWeBring() {
-   const link = document.querySelector('a.digituin');
+// Webring
+function koppelDigituinWeBring() {
+   const link = document.querySelector('#menu a.digituin');
    if (!link) return;
 
-   const target = document.querySelector('#webringTarget');
-   if (!target) return;
+   const doel = document.querySelector('#webringTarget');
+   if (!doel) return;
 
-   const updateLink = () => {
-      const randomLink = target.querySelector('a.random');
-      const firstLink = target.querySelector('a');
-      const chosen = randomLink || firstLink;
+   const werkBij = () => {
+      const willekeurigeLink = doel.querySelector('a.random');
+      const eersteLink = doel.querySelector('a');
+      const gekozen = willekeurigeLink || eersteLink;
 
-      if (chosen && chosen.href) {
-         link.href = chosen.href;
-         link.title = chosen.title || 'Digitaal tuintje';
+      if (gekozen && gekozen.href) {
+         link.href = gekozen.href;
+         link.title = gekozen.title || 'Digitaal tuintje';
       }
    };
 
    const observer = new MutationObserver(() => {
-      if (target.querySelector('a')) {
-         updateLink();
+      if (doel.querySelector('a')) {
+         werkBij();
          observer.disconnect();
       }
    });
 
-   observer.observe(target, { childList: true, subtree: true });
-   updateLink();
+   observer.observe(doel, { childList: true, subtree: true });
+   werkBij();
 }
 

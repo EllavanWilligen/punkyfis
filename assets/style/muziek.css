@@ -1,3 +1,20 @@
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+/* 
+body {
+    --pageBackground: rgb(255, 219, 238);
+}
+
+.dark-theme {
+    --pageBackground: rgb(56, 58, 89);
+}
+
+ */
+
+
+
 #topScherm {
     background-color: hotpink;
     position: absolute;
@@ -6,4 +23,61 @@
     left: 16.5%;
     width: 67%;
     height: 37.5%;
+}
+
+img {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -24%;
+    top: 7%;
+    animation: spin 3s linear infinite;
+}
+
+#album {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1em;
+
+    padding: 1em;
+    margin: 0;
+    width: 60%;
+    box-sizing: border-box;
+
+    list-style-type: none;
+    position: relative;
+    z-index: 2;
+}
+
+#album li {
+    min-width: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+
+    background-color: var(--liOverlay);
+    border: 1px solid var(--border);
+    border-radius: 2.5em;
+    box-shadow: 2px 3px 4px var(--shadow),
+    inset 1px 1px  var(--shadow);
+    text-align: center;
+}
+
+#album li:nth-of-type(1) {
+    background-color: aqua;
+}
+
+#album li:nth-of-type(2) {
+    background-color: coral;
+}
+
+#album li:nth-of-type(3) {
+    background-color: darkseagreen;
+}
+
+#album li:nth-of-type(4) {
+    background-color: hotpink;
 }

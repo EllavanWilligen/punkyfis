@@ -771,34 +771,42 @@
             </svg>
             <!-- Top scherm -->
             <div id="topScherm">
-                <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</p>
+                <ul id="TSBalk">
+                    <li>🛜Streetpass</li>
+                    <li>🩰7000</li>
+                    <li id="currentDate">da/tum</li>
+                    <li id="currentTime">ti:jd</li>
+                    <li class="battery" aria-label="Batterij">
+                        <span class="battery-shell" aria-hidden="true">
+                            <span class="battery-segment"></span>
+                            <span class="battery-segment"></span>
+                            <span class="battery-segment"></span>
+                        </span>
+                    </li>
+                </ul>
 
             </div>
 
             <!-- Bottom scherm-->
             <div id="bottomScherm">
-                <span id="bar">
+                                <span id="bar">
                     <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
                     <button>o[]</button> <!-- groot/klein-->
                     <button>✎</button> <!-- potlood -->
                     <button>:]</button> <!-- smiley -->
                     <button>☰</button> <!-- textwolk -->
-                    <button><a class="digiTuin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a> <!-- internet wereldbol -->
+                    <button>
+                        <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
+                    </button> <!-- internet wereldbol -->
                 </span>
-                <!-- <div> -->
-                    <ul id="menu">
-                        <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
-                         <li><a href="about.html">About</a></li>    <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
-                         <li><a href="spellen.html">Spellen</a></li>                        
-                         <li><a href="log.html">Log</a></li>  <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
-                         <li><a href="muziek.html">Muziek</a></li>
-                         <li><a href="recepten.html">Recepten</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                <!-- </div> -->
-            </div>
-        </div> 
-    </main>
+                <ul id="menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="spellen.html">Spellen</a></li>
+                    <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
+                    <li><a href="muziek.html">Muziek</a></li>
+                    <li><a href="recepten.html">Recepten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
 </body>
 
 </html>

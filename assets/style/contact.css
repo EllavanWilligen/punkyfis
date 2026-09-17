@@ -6,4 +6,83 @@
     left: 16.5%;
     width: 67%;
     height: 37.5%;
+    box-sizing: border-box;
+    padding: 1rem 1.25rem;
+    overflow: hidden;
 }
+
+.contact-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.contact-portrait {
+    flex: 0 0 10%;
+    max-width: 10%;
+    min-width: 0;
+    text-align: center;
+}
+
+.contact-portrait h1,
+.contact-portrait h2 {
+    margin: 0;
+}
+
+#miiHoofd {
+    display: block;
+    width: 200%;
+    height: auto;
+    max-width: 200%;
+    margin: 0 auto 0.75rem;
+}
+
+.Contact {
+    flex: 0 0 58%;
+    width: 58%;
+    max-width: 58%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.Contact label,
+.Contact input,
+.Contact select,
+.Contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Contact input,
+.Contact select,
+.Contact textarea {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.Contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.Contact input[type="submit"] {
+    width: auto;
+    align-self: flex-start;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+}
+
+

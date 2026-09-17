@@ -39,6 +39,18 @@
     font-style: normal;
 } */
 
+
+:root {
+  --step--2: clamp(0.4297rem, 1.0279rem + -0.6646cqi, 0.8784rem);
+  --step--1: clamp(0.6953rem, 1.0178rem + -0.3584cqi, 0.9372rem);
+  --step-0: clamp(1rem, 0.9583rem + 0.1852cqi, 1.125rem);
+  --step-1: clamp(1.067rem, 0.8159rem + 1.1159cqi, 1.8203rem);
+  --step-2: clamp(1.1385rem, 0.5363rem + 2.6766cqi, 2.9452rem);
+  --step-3: clamp(1.2148rem, 0.0313rem + 5.26cqi, 4.7653rem);
+  --step-4: clamp(1.2962rem, -0.8419rem + 9.5023cqi, 7.7102rem);
+  --step-5: clamp(1.383rem, -2.3144rem + 16.4328cqi, 12.4751rem);
+}
+
 /* light en dark mode */
 
 html {
@@ -48,22 +60,23 @@ html {
 
 
 body {
-    --pageBackground: rgb(255, 219, 238);
+    backdrop-filter: blur(1.4px);
     background: var(--pageBackground);
 
-    /* Licht theme */
+    /* Licht thema */    
+    --pageBackground: rgb(255, 219, 238);
     --liBackground: linear-gradient(145deg, #ffffff, #cdcdcd);
     /* --liOverlay: transparent; */
-    --BSBackground: rgb(169, 169, 169);
+    --BSBackground: rgb(196, 196, 196);
     --border: #6c706f;
     --shadow: rgb(53 63 65 / 35%);
     --bar: linear-gradient(#f8faf9, #dfe5e4);
     --liIcoon1: url(../fotos/MIIAbout3.png);
-    --liIcoon2: ;
-    --liIcoon3: ;
+    --liIcoon2: url(../fotos/ACWWW.png);
+    --liIcoon3: url(../fotos/logW.png); /* deze paars maken? */
     --liIcoon4: url("../fotos/muziekIcoon2.png");
-    --liIcoon5: ;
-    --liIcoon6: ;
+    --liIcoon5: url("../fotos/receptW.png");
+    --liIcoon6: url(../fotos/contactW.png);
 
     /* 3DS SVG */
     --cls-1: #d16993;
@@ -93,11 +106,11 @@ body {
     --shadow: rgb(52, 56, 56);
     --bar: linear-gradient(#353535, #323434);
     --liIcoon1: url(../fotos/MIIAboutDark.png);
-    --liIcoon2: ;
-    --liIcoon3: ;
+    --liIcoon2: url(../fotos/ACWWZ.png);
+    --liIcoon3: url(../fotos/logZ.png);
     --liIcoon4: url(../fotos/MuziekIcoonDark.png);
-    --liIcoon5: ;
-    --liIcoon6: ;
+    --liIcoon5: url("../fotos/receptZ.png");
+    --liIcoon6: url(../fotos/contactZ.png);
 
 
     /* 3DS SVG */
@@ -203,7 +216,7 @@ body {
     background-color: var(--BSBackground);
     position: absolute;
     z-index: 0;
-    top: 55.3%;
+    top: 55.2%;
     left: 22.8%;
     width: 54.5%;
     height: 38.7%;
@@ -267,7 +280,7 @@ body {
     padding: 20px;
 }
 
-ul {
+#bottomScherm ul {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
