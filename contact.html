@@ -779,16 +779,12 @@
                         <h1>Ella</h1>
                         <h2>Student Hogeschool <br> van Amsterdam</h2>
                     </div>
-
-                    <form class="Contact">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                        <label for="subject">Subject</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.."
-                            style="height:200px"></textarea>
-
-                        <input type="submit" value="Submit">
+                    <form id="contactForm" action="https://formsubmit.co/ajax/ella.van.willigen@hva.nl" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="name" required>
+                        <input type="text" name="bericht" required>
+                        <button id="submit" type="submit">Stuur</button>
+                        <p id="contactStatus" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>

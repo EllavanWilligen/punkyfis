@@ -2,8 +2,8 @@
 
 Link naar de site: url="https://punkyfis.nl"
 
-
 # Knowledge base
+
 ![image](log/TW15b.png)
 
 # Learning Log
@@ -34,6 +34,7 @@ Voor de opdracht moesten we fonts zoeken die bij Dolly Parton passen (naar onze 
 ### CSS: fonts met kleur en effecten
 
 #### Opdracht 1
+
 ```
 @font-face {
     font-family: "Ex";
@@ -67,7 +68,6 @@ main p::first-letter {
 ```
 
 #### Opdracht 2
-
 
 ```
 /*******************************/
@@ -139,8 +139,7 @@ li:nth-of-type(2) {
 
 ```
 
-#### Opdracht 3 + 4 
-
+#### Opdracht 3 + 4
 
 ![image]()
 
@@ -190,6 +189,7 @@ li:nth-of-type(1) {
 ```
 
 CSS - Myst met animatie
+
 ```
 li:nth-of-type(2) {
   display:grid;
@@ -216,6 +216,7 @@ li:nth-of-type(2) {
 ```
 
 CSS - CMYK met animatie
+
 ```
 li:nth-of-type(3) {
       display:grid;
@@ -246,10 +247,10 @@ li:nth-of-type(3) {
 	}
 }
 ```
+
 Dit was de moeilijkste, voor deze was ik in inspect gegaan om te kijken dus hij telt neit helemaal! Ik wist niet dat die schaduwen zo werkte, uit de opdracht kon ik niet opmaken dat het schaduwen waren. Al is deze code dus niet door mij bedacht heb ik het onderzocht hoe deze werkt en er veel van geleerd.
 
-
-Uitendelijk waren deze drie me gelukt met animatie (behalve de derde officieel, maar nu kan ik het). Om eerlijk te zijn wist ik niet waar ik moest beginnen, ik wist niet uit wat voor elementen het bestond. Wel heb ik veel nieuwe dingen geleerd, ik wist niet van nth_of_type() en dat je dingen zoals h2 daarin weer kan stoppen. 
+Uitendelijk waren deze drie me gelukt met animatie (behalve de derde officieel, maar nu kan ik het). Om eerlijk te zijn wist ik niet waar ik moest beginnen, ik wist niet uit wat voor elementen het bestond. Wel heb ik veel nieuwe dingen geleerd, ik wist niet van nth\_of\_type() en dat je dingen zoals h2 daarin weer kan stoppen.
 
 ## 03 sep - Thuiswerk
 
@@ -257,6 +258,7 @@ Vandaag heb ik meer pagina's toegevoegd, ze stonden al in de html maar niet in h
 Ik heb de navbar veranderd, het is voor nu een simpele niet opgemaakte band boven. Dit is om gewoon makkelijk tussen de verschillende pagina's te gaan. Later wil ik sowieso op de index een mooiere manier maken.
 
 CSS tijdelijke navbar:
+
 ```
 .navbar ul {
     list-style-type: none;
@@ -288,10 +290,10 @@ Ook heb ik aangepast hoe de CSS werkt. Ik heb één CSS waarin de algemene dinge
 ## 04 sep - Deep Dives                ^-^
 
 ### Praktische CSS
-Veel wat besproken wist ik al door mijn eerdere studie (1 jaar HBO-ICT) en jaar 1 blok 1. Desalniettemin heb ik veel geleerd van deze deep dive. 
 
+Veel wat besproken wist ik al door mijn eerdere studie (1 jaar HBO-ICT) en jaar 1 blok 1. Desalniettemin heb ik veel geleerd van deze deep dive.
 
-Het belangrijkste zijn variabelen, hier ben ik nooit eerder zo erg op in gegaan. We hebben ook een handige site gekregen om de variabelen makkelijk te maken, (https://utopia.fyi/type/calculator/?c=360,16,1.067,1440,18,1.414,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12). Hieronder staat mijn code en andere nieuwe dingen die ik heb geleerd (de onbelangrijke dingen staan niet in de snippet hieronder, dit is niet de hele CSS)
+Het belangrijkste zijn variabelen, hier ben ik nooit eerder zo erg op in gegaan. We hebben ook een handige site gekregen om de variabelen makkelijk te maken, (https://utopia.fyi/type/calculator/?c=360,16,1.067,1440,18,1.414,5,2,\&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l\&g=s,l,xl,12). Hieronder staat mijn code en andere nieuwe dingen die ik heb geleerd (de onbelangrijke dingen staan niet in de snippet hieronder, dit is niet de hele CSS)
 
 ```
 html {
@@ -337,8 +339,7 @@ li {
 }
 ```
 
-
-Nog een klein ding wat ik geleerd heb, ik wist niet dat de focus kleur aangepast konden worden! 
+Nog een klein ding wat ik geleerd heb, ik wist niet dat de focus kleur aangepast konden worden!
 
 ```
 input:focus,
@@ -352,6 +353,8 @@ button:focus {
 
 # SCHETSEN SCANNEN EN HIER DOEN!!
 
+# Sprint 1
+
 ## 07 sep - Sprintplanning            ^-^
 
 Blijkbaar moeten we elke Deep-Dive doen, dit wist ik niet. Deze maak ik later, nu ik dat weet hebben we oppeens zo veel werk!
@@ -363,21 +366,22 @@ alleen is dit erg duur. Ik hoop dat de laptop het volhoud tot ik een nieuwe heb.
    bezig bent.
 
 2. Leg uit wat een website 'webby' maakt en welke websites jou het meeste inspireren. <br>
-   Toegankelijk, 
+   Toegankelijk,
 
 3. Vertel waar jij mee aan de slag wilt gaan bij het maken van jouw eigen digital garden
    let op: dit zijn jouw eerste ideeën, dit kan en mag veranderen in de loop van het programma.<br>
 
-## 11 sep  - School en deep dive      ^-^
+## 11 sep - School en deep dive
 
 We moesten vandaag ons idee vertellen. Ik vertelde oven mijn idee om de site een 3DS te maken en hij vond het een goed idee en vertelde me dat ik moest gaan tekenen, dat had ik nog niet gedaan. In het begin werd verteld dat dit juist niet moest? Desalniettemin ben ik meteen gaan tekenen:
 ![image](log/idee.PNG)
 
-### Grid 101                           ^-^    
+### Grid 101                           ^-^
 
 Deze deepdive bestaat aan 3 opdrachten waarin je leert met grid werken.
 
 #### Opdracht 1
+
 ![image](log/DD11a.png)
 ![image](log/DD11b.png)
 ![image](log/DD11c.png)
@@ -628,6 +632,7 @@ Voor beide heb ik de volgende code om de delen van de SVG te kleuren:
 Het bleef heel lang niet werken, ik heb het aan meerdere mensen gevraagd en niemand snapte wat er mis ging. Uitendelijk bleek het dat mijn .js in de iCloud stond, terwijl de rest dat niet staat. Ik weet niet hoe dat is gebeurd maar het is nu opgelost en de light/dark mode toggle werkt. Het kijkt nu niet automatisch naar de systeeminstellingen, dus dat moet ik nog fixen.
 
 ### Opdracht 16
+
 1. Maak opnieuw duo's
 2. Bekijk elkaars website door de browser groter en kleiner te maken
 3. Wanneer is er een verandering van vormgeving/layout nodig? Waarom? Wat is er 'lelijk' of kan beter?
@@ -636,33 +641,35 @@ Het bleef heel lang niet werken, ik heb het aan meerdere mensen gevraagd en niem
 Ik was een duo met Feyza, ik heb haar feedback gegeven op haar site
 Feedback van Feyza: Layout is goed, misschien de letters iets groter maken voor als het scherm kleiner word, nu kan het moeilijk leesbaar zijn.
 
-Ik moet kijken wat ik moet doen, nu staat er alleen één test zin, maar ik wil dat je niet scrollt op de site, het moet lijken op een DS. Hier heb ik rekening mee gehouden met mijn plan, alles is redelijk groot uitgepland. 
+Ik moet kijken wat ik moet doen, nu staat er alleen één test zin, maar ik wil dat je niet scrollt op de site, het moet lijken op een DS. Hier heb ik rekening mee gehouden met mijn plan, alles is redelijk groot uitgepland.
 
 ### Opdracht 17
+
 1. Maak opnieuw duo’s
 2. Zoek samen naar minstens drie interessante voorbeelden van responsive design (tip: kijk eens op Awwwards.com).
 3. Laat de voorbeelden aan een ander duo zien en bespreek wat je er interessant aan vindt.
-4. Kies gezamenlijk 1 voorbeeld uit dat jullie aan de hele klas willen laten zien 
+4. Kies gezamenlijk 1 voorbeeld uit dat jullie aan de hele klas willen laten zien
 
 Niemand in de les was hier nog aan toe, daarom doe ik het in mijn eentje.
 
 #### 3 interessante websites
+
 1. https://crency.agency/ - Website makers
 2. https://aptransit.co/ - Metro netwerk in New York (staat)
 3. https://www.crechetank.com/ - Creative Tech/Media studio
 
 We moesten niet bespreken of iets laten zien, maar als had ik de 3e site laten zien! Creche is zo'n leuke site!! Als ik beter kon programmeren was dit hoe ik mijn site zou maken (dat is niet waar ik had nogsteeds een 3DS gemaakt maar dan mooier). Ik vond het een hele leuke site, heel schattig en visueel aantrekkelijk.
 
-
 ### Check out (met Joëlle)
 
 1. Leg uit wanneer een website 'lelijk' wordt en geef voorbeelden wat je kan doen om deze 'lelijke' onderdelen te fixen?<br>
+
 * Plaatjes te groot - in CSS de img een ander formaat geven
-* Geen CSS - CSS bestand toevoegen 
-* Te weinig whitespace - gaps en breaks toevoegen (padding en margin ook maar dat mag niet in dit project) 
-   
+* Geen CSS - CSS bestand toevoegen
+* Te weinig whitespace - gaps en breaks toevoegen (padding en margin ook maar dat mag niet in dit project)
 
 3. Vertel welke volgende stap je neemt om je website responsive te maken.<br>
+
 * Grid
 * Geen px gebruiken maar dingen zoals em en %
 * @media gebruiken
@@ -701,6 +708,7 @@ Ook ben ik begonnen met de indeling van het onderste scherm, ik heb in totaal 6 
     </ul>
 </div>
 ```
+
 Nog maar 1 button werkt, dat is de light/dark toggle, van "internet wereldbol" wil ik de random link maken die onderaan de site staat, maar ik kan de code hiervoor niet vinden.
 
 Om te testen of alles werkte heb ik eerst elke li een andere kleur gegeven:
@@ -708,6 +716,7 @@ Om te testen of alles werkte heb ik eerst elke li een andere kleur gegeven:
 Dit werkte allemaal prima dus ik kon verder met de individuele opmaak van elke li
 
 De li van ul id="menu" worden vormgegeven met de juiste CSS selectoren. Hierdoor kan ik ze later allemaal individueel vormgeven, al hebben ze nu tijdelijk hetzelfde uiterlijk allemaal. Als later blijkt dat ik de achtergrond wel overal dezelfde kleur doe maak ik dit netter en zet ik de line gewoon in #menu li.
+
 ```
 #menu li {
     min-width: 0;
@@ -749,33 +758,33 @@ De li van ul id="menu" worden vormgegeven met de juiste CSS selectoren. Hierdoor
 }
 ```
 
-Dit ziet er als volgt uit:  
+Dit ziet er als volgt uit:\
 ![image](log/TW15a.png)
 
 Het volgende wat ik moest doen is een foto toevoegen, uiteindelijk moeten ze allemaal een plaatje hebben. Voor het plaatje van 'About' wil ik de MII die ik heb gemaakt. Hiervoor gebruik ik de volgende code
+
 ```
 #menu li:nth-of-type(1) {
     background-image: url(../fotos/MIIAbout.png);
     background-size: cover;
 }
 ```
+
 Ik heb de text van de knoppen gehaald, ook heb ik de achtergrond tijdelijk grijs gemaakt. Later wil ik de achtergrond misschien roze of oranje maken maar voor nu hou ik het even neutraal. Nu ziet het er zo uit:
 ![image](log/TW15c.png)
 
 Tot slot heb ik ervoor gezorgd dat de home knop op je DS je naar home stuurt, uiteindelijk wil ik dat de site bestuurbaar is met de DS en alle knoppen van de DS ook echt werken. Maar voor nu is dat heel lastig, veel lastiger dan ik dacht dat het ging zijn.
 
-
 Vandaag heb ik ook mijn README aangevuld, ik ben nog niet helemaal klaar want die foto's zijn zo veel werk om erin te zetten! Maar verder ben ik klaar!
-
 
 ## 16 sep - Woensdag les
 
-
 Onderaan had ik de webring en de random link staan. Ik kon deze nergens vinden in de code. In de les heb ik hulp gevraag van de studentmentor (?), hij kwam erachter dat de lege footer de reden was dat de webring er stond. Hij begreep ook niet hoe, we hebben de link uit inspect gehaald en die in mijn site gezet, maar deze leidde alleen naar 1 dezelfde site. Daarom heb ik nu tijdelijk de https://digitaaltuintje.nl erin gezet. Zo is het niet random maar kan je wel naar alle andere tuintjes. Om de "Random" link er weer in te zetten moet ik alleen een footer in de HTMl zetten. Later wil ik wel de "Random" terug maar op de 🌐 in de bar (waar nu https://digitaaltuintje.nl staat)
 
-Verder heb ik de CSS gefixt, #topScherm staat nu in de indivuele CSS files in plaats van in normal.CSS waar alle code staat die op elke site hetzelfde is. 
+Verder heb ik de CSS gefixt, #topScherm staat nu in de indivuele CSS files in plaats van in normal.CSS waar alle code staat die op elke site hetzelfde is.
 
 ### Check out
+
 1. Noem 3 Gestaltprincipes op en laat de ander uitleggen wat ze betekenen en doen.<br>
    Nabijheid - Dingen die bij elkaar staan worden vaak gezien als één groep
    Sluiting - Mensen vullen automatisch een vorm aan, dus als er alleen delen van staan zien menssen nogsteeds de hele vorm erin
@@ -785,9 +794,7 @@ Verder heb ik de CSS gefixt, #topScherm staat nu in de indivuele CSS files in pl
 3. Welk principe neem je mee in een laatste iteratie van je ontwerp? <br>
    Allemaal? Alle principes zijn belangrijk en moeten rekening gehouden mee worden, ik denk dat ik de vraag niet helemaal begrijp.
 
-
-Thuis ben ik verder gaan werken aan de Javascript. 
-
+Thuis ben ik verder gaan werken aan de Javascript.
 
 Batterij:
 https://dev.to/docy/how-to-check-battery-status-with-javascript-full-guide-52mb
@@ -796,8 +803,166 @@ https://dev.to/docy/how-to-check-battery-status-with-javascript-full-guide-52mb
 https://archive.org/download/Fontworks/Fonts/
 
 ACNH:
-https://www.reddit.com/r/AnimalCrossing/comments/gmz7u2/ever_wondered_what_font_they_use_in_new_horizons/
+https://www.reddit.com/r/AnimalCrossing/comments/gmz7u2/ever\_wondered\_what\_font\_they\_use\_in\_new\_horizons/
 
 ## 17 sep - Thuiswerk
 
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow\_css\_contact\_form
+
+## 18 sep - Retrospective
+
+Helaas had ik een afspraak in de ochtend waardoor ik niet het invullen van de retrospective was, daarom heb ik deze op mijn tablet gemaakt in de trein.
+
+![image](log/retro1.1.jpg)
+![image](log/retro1.2.jpg)
+![image](log/retro1.3.jpg)
+![image](log/retro1.4.jpg)
+
+Het gesprek ging goed, ze waren erg te spreken en hebben goede tips en opmerkingen gegeven:
+
+* bottomScherm moet in de header en topScherm is de main, ik heb het nu als div's in de body.
+* Layout moet veranderen voor mobiel op beide schermen (scrollbaar maken op bovenste scherm op mobiel, kan met knoppen?)
+* Annotaties in schetsen zetten
+* GoodNotes en Concept voor schetsen op iPad
+
+### Check out
+
+#### Vragen en termen
+
+* Waarom geven de docenten deze opdracht? <br>
+  Omdat we deze dingen moeten leren, we moeten ook binnenkort een route kiezen dus daar moeten we ook op voorbereid zijn. Het is ook een hele vrije opdracht dus het geeft ook de kans om het persoonlijk en uniek te maken. Ik denk dat een grote reden van de opdracht is om te zien wat je doet met vrijheid aan keuze (met regels), in andere blokken word altijd gezegd wat je moet maken wat creativiteit kan tegenhouden.
+* Welke technieken gebruik ik? <br>
+  HTML, CSS en JavaScript. Vooral HTML en CSS zijn belangrijk (en voor mij nieuwer). Bij mijn vorige opleiding (1 jaar HBO-ICT) heb ik al veel met TypeScript gewerkt dus JavaScript gaat me redelijk goed af. CSS is helemaal nieuw voor me, natuurlijk weet ik de absolute basics maar meer dan dat mochten we niet doen, dat werd door de opleiding gezien als niet belangrijk.
+* Wat zijn de randvoorwaarden?
+  De website moet optijd en werkend op GitHub staan<br>
+  Je bent aanwezig bij de voortgangsgesprekken <br>
+  Je Learning log is bijgehouden en duidelijk <br>
+  Je hebt je code zelf geschreven en de ideeën zelf bedacht <br>
+  Je werk is netjes, wat betreft structuur en taal <br>
+* Waar gebruik je HTML/CSS voor?
+  HTML zijn de elementen, in HTML zeg je wat iets is, waar een link in zit en waar die je naartoe stuurt. In HTML link je ook de CSS en de JS (in het geval van dit project). CSS is hoe de elementen eruit zien, waar ze staan op de site, wat er gebeurd als je met je muis of tab op een element ziet.
+* Wat kan er allemaal met CSS? <br>
+  Ligt aan hoe goed je bent in CSS, je kan alles uit je andere bestanden (vooral HTML) mooi maken, laten bewegen. Voor dit blok kan je met CSS vooral opmaak doen, light en dark mode maken, werken met display: grid;.
+* Verbeelden en conceptualiseren<br>
+  Ik heb schetsen gemaakt van hoe ik ongeveer wil dat mijn site eruit gaat zien (achteraf op desktop, ik bedoelde het ook voor mobiel maar in de retrospective werd gezegd dat het anders moet op mobiel). <br>
+  [Schets](#11-sep---School-en-deep-dive) <br>
+  Dit is mijn schets, het is gebasseerd op de 3DS omdat dit mijn favoriete console is. Ik heb een paar kleine aanpassingen gemaakt omdat de huidige balk niet handig is voor de website en de eisen die eraan gesteld zijn door school. Misschien wil ik dit later veranderen maar voor nu is de verouderde balk beter passend.
+
+#### Vragen en termen
+
+* Lukt het om verschillende ideeën te bedenken? <br>
+  Ja, ik had voordat ik definitief voor de 3DS ging meer ideeën, ik had ook als idee een flipphone, een pikmin thema, lieveheerstbeesjes en McBling. Ik ben meestal heel goed in ideeën bedenken maar vind het moeilijk om ze precies zo te maken als ik in mn hoofd heb.
+* Lukt het om je ideeën te schetsen? <br>
+  Ja, al ben ik heel slecht in tekenen. Ik kan de ideeën tekenen op een manier dat ik begrijp wat ik ermee bedoel, maar ik ben bang dat andere mensen moeite zullen hebben als ze alleen de schetsen zijn omdat ze erg abstract zijn. In de tekeningen ziet niet veel detail terwijl ik dat wel in mijn hoofd heb. Ik ben bezig met beter leren tekenen zodat ik mijn ideeën ook aan anderen kan overdragen
+* Wat doet deze CSS-property? <br>
+  Ik snap niet helemaal wat mijn antwoord hierop moet zijn, het is meer een statement dan een vraag. Maar ik probeer wel veel variablen, al heb ik niet echt de tijd om ermee te spelen door de druk die er staat om in zo'n korte tijd zo'n uitgebreide site neer te zetten. Wel zoek ik veel op als iets specifieks niet lukt en kijk ik op StackOverflow, hier hebben veel mensen vaak creative oplossingen om leuke dingen mee te maken. Ook als ik niet zeker weet wat ik wil ga ik kijken op W3-schools naar welke CSS-properties ik niet herken en leuk lijken om toe te voegen. Ik vind dit een hele handige manier van nieuwe dingen toevoegen omdar W3-schools erbij heeft staan hoe het werkt en ik tijdens het toevoegen kan kijken waar ik het effect voor kan gebruiken.
+* Welke content, en welke HTML heb ik nodig? <br>
+  Dit gaat me redelijk goed af omdat ik 3/4 jaar HBO-ICT heb gedaan, dat jaar was vooral HTML, TypeScript en databases linken. Hierdoor weet ik redelijk veel over deze dingen. Het enige wat ik nog moeilijk vind is werken zonder div en id, wij moesten juist veel daarmee werken. Ook vind ik het moeilijk wat ik moet doen bij een uitgebreide CSS, mijn navbar is bijvoorbeeld onder mijn main, ik wist niet dat deze dan alsnog in de header moest (al is het het onderste scherm) en het bovenste scherm de main is (al staat de header meestal boven de main).
+* Hoe kan ik dit soort content vormgeven? <br>
+  Met de CSS. Met grid, background-color, SVG en img, color, variabelen, z-index, position, etc. Er zijn heel veel dingen in CSS waarmee je kan vormgeven
+* Wat als ik hier nu eens 1000 invul? <br>
+  Waar?
+
+#### Vragen en termen
+
+* Begrijpen bezoekers de site? <br>
+  Dat weet ik niet helemaal zeker, ik heb geen uitleg over hoe de site werkt. Ik denk dat de site redelijk te begrijpen is, alleen op het moment is de home knop nog vaag. Later wil ik dat de site helemaal bestuurbaar is met de knoppen van de ds en dan gaat de home knop ook beter te begrijpen zijn. Als je veel op een DS speelt/hebt gespeeld denk ik wel dat je de site gaat begrijpen. Als je dat niet doet denk ik dat je verder ook geen belang gaat hebben bij de site, al is ie natuurlijk heel mooi en wil je altijd kijken en ga je direct je DS reviven :p
+* Wat vindt de opdrachtgever er van? <br>
+  Goed hoop ik, de opdrachtgever (school) wou een persoonlijke, creative website. Al weet ik niet hoe creatief ik de site kan noemen omdat het sterk gebasseerd is op een al bestaand product. Desalniettemin ben ik er gerust op dat de opdrahtgever het goed vind.
+* Werkt dit wel? <br>
+  Ja, het werkt, maar waarschijnlijk niet tot het extent dat ik zou willen. Ik wil de hele site meer in de stijl maken van een 3DS, ook de graphics, maar dat is waarschijnlijk voor nu te moeilijk. De DS graphics zijn erg primitief vergeleken moderne apparaten zoals mijn laptop en mobiel. Ik hou heel erg van die oudere sfeer (ik voel me heel oud terwijl ik dit typ) en wil dat deel heel erg overbrengen, ik ben alleen bang dat ik dat echt moet maken, ik moet het tekenen en filteren zodat het eruit ziet alsof je het bekijkt op een DS, dat gaat heel moeilijk worden. Ook wil ik dat het 3D schijfje aan de zijkant het scherm echt 3D eruit laat zien, ook dat is nu nog buiten mijn kunsten.
+* Oooooh, kan dit óók?! <br>
+  Ik snap de vraag weer niet, dit is ook een statement? Ik had dit veel bij het retrospective gesprek, over de structuur van de HTML, dat je daadwerkelijk 3D kan maken in websites en dat je een SVG in de CSS kan zetten ipv elke HTML.
+* Evalueren <br>
+  Ik ben daar constant mee bezig, ik ben bij schoolopdrachten vaak (terecht) bang dat ik de opdracht een beetje kwijt ben en vooral iets aan het maken ben wat ik gewoon leuk vind. Ik ben iets te bewust soms, hierdoor ben ik nooit tevreden met mijn werk. Ik zie alle fouten, alles wat niet 100% de opdracht was, alles wat ik anders moest doen, of anderen het begrijpen, etc. Het nadeel is alleen dat ik fout denk, mensen begrijpen vaak de dingen waar ik me zorgen over maak, maar bij de dingen waar ik niet over nadacht omdat ik dacht dat het goed was hebben ze problemen met het begrijpen. Zo ben ik heel erg aan het stressen voor dingen die niet uit blijken te maak, maar ik een enorme omweg of iets compleet anders terwijl ik eigenslijk op de basics moet focussen (werkende batterij terwijl het niet responsive is).
+
+#### Reflecteren met the riddle:
+
+Een goede manier om bewuster te reflecteren is door je telkens deze vier vragen te stellen: (1) wat wilde ik weten? (2) wat deed ik om er achter te komen? (3) wat was het resultaat? (4) wat weet ik nu (niet)?
+
+* Wat wil(de) ik weten/bereiken? <br>
+  Een werkende 3DS met mijn favoriete 3DS spellen en muziek, er zijn in totaal 6/7 pagina's (ligt aan of ik de log een pagina maak of dat ik het naar mijn github stuur, ik zag dat ik github kan downloaden op mijn DS dus ik zou dat na kunnen bouwen als ik tijd overheb) met een index, een pagina voor de spellen, een pagina voor de muziek, een pagina met mijn favoriete recepten (cooking mama stijl) en een contact pagina.
+* Wat heb ik gedaan? <br>
+  Vooral heel veel code getypt, ik zou de volgende sprint nog wat kunnen focussen op meer schetsen, omdat ik het zo moeilijk vind om mijn ideeën op papier te zetten helpt schetsen niet echt voor me, ik heb alles in mijn hoofd. Maar als ik het niet oefen word ik nooit goed in schetsen.
+* Wat was het resultaat? <br>
+    Een 3DS met 2 schermen, het bovenste scherm laat de informatie zien terwijl het onderste scherm de verschillende pagina's laat zien. 4 spelletjes, 4 albums (beide wil ik er meer van maar ik weet nog niet hoe) en een draaiende CD, een lege recepten pagina, een contact form die geen database heeft of mail waar het naartoe gestuurd word.
+* Wat weet je nu (niet)? <br>
+    Ik heb nu een begin van de site en een beetje de indeling, sommige dingen werken, anderen miet. Ik heb het nog niet responsive kunnen krijgen en ik mis nog veel plaatjes (bij spellen en muziek vooral). Het receptendeel ben ik nog niet aan begonnen, de contactpagina is nog niet mooi of funcitioneel. De home knop op de DS stuurt je naar de index pagina. De datum en tijd kloppen met de huidige datum en tijd en de batterij laat het huidige batterijlevel zien van het apparaat waarop je de site bekijkt. De batterij laat opladen nog niet zien en de dag van de week staat er nog niet.
+* Wat vond je (niet) leuk? <br>
+    Het responsive maken, ik ben hier heel lang mee bezig geweest en heb alleen de navbar responsive gekregen en de about-pagina. Beide bleken alleen niet goed te zijn in het gesprek. De andere pagina's waren me helemaal niet gelukt. Dit was het minst leuke omdat het steeds iets nieuws proberen was en hoop te hebben dat dit werkte, om vervolgens de site te checken en te zien dat het nogsteeds niet gelukt was.
+* Voldoet het nog aan de eisen? <br>
+    Deels, het voldoet aan de eisen maar ik heb wel div's gebruikt omdat ik dacht dat deze nodig waren, dat bleken ze niet dus dat moet ik aanpassen. Ook heb ik id's omdat ik anders niet weet hoe ik specifieke dingen aan moet roepen. Verder voldoet het zeker aan de eisen, ik heb een light en dark mode, ik heb met grid gewerkt, ik heb met variabelen gewerkt, ik heb alleen HTML, CSS en JavaScript gebruikt in de site en de site is persoonlijk en uniek.
+
+#### HTML validatie
+
+* Is de HTML die je hebt geschreven nog wel valide? Check het regelmatig, hiermee voorkom je onverklaarbare fouten. En klopt de HTML wel? Gebruik je de juiste elementen op de juiste plek? <br>
+    Ik heb zware (bijna) dagelijkse migraines dus ik gebruik vaak dingen zoals screenreaders, de site is niet optimaal maar het is bruikbaar, ik wil hier nog veel aan doen om het te optimaliseren, dit vind ik namelijk erg belangrijk.
+* Check regelmatig of je website nog wel goed te gebruiken is met het toetsenbord. En of hij nog te begrijpen is met een screenreader. Zitten er alt-teksten op de afbeeldingen? Is het contrast overal hoog genoeg? <br>
+    Ja, sowieso gebruik ik vaak een screenreader om dingen te testen als ik migraine heb, ik heb nog geen alt-tekst omdat ik nog niet veel plaatjes heb, later wil ik wel dat er een verborgen element zit die je alleen met een screenreader echt merkt die het uiterlijk van elke pagina verteld. 
+    Contrast heb ik nog niet heel veel mee gewerkt, op een paar dingen (zoals de optie bar in het onderste scherm) hebben weinig contrast maar dat is een makkelijke fix, verder denk ik dat er redelijk goed contrast is.
+* Is mijn website nog wel adaptief? <br>
+    Ik heb een uitgebreide light en dark mode op alle pagina's, er is nog geen prefers-reduced-motion instelling maar tot zo ver denk ik dat alleen de draaiende CD een probleem is en dat is ook makkelijk te fixen als ik weet hoe. Het werkt voor nu alleen nog op laptop scherm maar daar moet ik nog aan werken, de DS is een heel moeilijk idee om responsive te maken
+* Voldoet mijn website nog wel aan de wet? <br>
+    Ik ken de wet niet uit mijn hoofd en het is te lang om nu helemaal te checken, al helemaal omdat ik heel veel nog moet maken. Ik denk dat ik voor nu nog niet aan de wet voldoe, al doe ik veel aan toegankelijk, zijn de foto's van mij of free use net als de lettertypes, etc. De wet is erg lang en heeft waarschijnlijk veel specifieke dingen.
+* Zie ik mezelf nog wel terug in wat ik doe?
+    Absoluut, de site is heel ik. Heel rommelig maar wel vrolijk, over een 3DS. Ik denk dat veel mensen om me heen als ze aan mij denken ook aan mijn roze 3DS denken (en andersom), ik neem dat ding overal mee naartoe, ik speel bijna altijd spelletjes op mijn DS als ik ergens ben. De site gaat verder ook over mijn favoriete dingen, mijn favoriete spelletjes op de 3DS, mijn favoriete muziek en mijn favoriete recepten. Misschien is het iets te veel mezelf.
+
+
+# Sprint 2
+
+## 19 & 20 september - Thuiswerk
+
+
+Uit het gesprek vrijdag was ik een belangrijk detail vergeten, het contact formulier stu
+
+
+```
+
+<form action="https://formsubmit.co/your@email.com" method="POST">
+     <input type="text" name="name" required>
+     <input type="email" name="email" required>
+     <button type="submit">Send</button>
+</form>
+```
+
+```
+<form id="contactForm" action="https://formsubmit.co/ajax/ella.van.willigen@hva.nl" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" required>
+    <input type="text" name="bericht" required>
+    <button id="submit" type="submit">Stuur</button>
+    <p id="contactStatus" role="status" aria-live="polite"></p>
+</form>    
+```
+```
+function koppelContactformulier() {
+   const formulier = document.querySelector('#contactForm');
+   if (!formulier) return;
+
+   formulier.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const knop = formulier.querySelector('button[type="submit"]');
+      const status = formulier.querySelector('#contactStatus');
+      knop.disabled = true;
+      status.textContent = 'Versturen...';
+
+      try {
+         const antwoord = await fetch(formulier.action, {
+            method: 'POST',
+            body: new FormData(formulier),
+            headers: { Accept: 'application/json' }
+         });
+
+         if (!antwoord.ok) throw new Error('Versturen mislukt');
+
+         formulier.reset();
+         status.textContent = 'Bericht verstuurd.';
+      } catch (error) {
+         status.textContent = 'Versturen mislukt. Probeer het opnieuw.';
+      } finally {
+         knop.disabled = false;
+      }
+   });
+}
+```

@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    koppelBatterijStatus();
    koppelDigituinWeBring();
+   koppelContactformulier();
 });
 
 
@@ -127,3 +128,33 @@ function koppelDigituinWeBring() {
    werkBij();
 }
 
+function koppelContactformulier() {
+   const formulier = document.querySelector('#contactForm');
+   if (!formulier) return;
+
+   formulier.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const knop = formulier.querySelector('button[type="submit"]');
+      const status = formulier.querySelector('#contactStatus');
+      knop.disabled = true;
+      status.textContent = 'Versturen...';
+
+      try {
+         const antwoord = await fetch(formulier.action, {
+            method: 'POST',
+            body: new FormData(formulier),
+            headers: { Accept: 'application/json' }
+         });
+
+         if (!antwoord.ok) throw new Error('Versturen mislukt');
+
+         formulier.reset();
+         status.textContent = 'Bericht verstuurd.';
+      } catch (error) {
+         status.textContent = 'Versturen mislukt. Probeer het opnieuw.';
+      } finally {
+         knop.disabled = false;
+      }
+   });
+}
