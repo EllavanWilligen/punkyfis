@@ -313,7 +313,6 @@ body {
     place-items: center;
     padding: 0;
     background: var(--liBackground);
-    /* background-color: var(--liOverlay); */
     border: 1px solid var(--border);
     border-radius: 2.5em;
     box-shadow: 2px 3px 4px var(--shadow), inset 1px 1px var(--shadow);
@@ -356,4 +355,9 @@ body {
 
 .home{
     z-index: 3;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }

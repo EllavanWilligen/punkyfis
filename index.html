@@ -14,6 +14,7 @@
     <link rel="icon" type="image" href="../assets/fotos/laly.gif"> <!-- Het icoontje van de site (Favicon) -->
     <!-- Importeer het webring component, voeg jouw eigen domein toe in data-page -->
     <script data-page="https://punkyfis.nl" src="https://digitaaltuintje.nl/webring.js" defer></script>
+
 </head>
 
 
@@ -818,8 +819,28 @@
             </div>
         </div>
     </main>
+    
+    <footer>
+      <nav>
+        <button commandfor="cookieModal" command="show-modal">
+          <span>Allow cookies?</span>
+        </button>
+      </nav>
+    </footer>
 
-    <footer id="webringTarget" aria-label="Digitaal Tuintje webring" hidden></footer>
+    <dialog id="cookieModal">
+      <form method="dialog">
+        <p>
+          We use cookies to personalise content and ads, to provide social media
+          features and to analyse our traffic. We also share information about
+          your use of our site with our social media, advertising and analytics
+          partners who may combine it with other information that you’ve
+          provided to them or that they’ve collected from your use of their
+          services.
+        </p>
+        <button onclick="setCookie()">Allow</button>
+        <button onclick="unsetCookie()">Deny</button>
+      </form>
+    </dialog>
 </body>
-
 </html>

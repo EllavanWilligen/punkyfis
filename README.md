@@ -8,6 +8,8 @@ Link naar de site: url="https://punkyfis.nl"
 
 # Learning Log
 
+# Sprint 0
+
 ## 31 aug - Kickoff
 
 Een fork van de model repository gemaakt en gepubliceerd via mijn eigen Github omgeving.
@@ -833,13 +835,13 @@ Het gesprek ging goed, ze waren erg te spreken en hebben goede tips en opmerking
   Omdat we deze dingen moeten leren, we moeten ook binnenkort een route kiezen dus daar moeten we ook op voorbereid zijn. Het is ook een hele vrije opdracht dus het geeft ook de kans om het persoonlijk en uniek te maken. Ik denk dat een grote reden van de opdracht is om te zien wat je doet met vrijheid aan keuze (met regels), in andere blokken word altijd gezegd wat je moet maken wat creativiteit kan tegenhouden.
 * Welke technieken gebruik ik? <br>
   HTML, CSS en JavaScript. Vooral HTML en CSS zijn belangrijk (en voor mij nieuwer). Bij mijn vorige opleiding (1 jaar HBO-ICT) heb ik al veel met TypeScript gewerkt dus JavaScript gaat me redelijk goed af. CSS is helemaal nieuw voor me, natuurlijk weet ik de absolute basics maar meer dan dat mochten we niet doen, dat werd door de opleiding gezien als niet belangrijk.
-* Wat zijn de randvoorwaarden?
+* Wat zijn de randvoorwaarden? <br>
   De website moet optijd en werkend op GitHub staan<br>
   Je bent aanwezig bij de voortgangsgesprekken <br>
   Je Learning log is bijgehouden en duidelijk <br>
   Je hebt je code zelf geschreven en de ideeën zelf bedacht <br>
   Je werk is netjes, wat betreft structuur en taal <br>
-* Waar gebruik je HTML/CSS voor?
+* Waar gebruik je HTML/CSS voor?<br>
   HTML zijn de elementen, in HTML zeg je wat iets is, waar een link in zit en waar die je naartoe stuurt. In HTML link je ook de CSS en de JS (in het geval van dit project). CSS is hoe de elementen eruit zien, waar ze staan op de site, wat er gebeurd als je met je muis of tab op een element ziet.
 * Wat kan er allemaal met CSS? <br>
   Ligt aan hoe goed je bent in CSS, je kan alles uit je andere bestanden (vooral HTML) mooi maken, laten bewegen. Voor dit blok kan je met CSS vooral opmaak doen, light en dark mode maken, werken met display: grid;.
@@ -913,27 +915,30 @@ Een goede manier om bewuster te reflecteren is door je telkens deze vier vragen 
 ## 19 & 20 september - Thuiswerk
 
 
-Uit het gesprek vrijdag was ik een belangrijk detail vergeten, het contact formulier stu
+Uit het gesprek vrijdag was ik een belangrijk detail vergeten, het contact formulier stuurt niks door naar mijn mail. Bij ICT kregen we een PhPmyAdmin database waarin we alles moesten maken, het probleem is dat die gelinkt moet worden, ik kan dat niet. Hierdoor had ik dit een beetje opgegeven. Maar natuurlijk is het nogsteeds mogelijk, alleen dan op een andere manier.
 
+Na een beetje onderzoek zag ik dat je ook mailto: kan gebruiken, alleen opende dat de mail app en dat is niet wat ik wil. Daarom ging ik verder zoeken en vond ik FormSubmit, hierdoor hoef je niet de site te verlaten om een bericht te sturen naar de mail.
+Op de site gaven ze me de volgende code om mee te beginnen:
 
 ```
-
 <form action="https://formsubmit.co/your@email.com" method="POST">
      <input type="text" name="name" required>
      <input type="email" name="email" required>
      <button type="submit">Send</button>
 </form>
 ```
-
+Ik zette dit in de site en dat werkte, er waren alleen een paar problemen, ten eerst wil ik geen naam en email, ik wil alleen een naam en een bericht. Ten tweede kreeg ik een captcha, dat wil ik niet. Tot slot, het grootste probleem, hij stuurt je naar een pagina van FormSubmit. Ik wil dat niet ik wil dat de gebruiker gewoon op punkyfis.nl blijft. Hiervoor heb ik de volgende code geschreven in HTML en JavaScript. <br><br>
+HTML:
 ```
 <form id="contactForm" action="https://formsubmit.co/ajax/ella.van.willigen@hva.nl" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="name" required>
     <input type="text" name="bericht" required>
     <button id="submit" type="submit">Stuur</button>
-    <p id="contactStatus" role="status" aria-live="polite"></p>
+    <p id="contactStatus" role="status"></p>
 </form>    
 ```
+JavaScript:
 ```
 function koppelContactformulier() {
    const formulier = document.querySelector('#contactForm');
@@ -966,3 +971,76 @@ function koppelContactformulier() {
    });
 }
 ```
+
+Dit werkt op mijn LocalHost, maar nadat ik het had gepusht naar punkyfis.nl kreeg ik alsnog een scherm erna, ik werd geleid naar "https://formsubmit.co/ajax/ella.van.willigen@hva.nl" waarop stond "{"success":"true","message":"The form was submitted successfully."}". Ik snap niet hoe het kan dat dat niet word laten zien in de LocalHost maar wel op de gepushte site, het is precies hetzelfde. Oppeens duurde het op zowel LocalHost als op punkyfis.nl heel lang voordat een bericht verstuurd was. Voor nu hou ik het hierbij, ik heb een mailfunctie. Er is nog geen opmaak en veel andere dingen van de site kloppen nog niet helemaal, dus daar ga ik voor nu mijn aandacht aan geven omdat ik daarop beoordeeld word.
+
+## 21 sep - Kick-off sprint 2
+
+Giel kwam met een goed idee, misschien kan ik voor de mobiele versie een game boy maken. Die zijn wat meer telefoon formaat en zijn ook heel leuk, ik heb een game boy advance color (paars doorschijnend). Ik moet nog heel even nadenken omdat ik dan alles weer om moet gooien, ook qua kleur en thema, de game boy software zag er heel anders uit. Ik vind het een heel leuk idee maar ik ben bang dat het voor nu te hoog gegrepen is, misschien voor later.
+
+Vandaag ben ik bezig gegaan aan de cookiemelding. Mijn plan is om deze eruit te laten zien als een kinderslot op de 3DS. 
+Ik begon met de nieuwe Model te downloaden, ik ga niet overstappen naar de nieuwe omdat ik deze al helemaal naar wens heb ingesteld, maar ik wou wel de voorbeeld cookiemelding. ik heb de melding voor nu op dezelfde plek gezet als bij het voorbeeld. De melding werkt maar ik heb een raar probleem, als ik op "Allow" druk bij de cookiemelding komt er een "Digitaal Tuintje Webring" (zie foto hieronder). Ik heb geen idee waardoor dit komt? Ik heb webring.js gecloned om te kijken of het komt door iets in die code?
+![image](log/KO21A.png)
+Dit is niet alleen op mijn eigen site maar ook op de site die ik net van de nieuwe model heb gedownload, daardoor denk ik dat het toch iets is in webring.js, ik ben alleen niet goed genoeg in JS om erachter te komen, daarom ga ik het na de les vragen.
+
+Belangrijk uit de les:
+* grid-template-area
+* grid-area
+* ". main ." = de punt is witruimte <br>
+<br>
+**voor punkyfis: grid-template-areas:**<br>
+"main" <br>
+"header"<br> <br>
+
+Footer is alleen de webring en de cookiemelding, die wil ik verwerkt/bovenop de DS, dus zowel op de header als de main. Moet ik die dan ertussenin?
+
+Ik vroeg het aan Justus en die zei dat dat hoort en ik het niet goed heb dan, ik ga kijken wat ik dan moet
+
+Bronnen: 
+
+https://www.youtube.com/watch?v=85DcIyq9H-s
+
+**Website speciefiek gemaakt voor op de 3DS**
+https://wolfyxon.github.io/3ds-web-stuff/
+Het lijkt me leuk om de site ook beschikbaar te maken op een 3DS! Voor nu sla ik dit stuk op uit de code van de site om te kijken naar hoe groot de schermen moeten zijn. Dit sla ik voor nu alleen op en word alleen werkelijkheid als ik de site verder af heb, het lijkt me makkelijker om te maken dan de rest omdat het niet responsive hoeft te zijn :P
+
+```
+#screens {
+	display: inline-block;
+}
+
+#top-screen {
+	background-color: white;
+	width: 400px;
+	height: 217px;
+	overflow: hidden;
+}
+
+#bottom-screen {
+	background-color: white;
+	width: 320px;
+	height: 240px;
+	margin-left: 39.4667px;
+	overflow: hidden;
+}
+```
+
+#### Checkout
+Wat zijn HTML landmark role elements?
+
+Wat zijn heading elementen en hoe horen deze 'genest' te worden?
+
+Hoe ga jij met cookies om? Beschrijf jouw beweegredenen en of die zijn veranderd na het volgen van dit college.
+
+## 22 sep - Thuiswerk
+
+Helaas kon ik gister de les niet afmaken omdat ik erg last kreeg van een migraine, dit was een geluk bij een ongeluk (vooral ongeluk) omdat ik hierdoor weer verder probeerde te gaan met screenreader, door mijn nieuwe medicatie heb ik dit al een week niet hoeven doen en in die week ben ik veel verder gekomen. Helaas kwam ik erachter dat de site niet heel toegankelijk meer is. 
+
+#### Dingen die beter kunnen voor screenreader:
+* In about en contact heb ik staan "Student aan de Hogeschool van Amsterdam", hier leest mijn screenreader (VoiceOver) voor welke kop het is, dat wil ik niet.
+* Dit wist ik al maar het moet wel op deze lijst voordat ik het blijf vergeten, ik heb geen alt-tekst bij veel plaatjes.
+* De knoppen in de balk op het onderste scherm hebben geen namen alleen icoontjes, nu werken alleen light/dark en de digituintjes knop maar die moeten er wel snel ingezet worden. 
+* De screenreader leest de X en de Y voor van de toetsen op de DS, die moeten niet voorgelezen worden (misschien kan ik daar wel de uitleg van hoe de site eruit ziet stoppen? Het is het eerste wat de screenreader leest op de site)
+* Hij leest de home knop als een van de eerste voor, die wil ik ook als laatste.
+
+
