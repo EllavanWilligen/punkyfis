@@ -12,7 +12,7 @@
 
 
 
-#topScherm {
+main {
     background: var(--TSBackground);
     position: absolute;
     z-index: 2;
@@ -35,7 +35,7 @@ body{
    --antwoord: rgb(99, 99, 99);
 }
 
-#topScherm {
+main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;

@@ -1,22 +1,106 @@
+:root {
+  --step--2: clamp(0.2813rem, 0.7846rem + -0.5593cqi, 0.6588rem);
+  --step--1: clamp(0.5625rem, 0.7497rem + -0.208cqi, 0.7029rem);
+  --step-0: clamp(0.75rem, 0.625rem + 0.5556cqi, 1.125rem);
+  --step-1: clamp(0.8003rem, 0.317rem + 2.1478cqi, 2.25rem);
+  --step-2: clamp(0.8539rem, -0.3615rem + 5.4017cqi, 4.5rem);
+  --step-3: clamp(0.9111rem, -1.7852rem + 11.9836cqi, 9rem);
+  --step-4: clamp(0.9721rem, -4.7038rem + 25.2265cqi, 18rem);
+  --step-5: clamp(1.0372rem, -10.617rem + 51.7967cqi, 36rem);
+}
+
+
+
 body {
     --TSBackground: url(../fotos/groenStip.jpg);
+    --cookie: linear-gradient(145deg, #bdbdbd, #848484);
 }
 
 .dark-theme {
     --TSBackground: url(../fotos/lolly.jpg);
+    --cookie: linear-gradient(145deg, #4a4a4a, #3b3b3b);
 }
 
-#topScherm {
+main {
+    anchor-name: --main;
     background-image: var(--TSBackground);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     z-index: 0;
-    top: 7.5%;
+    top: 7.4%;
     left: 16.5%;
     width: 67%;
     height: 37.5%;
+}
+
+#cookieModal {
+    position: fixed;
+    position-anchor: --main;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    margin: 0;
+    max-width: none;
+    max-height: none;
+    box-sizing: border-box;
+}
+
+#cookieModal p {
+    position: fixed;
+    position-anchor: --main;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    margin: 0; 
+    background: var(--cookie);
+    box-sizing: border-box;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    padding: 2%;
+    font-weight: 700px;
+}
+
+#cookieModal form {
+    position: fixed;
+    position-anchor: --header;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    box-sizing: border-box;
+    background: var(--cookie);
+    border-radius: 0.5rem;
+}
+
+#buttons {
+    position: absolute;
+    top: 65%;
+    left: 4.5%;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+#buttons h1 {
+    position: absolute;
+    top: -200%;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+}
+
+#buttons button {
+    min-width: 20rem;
+    min-height: 10rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    font-weight: 700px;
+    border-radius: 1rem;
 }
 
 #TSBalk {
@@ -31,7 +115,6 @@ body {
     box-sizing: border-box;
     background: linear-gradient(#f3f3f3, #e7e7e700);
     border-radius: 0.18rem 0.18rem 0 0;
-    /* height: 3rem; */
     font-size: 2rem;
     font-weight: 700;
     color: #1a1a1a;

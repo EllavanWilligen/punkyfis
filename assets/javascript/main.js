@@ -3,7 +3,40 @@
 function lightDark() {
    const element = document.body;
    element.classList.toggle("dark-theme");
+   localStorage.setItem(
+      "punkyfis-theme",
+      element.classList.contains("dark-theme") ? "dark" : "light"
+   );
 }
+
+
+// Allow opslaan in localStorage zodat cookies niet elke keer gevraagd word
+function saveCookieConsent(allowed) {
+   localStorage.setItem("consent", String(allowed));
+
+   if (allowed && typeof getWebringLinks === "function") {
+      getWebringLinks();
+   }
+}
+
+// Kijkt of apparaat in light of dark mode staat
+const systemColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applySystemColorScheme() {
+   const savedTheme = localStorage.getItem("punkyfis-theme");
+   const useDarkTheme = savedTheme
+      ? savedTheme === "dark"
+      : systemColorScheme.matches;
+   document.body.classList.toggle("dark-theme", useDarkTheme);
+}
+
+if (document.readyState === "loading") {
+   document.addEventListener("DOMContentLoaded", applySystemColorScheme, { once: true });
+} else {
+   applySystemColorScheme();
+}
+
+systemColorScheme.addEventListener("change", applySystemColorScheme);
 
 
 // Huidige datum en tijd
@@ -159,6 +192,9 @@ function koppelContactformulier() {
    });
 }
 
-
-
-
+      document.addEventListener("DOMContentLoaded", () => {
+        const dialog = document.getElementById("cookieModal");
+        if (dialog && localStorage.getItem("consent") === null && !dialog.open) {
+          dialog.showModal();
+        }
+      });

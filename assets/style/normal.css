@@ -56,6 +56,10 @@
 html {
     font-family: "RodinNTLG M", system-ui;
     outline: 2px solid rgb(49, 141, 164);
+    grid-template-areas:
+    "main" 
+    "header"
+    "footer";
 }
 
 
@@ -77,9 +81,8 @@ body {
     --liIcoon4: url("../fotos/muziekIcoon2.png");
     --liIcoon5: url("../fotos/receptW.png");
     --liIcoon6: url(../fotos/contactW.png);
-
     /* 3DS SVG */
-    --cls-1: #d16993;
+    /* --cls-1: #d16993;
     --cls-2: #a7446c;
     --cls-3: #883d55;
     --cls-4: #cbc7c6;
@@ -92,7 +95,7 @@ body {
     --cls-11: #713244;
     --cls-12: #fcfff2;
     --cls-13: #7c4f49;
-    --cls-14: #7c4f49;
+    --cls-14: #7c4f49; */
 
 
 }
@@ -111,10 +114,8 @@ body {
     --liIcoon4: url(../fotos/MuziekIcoonDark.png);
     --liIcoon5: url("../fotos/receptZ.png");
     --liIcoon6: url(../fotos/contactZ.png);
-
-
     /* 3DS SVG */
-    --cls-1: #587da7;
+    /* --cls-1: #587da7;
     --cls-2: #587da7;
     --cls-3: #292841;
     --cls-4: #cbc7c6;
@@ -127,15 +128,32 @@ body {
     --cls-11: #292841;
     --cls-12: #fcfff2;
     --cls-13: #292841;
-    --cls-14: #292841;
+    --cls-14: #292841; */
 
     /* accent-color:#fcfff2; */
 }
 
-/* DS */
+
+
+/* 3DS SVG */
 #DS {
     position: relative;
     width: 100%;
+    aspect-ratio: 886.99 / 950.68;
+}
+
+#DS::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: url("../fotos/DS1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+body.dark-theme #DS::before {
+    background-image: url("../fotos/DS2.svg");
 }
 
 /* 3DS SVG */
@@ -150,7 +168,7 @@ body {
 }
 
 
-
+/* 
 .cls-1 {
     fill: var(--cls-1);
 }
@@ -208,14 +226,16 @@ body {
 
 .cls-14 {
     fill: var(--cls-14);
-}
+} */
 
 
 /* Bottom scherm */
-#bottomScherm {
+header {
     background-color: var(--BSBackground);
     position: absolute;
-    z-index: 0;
+    anchor-name: --header;
+    z-index: auto;
+    pointer-events: none;
     top: 55.2%;
     left: 22.8%;
     width: 54.5%;
@@ -251,7 +271,8 @@ body {
 
 #bar {
     position: relative;
-    z-index: 2;
+    z-index: auto;
+    pointer-events: none;
     flex: 0 1 auto;
     display: flex;
     align-items: center;
@@ -264,6 +285,9 @@ body {
 }
 
 #bar button {
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
     min-width: 2em;
     min-height: 1.8em;
     padding: clamp(0.1em, 0.7vw, 0.3em) clamp(0.25em, 1vw, 0.55em);
@@ -280,7 +304,7 @@ body {
     padding: 20px;
 }
 
-#bottomScherm ul {
+header ul {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
@@ -291,6 +315,7 @@ body {
 #menu {
     position: relative;
     z-index: 2;
+    pointer-events: auto;
     flex: 1 1 auto;
     min-height: 0;
     box-sizing: border-box;
