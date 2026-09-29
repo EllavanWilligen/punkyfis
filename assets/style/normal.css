@@ -55,7 +55,8 @@
 
 html {
     font-family: "RodinNTLG M", system-ui;
-    outline: 2px solid rgb(49, 141, 164);
+    font-size: clamp(6px, 1.804vw, 16px);
+    overflow-x: clip;
     grid-template-areas:
     "main" 
     "header"
@@ -64,7 +65,11 @@ html {
 
 
 body {
-    backdrop-filter: blur(1.4px);
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow-x: clip;
+    backdrop-filter: blur(0.0875rem);
     background: var(--pageBackground);
 
     /* Licht thema */    
@@ -77,26 +82,10 @@ body {
     --bar: linear-gradient(#f8faf9, #dfe5e4);
     --liIcoon1: url(../fotos/MIIAbout3.png);
     --liIcoon2: url(../fotos/ACWWW.png);
-    --liIcoon3: url(../fotos/logW.png); /* deze paars maken? */
+    --liIcoon3: url(../fotos/githubPW.png); /* deze paars maken? */
     --liIcoon4: url("../fotos/muziekIcoon2.png");
-    --liIcoon5: url("../fotos/receptW.png");
+    --liIcoon5: url("../fotos/recept2W.png");
     --liIcoon6: url(../fotos/contactW.png);
-    /* 3DS SVG */
-    /* --cls-1: #d16993;
-    --cls-2: #a7446c;
-    --cls-3: #883d55;
-    --cls-4: #cbc7c6;
-    --cls-5: #a75878;
-    --cls-6: #7c4f49;
-    --cls-7: #ac5d74;
-    --cls-8: #fcfff2;
-    --cls-9: #fcfff2;
-    --cls-10: #c36987;
-    --cls-11: #713244;
-    --cls-12: #fcfff2;
-    --cls-13: #7c4f49;
-    --cls-14: #7c4f49; */
-
 
 }
 
@@ -110,27 +99,43 @@ body {
     --bar: linear-gradient(#353535, #323434);
     --liIcoon1: url(../fotos/MIIAboutDark.png);
     --liIcoon2: url(../fotos/ACWWZ.png);
-    --liIcoon3: url(../fotos/logZ.png);
+    --liIcoon3: url(../fotos/githubPZ.png);
     --liIcoon4: url(../fotos/MuziekIcoonDark.png);
-    --liIcoon5: url("../fotos/receptZ.png");
+    --liIcoon5: url("../fotos/recept2Z.png");
     --liIcoon6: url(../fotos/contactZ.png);
-    /* 3DS SVG */
-    /* --cls-1: #587da7;
-    --cls-2: #587da7;
-    --cls-3: #292841;
-    --cls-4: #cbc7c6;
-    --cls-5: #405171;
-    --cls-6: #292841;
-    --cls-7: #405171;
-    --cls-8: #fcfff2;
-    --cls-9: #fcfff2;
-    --cls-10: #587da7;
-    --cls-11: #292841;
-    --cls-12: #fcfff2;
-    --cls-13: #292841;
-    --cls-14: #292841; */
+}
 
-    /* accent-color:#fcfff2; */
+body.dark-theme #DS::before {
+    background-image: url(../fotos/3DSBlauw3.png);
+}
+
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background-image:
+        linear-gradient(to right, rgb(35 28 45 / 9%) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(35 28 45 / 9%) 1px, transparent 1px),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 2px,
+            rgb(70 80 55 / 5%) 2px 3px
+        );
+    background-size: 2px 2px, 2px 2px, 100% 3px;
+}
+
+body.dark-theme::after {
+    background-image:
+        linear-gradient(to right, rgba(56, 58, 52, 0.156) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(55, 56, 51, 0.136) 1px, transparent 1px),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 2px,
+            rgb(150 180 115 / 5%) 2px 3px
+        );
 }
 
 
@@ -138,6 +143,7 @@ body {
 /* 3DS SVG */
 #DS {
     position: relative;
+    display: block;
     width: 100%;
     aspect-ratio: 886.99 / 950.68;
 }
@@ -147,17 +153,14 @@ body {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background-image: url("../fotos/DS1.svg");
+    pointer-events: none;
+    background-image: url(../fotos/3DSRoze4.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-body.dark-theme #DS::before {
-    background-image: url("../fotos/DS2.svg");
-}
 
 /* 3DS SVG */
-
 #Layer_1 {
     position: relative;
     z-index: 1;
@@ -168,67 +171,6 @@ body.dark-theme #DS::before {
 }
 
 
-/* 
-.cls-1 {
-    fill: var(--cls-1);
-}
-
-.cls-2 {
-    fill: var(--cls-2);
-}
-
-.cls-3 {
-    fill: var(--cls-3);
-}
-
-.cls-4 {
-    fill: var(--cls-4);
-}
-
-.cls-5 {
-    fill: var(--cls-5);
-}
-
-.cls-6 {
-    fill: var(--cls-6);
-}
-
-.cls-7 {
-    fill: var(--cls-7);
-}
-
-.cls-8 {
-    font-family: SinhalaMN-Bold, 'Sinhala MN';
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.cls-8,
-.cls-9 {
-    fill: var(--cls-8);
-}
-
-.cls-10 {
-    fill: var(--cls-10);
-}
-
-.cls-11 {
-    fill: var(--cls-11);
-}
-
-.cls-12 {
-    fill: var(--cls-12);
-}
-
-.cls-13 {
-    fill: var(--cls-13);
-}
-
-.cls-14 {
-    fill: var(--cls-14);
-} */
-
-
 /* Bottom scherm */
 header {
     background-color: var(--BSBackground);
@@ -236,7 +178,7 @@ header {
     anchor-name: --header;
     z-index: auto;
     pointer-events: none;
-    top: 55.2%;
+    top: 55.5%;
     left: 22.8%;
     width: 54.5%;
     height: 38.7%;
@@ -245,6 +187,26 @@ header {
     display: flex;
     flex-direction: column;
 }
+
+main {
+    anchor-name: --main;
+    background-image: var(--TSBackground);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    top: 7.6%;
+    left: 16.5%;
+    width: 67%;
+    height: 37.5%;
+}
+
+footer {
+    position: absolute;
+
+}
+
 
 #home {
     position: absolute;
@@ -259,17 +221,10 @@ header {
     cursor: pointer;
 }
 
-#bar span {
+header span {
     font-size: 1.5em;
     width: 100%;
-    box-sizing: border-box;
-    padding: 0.35em;
-    display: flex;
     justify-content: space-around;
-    gap: 0.35em;
-}
-
-#bar {
     position: relative;
     z-index: auto;
     pointer-events: none;
@@ -280,11 +235,11 @@ header {
     gap: clamp(0.15em, 1vw, 0.45em);
     padding: clamp(0.2em, 1vw, 0.45em);
     background: var(--bar);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 1px 3px rgb(53 63 65 / 35%);
+    border-bottom: 0.0625rem solid var(--border);
+    box-shadow: 0 0.0625rem 0.1875rem rgb(53 63 65 / 35%);
 }
 
-#bar button {
+header span button {
     position: relative;
     z-index: 3;
     pointer-events: auto;
@@ -296,23 +251,16 @@ header {
     font-size: clamp(0.5rem, 1.4vw, 0.9rem);
     line-height: 1;
     background: linear-gradient(#ffffff, #e7eceb);
-    border: 1px solid #aeb8b7;
+    border: 0.0625rem solid #aeb8b7;
     border-radius: 0.35em;
-    box-shadow: inset 0 1px #ffffff, 0 1px 2px rgb(53 63 65 / 35%);    
-    grid-template-columns: auto auto auto auto auto auto;
-    gap: 30px;
-    padding: 20px;
+    box-shadow: inset 0 0.0625rem #ffffff, 0 0.0625rem 0.125rem rgb(53 63 65 / 35%);
 }
 
 header ul {
     display: grid;
-    grid-template-columns: auto auto auto;
     padding: 10px;
     gap: 1em;
     list-style-type: none;
-}
-
-#menu {
     position: relative;
     z-index: 2;
     pointer-events: auto;
@@ -328,54 +276,64 @@ header ul {
     align-items: start;
 }
 
-#menu li {
+/* #menu {
+
+} */
+
+header li {
     min-width: 0;
     aspect-ratio: 1 / 1;
     max-width: 100%;
     max-height: 100%;
     box-sizing: border-box;
     display: grid;
+    pointer-events: auto;
     place-items: center;
     padding: 0;
     background: var(--liBackground);
-    border: 1px solid var(--border);
+    border: 0.0625rem solid var(--border);
     border-radius: 2.5em;
-    box-shadow: 2px 3px 4px var(--shadow), inset 1px 1px var(--shadow);
+    box-shadow: 0.125rem 0.1875rem 0.25rem var(--shadow), inset 0.0625rem 0.0625rem var(--shadow);
     background-size: cover;
 }
 
-#menu li:nth-of-type(1) {
+header li:nth-of-type(1) {
     background-image: var(--liIcoon1), var(--liBackground);
 }
 
-#menu li:nth-of-type(2) {
+header li:nth-of-type(2) {
     background-image: var(--liIcoon2), var(--liBackground);
 }
 
-#menu li:nth-of-type(3) {
+header li:nth-of-type(3) {
     background-image: var(--liIcoon3), var(--liBackground);
 }
 
-#menu li:nth-of-type(4) {
+header li:nth-of-type(4) {
     background-image: var(--liIcoon4), var(--liBackground);
 }
 
-#menu li:nth-of-type(5) {
+header li:nth-of-type(5) {
     background-image: var(--liIcoon5), var(--liBackground);
 }
 
-#menu li:nth-of-type(6) {
+header li:nth-of-type(6) {
     background-image: var(--liIcoon6), var(--liBackground);
 }
 
-#menu a {
+header a {
     display: grid;
+    pointer-events: auto;
     width: 100%;
     height: 100%;
     place-items: center;
     color: #344343;
     font-size: 0;
     text-decoration: none;
+}
+
+header span button a {
+    font-size: medium;
 }
 
 .home{
@@ -385,4 +343,14 @@ header ul {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+a:hover {
+	color: olivedrab;
+}
+a:active {
+	color: darkblue;
+}
+a:focus {
+	outline: .2em dashed deeppink;
 }

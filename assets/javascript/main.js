@@ -10,12 +10,56 @@ function lightDark() {
 }
 
 
-// Allow opslaan in localStorage zodat cookies niet elke keer gevraagd word
-function saveCookieConsent(allowed) {
-   localStorage.setItem("consent", String(allowed));
 
-   if (allowed && typeof getWebringLinks === "function") {
-      getWebringLinks();
+// Allow opslaan in localStorage zodat cookies niet elke keer gevraagd word
+// Allow klikken laad de Webring.js in, deny klikken laat de site de cookies verwijderen
+function saveCookieConsent(allowed) {
+   localStorage.setItem("consent", allowed ? "true" : "false");
+
+   if (allowed) {
+      cookieAllow();
+   } else {
+      cookieDeny();
+   }
+}
+
+function openCookieSettings() {
+   const dialog = document.getElementById("cookieModal");
+   if (dialog && !dialog.open) {
+      dialog.show();
+   }
+}
+
+// De digitaal tuintje webring pas laten werken als er op allow word gedrukt (code voor if (allowed) statement hierboven)
+function cookieAllow() {
+   if (localStorage.getItem("consent") !== "true") return;
+   if (document.querySelector('script[data-page="https://punkyfis.nl"]')) return;
+
+   const script = document.createElement("script");
+   script.dataset.page = "https://punkyfis.nl";
+   script.src = "assets/javascript/webring.js";
+   script.addEventListener("load", koppelWebring, { once: true });
+   document.head.appendChild(script);
+}
+
+// Verwijder de webring en cookies wanneer iemand deny kiest
+function cookieDeny() {
+   const webringScript = document.querySelector('script[data-page="https://punkyfis.nl"]');
+   if (webringScript) {
+      webringScript.remove();
+   }
+
+   const webring = document.querySelector(".webring");
+   if (webring) {
+      webring.remove();
+   }
+
+   const cookies = document.cookie.split(";");
+   for (const cookie of cookies) {
+      const name = cookie.split("=")[0].trim();
+      if (name) {
+         document.cookie = `${name}=; expires=Thu, 03 Jan 1970 00:00:00 UTC; path=/`;
+      }
    }
 }
 
@@ -37,6 +81,7 @@ if (document.readyState === "loading") {
 }
 
 systemColorScheme.addEventListener("change", applySystemColorScheme);
+
 
 
 // Huidige datum en tijd
@@ -96,7 +141,6 @@ function zetBatterijNiveau(niveau) {
    }
 }
 
-
 async function koppelBatterijStatus() {
    if (navigator.getBattery) {
       try {
@@ -117,22 +161,10 @@ async function koppelBatterijStatus() {
 
 
 
-// Event Listener
-document.addEventListener('DOMContentLoaded', () => {
-   updateDatumTijd();
-   zetBatterijNiveau(Number(localStorage.getItem('punkyfis-battery')) || 80);
-   setInterval(updateDatumTijd, 1000);
 
-   koppelBatterijStatus();
-   koppelDigituinWeBring();
-   koppelContactformulier();
-});
-
-
-
-
-// Webring
-function koppelDigituinWeBring() {
+// Webring in de site, deze wil ik in bovenste bar in header
+// De ingebouwde werkte niet meer? Ik weet niet waarom, het werkt niet meer sinds ik cookieAllow en cookieDeny heb gemaakt
+function koppelWebring() {
    const link = document.querySelector('#menu a.digituin');
    if (!link) return;
 
@@ -161,6 +193,7 @@ function koppelDigituinWeBring() {
    werkBij();
 }
 
+// Contact formulier sturen naar mijn mail
 function koppelContactformulier() {
    const formulier = document.querySelector('#contactForm');
    if (!formulier) return;
@@ -194,7 +227,23 @@ function koppelContactformulier() {
 
       document.addEventListener("DOMContentLoaded", () => {
         const dialog = document.getElementById("cookieModal");
-        if (dialog && localStorage.getItem("consent") === null && !dialog.open) {
-          dialog.showModal();
+        const consent = localStorage.getItem("consent");
+
+        if (consent === "true") {
+          cookieAllow();
+        } else if (dialog && consent === null && !dialog.open) {
+          dialog.show();
         }
       });
+
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+   updateDatumTijd();
+   zetBatterijNiveau(Number(localStorage.getItem('punkyfis-battery')) || 80);
+   setInterval(updateDatumTijd, 1000);
+
+   koppelBatterijStatus();
+   koppelWebring();
+   koppelContactformulier();
+});

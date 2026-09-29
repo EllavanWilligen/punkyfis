@@ -90,7 +90,7 @@ h2 {
     background: var(--aboutMe);
     padding: 1em;
     border-radius: 1em;
-    box-shadow: 1px 1px 1rem rgb(53 63 65 / 35%);
+    box-shadow: 0.0625rem 0.0625rem 1rem rgb(53 63 65 / 35%);
     font-size: 1.5cqi;
     overflow-wrap: anywhere;
 }
@@ -100,9 +100,8 @@ h2 {
     background: var(--TSBackground);
     padding: 1em;
     border-radius: 1em;
-    box-shadow: 1px 1px 1rem rgb(53 63 65 / 35%);
+    box-shadow: 0.0625rem 0.0625rem 1rem rgb(53 63 65 / 35%);
     font-size: 1.5cqi;
     overflow-wrap: anywhere;
 }
-
 

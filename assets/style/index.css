@@ -14,96 +14,24 @@
 body {
     --TSBackground: url(../fotos/groenStip.jpg);
     --cookie: linear-gradient(145deg, #bdbdbd, #848484);
+    --TSBalk: linear-gradient(#f3f3f3, #e7e7e700);
 }
 
 .dark-theme {
     --TSBackground: url(../fotos/lolly.jpg);
     --cookie: linear-gradient(145deg, #4a4a4a, #3b3b3b);
+    --TSBalk: linear-gradient(#3b3b3b, #e7e7e700);
 }
 
 main {
-    anchor-name: --main;
-    background-image: var(--TSBackground);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: 0;
-    top: 7.4%;
-    left: 16.5%;
-    width: 67%;
-    height: 37.5%;
+    color: black;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
 }
 
-#cookieModal {
-    position: fixed;
-    position-anchor: --main;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    margin: 0;
-    max-width: none;
-    max-height: none;
-    box-sizing: border-box;
-}
 
-#cookieModal p {
-    position: fixed;
-    position-anchor: --main;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    margin: 0; 
-    background: var(--cookie);
-    box-sizing: border-box;
-    font-family: "RodinNTLG B", sans-serif;
-    font-size: var(--step-1);
-    padding: 2%;
-    font-weight: 700px;
-}
+/* Balk main */
 
-#cookieModal form {
-    position: fixed;
-    position-anchor: --header;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    box-sizing: border-box;
-    background: var(--cookie);
-    border-radius: 0.5rem;
-}
-
-#buttons {
-    position: absolute;
-    top: 65%;
-    left: 4.5%;
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-
-#buttons h1 {
-    position: absolute;
-    top: -200%;
-    font-family: "RodinNTLG B", sans-serif;
-    font-size: var(--step-1);
-}
-
-#buttons button {
-    min-width: 20rem;
-    min-height: 10rem;
-    padding: 0.75rem 1rem;
-    font-size: 1.1rem;
-    font-family: "RodinNTLG B", sans-serif;
-    font-size: var(--step-1);
-    font-weight: 700px;
-    border-radius: 1rem;
-}
-
-#TSBalk {
+main ul {
     position: absolute;
     width: 100%;
     display: flex;
@@ -113,44 +41,47 @@ main {
     margin: 0;
     padding: 1rem 1rem 2rem;
     box-sizing: border-box;
-    background: linear-gradient(#f3f3f3, #e7e7e700);
+    background: var(--TSBalk);
     border-radius: 0.18rem 0.18rem 0 0;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: var(--step-2);
     color: #1a1a1a;
     line-height: 1;
     letter-spacing: 0.01em;
+    -webkit-text-stroke: 1px white;
 }
 
-#TSBalk li {
+main li {
     display: flex;
     align-items: center;
     white-space: nowrap;
     min-height: 1rem;
 }
 
-#TSBalk li:nth-child(1) {
+main li:nth-child(1) {
     margin-right: 0.1rem;
 }
 
-#TSBalk li:nth-child(2) {
+main li:nth-child(2) {
     margin-right: 0.1rem;
 }
 
-#TSBalk li:nth-child(3) {
+main li:nth-child(3) {
     margin-left: auto;
     padding-right: 0.35rem;
 }
 
-#TSBalk li:nth-child(4) {
+main li:nth-child(4) {
     margin-left: 0;
     padding-right: 0.25rem;
 }
 
-#TSBalk li:nth-child(5) {
+main li:nth-child(5) {
     margin-left: 0.2rem;
     justify-content: flex-end;
 }
+
+
+/* Batterij */
 
 .battery {
     display: flex;
@@ -202,4 +133,81 @@ main {
 .battery-segment.is-low {
     background: #ff4d4d;
     border-color: #c62828;
+}
+
+
+/* Cookies */
+
+#cookieModal {
+    position: fixed;
+    z-index: 100;
+    position-anchor: --main;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    margin: 0;
+    max-width: none;
+    max-height: none;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+#cookieModal p {
+    position: fixed;
+    position-anchor: --main;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    margin: 0; 
+    background: var(--cookie);
+    box-sizing: border-box;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    padding: 2%;
+    font-weight: 700;
+}
+
+#cookieModal form {
+    position: fixed;
+    position-anchor: --header;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    box-sizing: border-box;
+    background: var(--cookie);
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+#buttons {
+    position: absolute;
+    top: 56%;
+    left: 4.5%;
+    width: 91%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+#buttons h1 {
+    position: absolute;
+    top: -200%;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+}
+
+#buttons button {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 8rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    font-weight: 700;
+    border-radius: 1rem;
+    pointer-events: auto;
 }

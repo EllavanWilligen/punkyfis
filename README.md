@@ -1104,15 +1104,15 @@ Parental Consent - 3DS op de home page, maar dan op het bovenste scherm de uitle
     Dat het zo makkelijk mogelijk te begrijpen is en dat het niet irritant is, als het te veel tekst is gaan mensen niet meer alles lezen  waardoor het niet ethisch is 
 
 
-## 28 sep - Thuis werk
+## 28 sep - Thuiswerk
 
 Helaas ben ik de afgelopen week heel ziek geweest en heb ik geen schermen kunnen tolereren. Nu gaat het iets beter, ik ben nogsteeds niet in staat om naar school te komen maar kan gelukkig thuis weer aan het werk!
 
-Door mijn ziekzijn heb ik veel gemist:
-* HTML structuur
-* Cookie pop-up
-* Compliance / Valide HTML
-* Werken met alleen toetsenbord
+# Door mijn ziekzijn heb ik veel gemist:
+* HTML structuur v
+* Cookie pop-up v
+* Compliance / Valide HTML v
+* Werken met alleen toetsenbord v
 
 ### HTML structuur 
 
@@ -1434,6 +1434,173 @@ systemColorScheme.addEventListener("change", applySystemColorScheme);
 Ik stoorde me aan dat hij niet meer keek naar de apparaat instellingen voor het light en dark mode. Ook moest je elke keer opnieuw op de toggle klikken als je van pagina verandert en dark mode wil. Deze code verbeterd beide problemen, hij kijkt naar de instellingen van je apparaat en past de site daarop aan en onthoud welke modus je wil, light of dark, en bewaart dit door de hele site in je localStorage. Dit zorgt ervoor dat het ook word onthouden als je de pagina sluit en opnieuw opent op hetzelfde apparaat. Ik moet nog even uitgebreider onderzoek doen naar localStorage, ik heb er veel mee gewerkt maar ik weet eigenlijk niet hoe lang het daar blijft?
 
 
+## 29 sep - Thuiswerk
+
+Vandaag ben ik thuis begonnen met de cookie melding werkend krijgen!
+
+### Cookies of niet
+
+JAVASCRIPT
+```
+// Allow opslaan in localStorage zodat cookies niet elke keer gevraagd word
+// Allow klikken laad de Webring.js in
+function saveCookieConsent(allowed) {
+   localStorage.setItem("consent", allowed ? "true" : "false");
+
+   if (allowed) {
+      cookieAllow();
+   } else {
+      cookieDeny();
+   }
+}
+
+// De digitaal tuintje webring pas laten werken als er op allow word gedrukt (code voor if (allowed) statement hierboven)
+function cookieAllow() {
+   if (localStorage.getItem("consent") !== "true") return;
+   if (document.querySelector('script[data-page="https://punkyfis.nl"]')) return;
+
+   const script = document.createElement("script");
+   script.dataset.page = "https://punkyfis.nl";
+   script.src = "assets/javascript/webring.js";
+   script.addEventListener("load", koppelDigituinWeBring, { once: true });
+   document.head.appendChild(script);
+}
+
+// Verwijder de webring en cookies wanneer iemand deny kiest
+function cookieDeny() {
+   const webringScript = document.querySelector('script[data-page="https://punkyfis.nl"]');
+   if (webringScript) {
+      webringScript.remove();
+   }
+
+   const webring = document.querySelector(".webring");
+   if (webring) {
+      webring.remove();
+   }
+
+   const cookies = document.cookie.split(";");
+   for (const cookie of cookies) {
+      const name = cookie.split("=")[0].trim();
+      if (name) {
+         document.cookie = `${name}=; expires=Thu, 03 Jan 1970 00:00:00 UTC; path=/`;
+      }
+   }
+}
+```
+Dit was een stuk moeilijker dan gedacht, ik snap JavaScript redelijk omdat ik veel met TypeScript gewerkt heb in het verleden, maar ik heb nog nooit met cookies en cookiemeldingen gewerkt. Ik heb het werkend gekregen, grotendeels dank aan stack overflow, maar ik snap niet helemaal waarom dit zo werkt. Om de cookies te verwijderen doe je: ```expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;```. Ik weet niet waarom je dit doet, ik weet niet of het altijd 1 januari 1970 is maar iedereen doet die dag en overal staat die dag. Ik probeerde 3 januari 1970 (die dag is mn vader geboren) en ik had precies hetzelfde effect. Ik hoop dat dit alle cookies verwijderd, maar dat kan ik pas vragen als ik weer naar school ga, ik hoop dat dat morgen al lukt maar ik denk het niet.
+
+GEBRUIKTE BRONNEN:
+https://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove 
+https://www.w3schools.com/js/js_cookies.asp 
+
+
+### Webring component op andere plek
+
+Ik wil de webring in de site verwerkt hebben, niet in de footer, het staat slorig. Of bar moet de footer worden, dat is misschien netter, moeilijk maar netter. Terwijl ik bezig was met de cookieAllow en cookieDeny was ik heel lang overtuigd dat het niet werkte, dit was omdat ik geen webring in de footer zag. Ik ging testen met ```<script data-page="https://punkyfis.nl" src="https://digitaaltuintje.nl/webring.js" defer></script>``` terug zetten in de HTML en kwam erachter dat het niet perse betekende dat het niet werkte, maar eerder dat de webring in de footer niet meer werkte. Ik ben uiteindelijk tegen mijn principes in gegaan en heb het gevraagd aan copilot. Copilot heeft voor mij deze code geschreven om de webring terug te krijgen. Ik weet niet wat de code doet, ik snap de code, ik snap alles wat er staat apart, maar ik weet niet waarom dit het fixt en wat dit fixt.
+
+```
+// Webring in de site, deze wil ik in bovenste bar in header
+function koppelWebring() {
+   const link = document.querySelector('#menu a.digituin');
+   if (!link) return;
+
+   const doel = document.querySelector('#webringTarget');
+   if (!doel) return;
+
+   const werkBij = () => {
+      const willekeurigeLink = doel.querySelector('a.random');
+      const eersteLink = doel.querySelector('a');
+      const gekozen = willekeurigeLink || eersteLink;
+
+      if (gekozen && gekozen.href) {
+         link.href = gekozen.href;
+         link.title = gekozen.title || 'Digitaal tuintje';
+      }
+   };
+
+   const observer = new MutationObserver(() => {
+      if (doel.querySelector('a')) {
+         werkBij();
+         observer.disconnect();
+      }
+   });
+
+   observer.observe(doel, { childList: true, subtree: true });
+   werkBij();
+}
+```
+Voor nu is het enige wat me uitmaakt dat ik de webring terug heb, ik hoop dat ik deze code aan kan passen en de webring uit de footer kan halen, ik zou namelijk liever de webring ergens in de DS willen stoppen. Ik wil minimaal eigenlijk een specifieke plek in de HTML hebben om dit mee aan te passen, ik denk dat deze code zelf hebben me daarmee kan helpen, maar dan moet ik hulp vragen in de les.
+
+
+### Stijl update
+
+Ik stoor me ergens aan vanaf het begin, het ziet er veel te modern uit, ik ben hier heel lang mee bezig maar ik kan niks vinden, behalve alles in blender maken, maar dat duurt veel te lang en ik ben slecht in blender. Ik heb besloten nu maar pixels te doen, het is niet helemaal wat ik wou maar het is beter dan wat ik heb. 3DS is niet heel pixelig.
+
+
+### Belangrijke elementen DS
+* Onderste balk onder de apps
+* Witte schaduw onder tekst onderste balk
+* Balk bovenstescherm witte tijd omringd
+* Licht pixel over alles
+* Border om apps te dik, moet veel dunner
+* Bewegend ding boven als app geselecteerd is (is dit mogelijk? met mijn skills?)
+
+
+
+#### Licht pixel over alles
+
+```
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background-image:
+        linear-gradient(to right, rgb(35 28 45 / 9%) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(35 28 45 / 9%) 1px, transparent 1px),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 2px,
+            rgb(70 80 55 / 5%) 2px 3px
+        );
+    background-size: 2px 2px, 2px 2px, 100% 3px;
+}
+
+body.dark-theme::after {
+    background-image:
+        linear-gradient(to right, rgba(56, 58, 52, 0.156) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(55, 56, 51, 0.136) 1px, transparent 1px),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 2px,
+            rgb(150 180 115 / 5%) 2px 3px
+        );
+}
+```
+
+Het is niet helemaal wat ik wou maar het geeft een oke effect, ik wou eigenlijk dat er een soort overlay overheen zit wat de site pixelig maakt. Dat is dit niet, maar ik ben er voor nu blij mee. Het zet een klein grid over de pagina, hierdoor lijkt het iets meer op het scherm van een DS. Ik ben er wel heel blij mee, ik zou alleen willen dat elk blokje maar 1 kleur erin heeft, verder is het perfect.
+
+![image](log/TW29B.png)
+
+
+BRON:
+https://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css 
+
+#### TSBalk stroke
+
+```
+-webkit-text-stroke: 1px white;
+```
+
+Dit was heel snel en heel makkelijk. Alleen wil ik dat de stroke aan de buitenkant hebben ipv de binnenkant, ik moet inhalen op het moment dus ik heb niet heel veel tijd voor alles. Ik onthoud het voor later.
+
+BRON:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke
+
+
+### Valide HTML
 
 
 
