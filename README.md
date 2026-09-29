@@ -1600,8 +1600,51 @@ BRON:
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke
 
 
-### Valide HTML
+#### Nieuwe DS
 
+De oude DS was iets te minimalistisch, daarom heb ik nieuwe SVGs gemaakt. 
+
+**OUDE ROZE**
+![image](assets/fotos/DS1.svg)
+**NIEUWE ROZE**
+![image](assets/fotos/3DSRoze2.svg) 
+<br><br><br>
+
+**OUDE BLAUW**
+![image](assets/fotos/DS2.svg)
+**NIEUWE BLAUW**
+![image](assets/fotos/3DSBlauw2.svg)
+
+
+### Responsive
+
+Ik haat dit onderdeel, het blijft me niet lukken, ik ga vandaag proberen om feedback van de retrospective te verwerken. Als de website op mobiel bekeken word werd gezegd dat het beter is als er 1 rij is ipv 2. Dat leek me een goed begin voor de responisiveness, ik ben het de hele tijd aan het uitstellen omdat ik het het saaiste en frustrerendste deel is. 
+
+CSS
+```
+@media (max-width: 600px) {
+    header ul {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: clamp(10rem, 56vw, 14rem);
+        grid-template-columns: none;
+        grid-template-rows: minmax(0, 1fr);
+        flex: 1 1 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+    }
+
+    header li {
+        width: 100%;
+        max-width: none;
+    }
+}
+```
+Als het scherm minder dan 600px is worden de "apps" in 1 rij gezet, ik heb overflow hidden zodat het niet uitsteekt uit het onderste scherm.
+
+
+### Valide HTML
 
 
 

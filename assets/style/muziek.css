@@ -23,15 +23,18 @@ main {
     left: 16.5%;
     width: 67%;
     height: 37.5%;
+    overflow: hidden;
 }
 
 img {
     position: absolute;
-    width: 84.2%;
+    width: 60%;
     height: auto;
-    right: -24%;
-    top: 7%;
+    right: -27%;
+    top: 1%;
     animation: spin 3s linear infinite;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #album {
