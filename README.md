@@ -1616,6 +1616,39 @@ De oude DS was iets te minimalistisch, daarom heb ik nieuwe SVGs gemaakt.
 ![image](assets/fotos/3DSBlauw2.svg)
 
 
+
+#### Interactie deep dive
+
+Ik was vergeten dat er nog deep dives waren, ik heb dit gedaan gebasseerd op de deep dive over button states.
+
+CSS
+```
+header li:hover::after,
+header li:focus-within::after {
+    content: "";
+    position: absolute;
+    inset: -0.2em;
+    transform-origin: center;
+    animation: menu-select 0.7s ease-in-out infinite alternate;
+    background:
+        linear-gradient(var(--select), var(--select)) top left / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) top left / 0.8em 2.4em no-repeat,
+        linear-gradient(var(--select), var(--select)) top right / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) top right / 0.8em 2.4em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom left / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom left / 0.8em 2.4em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom right / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom right / 0.8em 2.4em no-repeat;
+}
+```
+Ik wist niet dat ::after moet als je decoraties toevoegd, heel lang was het een bende en werkte het niet. Ik heb nu hoekjes als de gebruiker op de li items zit. Op de 3DS bewegen de hoekjes als je het spel geselecteerd hebt, als het kan wil ik dat voor de site hebt. Ik heb weinig met animaties gewerkt in het verleden, ik was al trots dat ik de CD kon laten draaien.
+
+
+BRONNEN:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::after
+
+
 ### Responsive
 
 Ik haat dit onderdeel, het blijft me niet lukken, ik ga vandaag proberen om feedback van de retrospective te verwerken. Als de website op mobiel bekeken word werd gezegd dat het beter is als er 1 rij is ipv 2. Dat leek me een goed begin voor de responisiveness, ik ben het de hele tijd aan het uitstellen omdat ik het het saaiste en frustrerendste deel is. 
@@ -1643,6 +1676,15 @@ CSS
 ```
 Als het scherm minder dan 600px is worden de "apps" in 1 rij gezet, ik heb overflow hidden zodat het niet uitsteekt uit het onderste scherm.
 
+
+
+
+#### Buttons
+
+Een klein ding waar ik me aan stoor is dat de buttons te licht zijn in dark mode
+
+BRONNEN:
+https://stackoverflow.com/questions/15966495/default-color-code-on-html-button
 
 ### Valide HTML
 

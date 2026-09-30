@@ -80,6 +80,11 @@ body {
     --border: #6c706f;
     --shadow: rgb(53 63 65 / 35%);
     --bar: linear-gradient(#f8faf9, #dfe5e4);
+    --select: rgb(241, 153, 194);
+    --button: linear-gradient(to top left, #b9b9b9 -50%, #fcfcfc 110%);
+    --buttonKleur: black;
+    --buttonDrop: rgb(195,195,195);
+
     --liIcoon1: url(../fotos/MIIAbout3.png);
     --liIcoon2: url(../fotos/ACWWW.png);
     --liIcoon3: url(../fotos/githubPW.png); /* deze paars maken? */
@@ -97,6 +102,11 @@ body {
     --border: #3a3d3d;
     --shadow: rgb(52, 56, 56);
     --bar: linear-gradient(#353535, #323434);
+    --select: rgb(141, 186, 245);
+    --button: linear-gradient(to top left, #3b3b3b -50%, #777777 110%);
+    --buttonKleur: rgb(171, 171, 171);
+    --buttonDrop: rgb(27, 27, 27);
+
     --liIcoon1: url(../fotos/MIIAboutDark.png);
     --liIcoon2: url(../fotos/ACWWZ.png);
     --liIcoon3: url(../fotos/githubPZ.png);
@@ -203,7 +213,6 @@ main {
 
 footer {
     position: absolute;
-
 }
 
 
@@ -249,7 +258,7 @@ header span button {
     font-family: "Comic Relief", system-ui;
     font-size: clamp(0.5rem, 1.4vw, 0.9rem);
     line-height: 1;
-    background: linear-gradient(#ffffff, #e7eceb);
+    background: var(--button);
     border: 0.0625rem solid #aeb8b7;
     border-radius: 0.35em;
     box-shadow: inset 0 0.0625rem #ffffff, 0 0.0625rem 0.125rem rgb(53 63 65 / 35%);
@@ -296,6 +305,7 @@ header ul {
 
 
 header li {
+    position: relative;
     min-width: 0;
     aspect-ratio: 1 / 1;
     max-width: 100%;
@@ -351,6 +361,9 @@ header span button a {
     font-size: medium;
 }
 
+
+
+
 .home{
     z-index: 3;
 }
@@ -360,15 +373,72 @@ header span button a {
   box-sizing: border-box;
 }
 
-
+/* .home a:focus {
+    color: cornflowerblue;
+} */
 
 /* to do */
 a:hover {
 	color: olivedrab;
 }
+
 a:active {
 	color: darkblue;
 }
+
+/* tab */
 a:focus {
-	outline: .2em dashed deeppink;
+    color: cornflowerblue;
 }
+
+/* header apps  */
+/* header li:hover,
+header li:focus-within {
+    filter: brightness(1.15);
+} */
+
+header li:hover::after,
+header li:focus-within::after {
+    content: "";
+    position: absolute;
+    inset: -0.2em;
+    transform-origin: center;
+    animation: menu-select 0.7s ease-in-out infinite alternate;
+    background:
+        linear-gradient(var(--select), var(--select)) top left / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) top left / 0.8em 2.4em no-repeat,
+        linear-gradient(var(--select), var(--select)) top right / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) top right / 0.8em 2.4em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom left / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom left / 0.8em 2.4em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom right / 2.4em 0.8em no-repeat,
+        linear-gradient(var(--select), var(--select)) bottom right / 0.8em 2.4em no-repeat;
+}
+
+header button:hover, 
+header button:focus-within {
+    color: var(--buttonKleur);
+    filter: brightness(1.15);
+    filter: drop-shadow(0em 0em 0.5em var(--buttonDrop));
+
+}
+
+header button:hover::after, 
+header button:focus-within::after {
+    outline: red;
+    background-color: red;
+
+}
+
+
+/* header a:focus-visible {
+    outline: none;
+}
+
+button:focus {
+    color: cadetblue;
+}
+
+button:hover {
+    color: rebeccapurple;
+} */
