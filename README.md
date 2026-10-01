@@ -2136,6 +2136,81 @@ Nummers pagina klein scherm (data-page="3")
 
 Volgende sprint wil ik meer focussen op mijn logboek, ik heb het idee dat ik goed ga in het programmeren, er is daar nog veel ruimte voor verbetering maar ik vind het leuk om te onderzoeken. Documenteren vind ik heel moeilijk, ik vind MarkDown heel fijn om in te documenteren ivm de code blokken
 
+### Toegankelijkheid
+
+#### 1. VoiceOver
+Voiceover werkt goed, de hele site is makkelijk bagaanbaar met een screenreader. Er zijn wel nog wat dingen die ik wil toevoegen, zoals:
+* Meer alt teksten
+* Beschrijving van de hele pagina, de pagina's hebben veel opmaak en ik wil slechtziende/blinde mensen ook meer laten merken van de site
+
+#### 2. Kleurenblind
+Ik heb hiervoor de web extentie Colorblindly gebruikt. 
+
+Blue Cone Monochromancy - ✅
+![image](log/KB01A.png)
+Monochromacy - ✅
+![image](log/KB01B.png)
+Green-Weak - ✅
+![image](log/KB01C.png)
+Green-Blind - ✅
+![image](log/KB01D.png)
+Red-Weak - ✅
+![image](log/KB01E.png)
+Red-Blind - ✅
+![image](log/KB01F.png)
+Blue-Weak - ✅
+![image](log/KB01G.png)
+Blue-Blind - ✅
+![image](log/KB01H.png)
+
+Iedereen met welke vorm van kleurenblindheid dan ook kan de site goed bekijken.
+
+#### WCAG Checklist
+
+**1 waarneembaar**
+1a. Veel plaatjes hebben alt tekst, ook decoratieve plaatjes. De plaatjes voor muziek en spellen hebben geen alt tekst maar blinde gebruikers krijgen wel te horen wat voor nummer/album/spel het is.
+
+1b. Ik heb geen video's in mijn website
+
+1c. Ik heb correcte HTML gebruikt en de site werkt in elk formaat, op mobiel ziet de website er anders uit dan op desktop zodat alles leesbaar blijft.
+
+1d. De tekst kan op 200% staan en de website is nog helemaal bruikbaar. De website past zich dan aan naar een "smaller scherm" waardoor alles goed past.
+![image](log/TW01G.png)
+^ Text op 200%
+
+**2 bedienbaar**
+
+2a. Alles is bestuurbaar met alleen toetsenbord, je kan overal met gemak bij.
+
+2b. Er is geen enkele timer op de site
+
+2c. Er zijn geen flitsende onderdelen, ik heb zelf lichtgevoelige epilepsie dus dit zal ook nooit in de site komen!
+
+2d.a. Je kan naar home met de home-knop op de DS
+
+2d.b. Er zijn duidelijk zichtbare focus indicatoren, ik wil de volgende sprint nog meer focussen op leukere focus, zoals ik nu heb bij de header li items heb.
+
+2d.c. Niks word bedekt, je kan alle elementen zien.
+
+2e.Ik hoop dat ik deze heb, de enige waar ik dit mogelijk niet heb (volgensmij is het groter dan 24x24p) maar dat is de + knop, maar deze is optioneel.
+
+**3 begrijpelijk**
+
+3a. De hele site is in het nederlands en alle HTML hebben ```lang="nl"```
+
+3b. De navigatie elementen zitten bijna allemaal in de header, ze hebben allemaal dezelfde opmaak uit hetzelfde bestand (normal.css)
+
+3c.a. De formulieren zijn nog niet af maar er is geen mogelijkheid om het fout te doen, je kan een mail sturen en daarvoor moet je een naam en een bericht achterlaten, je mag doen wat je wil je kan het niet fout doen, maar later word het formulier nog beter en duidelijker vormgegeven.
+
+3c.b. Je kan niet inloggen op de site omdat we geen database hebben
+
+**4 robuust**
+
+4a. Ik denk dat het goed is maar ik stoor me eraan. Hij leest alles goed voor, alleen leest hij ook h1 etc. voor. Ik wil dit niet eigenlijk, hij moet alleen de tekst voorlezen.
+
+4b. De opmaak is nog niet heel speciaal maar als je een bericht stuurt staat eronder eerst "bericht versturen" en als het verstuurd is staat er "bericht verstuurd"
+
+
 # Reserves
 
 
