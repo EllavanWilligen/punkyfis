@@ -2129,8 +2129,12 @@ Albums pagina fullscreen (data-page="1")
 Nummers pagina fullscreen (data-page="2")
 ![image](log/TW01D.png)
 Nummers pagina medium scherm (data-page="2")
-
+![image](log/TW01F.png)
 Nummers pagina klein scherm (data-page="3")
+![image](log/TW01E.png)
+
+
+Volgende sprint wil ik meer focussen op mijn logboek, ik heb het idee dat ik goed ga in het programmeren, er is daar nog veel ruimte voor verbetering maar ik vind het leuk om te onderzoeken. Documenteren vind ik heel moeilijk, ik vind MarkDown heel fijn om in te documenteren ivm de code blokken
 
 # Reserves
 
