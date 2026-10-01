@@ -1,58 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/style/normal.css"/>
-        <link rel="stylesheet" href="assets/style/spellen.css"/>
+    <link rel="stylesheet" href="assets/style/normal.css" />
+    <link rel="stylesheet" href="assets/style/spellen.css" />
     <script src="assets/javascript/main.js"></script>
     <link rel="icon" type="image" href="assets/fotos/laly.gif">
-    <title>Document</title>
+    <title>Spellen</title>
 </head>
+
 <body>
     <div id="DS">
         <a id="home" href="index.html" aria-label="Home"></a>
-        <button id="scrollUp" class="ds-scroll" type="button" aria-label="Scroll omhoog"></button>
-        <button id="scrollDown" class="ds-scroll" type="button" aria-label="Scroll omlaag"></button>
+        <button id="omhoog" class="ds-scroll" type="button" aria-label="Scroll omhoog"></button>
+        <button id="omlaag" class="ds-scroll" type="button" aria-label="Scroll omlaag"></button>
     </div>
-        <header>
-         <span id="bar">
-                    <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
-                    <button>o[]</button> <!-- groot/klein-->
-                    <button>✎</button> <!-- potlood -->
-                    <button>:]</button> <!-- smiley -->
-                    <button>☰</button> <!-- textwolk -->
-                    <button>
-                        <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-                    </button> <!-- internet wereldbol -->
-                </span>
-                <ul id="menu">
-                    <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
-                    <li><a href="about.html">About</a></li> <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
-                    <li><a href="spellen.html">Spellen</a></li>
-                    <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li> <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
-                    <li><a href="muziek.html">Muziek</a></li>
-                    <li><a href="recepten.html">Recepten</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+    <header>
+        <span id="bar">
+            <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
+            <button>o[]</button> <!-- groot/klein-->
+            <button>✎</button> <!-- potlood -->
+            <button>:]</button> <!-- smiley -->
+            <button>☰</button> <!-- textwolk -->
+            <button>
+                <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
+            </button> <!-- internet wereldbol -->
+        </span>
+        <ul id="menu">
+            <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
+            <li><a href="about.html">About</a></li>
+            <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
+            <li><a href="spellen.html">Spellen</a></li>
+            <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
+            <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
+            <li><a href="muziek.html">Muziek</a></li>
+            <li><a href="recepten.html">Recepten</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </header>
-        <main>
-                <!-- <h1>Spellen</h1> -->
-                <ul id="album"> <!-- Foto's toevoegen!!, en meer pagina's?-->
-                    <li><a href="https://hshop.erista.me/t/75">Animal Crossing New Leaf</a></li>
-                    <li><a href="https://hshop.erista.me/t/2335">Style Savvy 3 - Styling star</a></li>
-                    <li><a href="https://hshop.erista.me/t/824">Tomodatchi Life</a></li>
-                    <li><a href="https://romsfun.com/roms/nintendo-ds/dragon-quest-ix-sentinels-of-the-starry-skies.html">Dragons Quest IX</a></li>
-                </ul>
-                <aside id="spelTekst">
-                    <h1>Mijn favoriete spellen</h1>
-                    <p>Dit zijn een paar van mijn favoriete spellen, als je op een spel klikt kan je naar de downloadpagina gaan waarmee je het spel kan downloaden op je (3)DS.</p>
-                </aside>
-                <img src="assets/fotos/pikmin.png"> <!-- de foto is er niet, ik snap niet waarom-->
-            
+    <main>
+        <!-- 3DS -->
+        <aside data-page="1">
+            <h1>Mijn favoriete spellen</h1>
+            <p>Dit zijn een paar van mijn favoriete spellen, als je op een spel klikt kan je naar de download-pagina
+                gaan waarmee je het spel kan downloaden op je (3)DS.</p>
+            <p id="divider">-=+=-</p>
+            <p>Dit zijn de 3DS spellen</p>
+            <button type="button" data-show-album="2">Naar DS spellen</button>
+        </aside>
+        <ul class="album" data-page="1">
+            <li><a href="https://hshop.erista.me/t/73">Animal Crossing Happy Home Designer</a></li>
+            <li><a href="https://hshop.erista.me/t/2335">Style Savvy 3 - Styling star</a></li>
+            <li><a href="https://hshop.erista.me/t/824">Tomodatchi Life</a></li>
+            <li><a href="https://hshop.erista.me/t/20785">Art academy</a></li> <!-- DS SPEL!-->
+        </ul>
+
+        <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
+        <!-- <img src="assets/fotos/pikmin.png"
+            alt="Pikmin, een klein geel poppetje bekend van de gelijknamige gameserie. De gele pikmin heeft klavertjes drie om zich heen en een rood lieveheersbeestje op zijn hoofd">> -->
+
+
+        <!-- DS -->
+        <aside data-page="2" hidden>
+            <h1>Mijn favoriete spellen</h1>
+            <p>Dit zijn een paar van mijn favoriete spellen, als je op een spel klikt kan je naar de download-pagina
+                gaan waarmee je het spel kan downloaden op je (3)DS.</p>
+            <p id="divider">-=+=-</p>
+            <p>Dit zijn de DS spellen</p>
+            <button type="button" data-show-album="1">Naar 3DS spellen</button>
+        </aside>
+        <ul class="album" data-page="2" hidden>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/rhythm-heaven.html">Rhythm Heaven</a></li>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/nintendogs-lab-friends.html">Nintendogs</a></li>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/pokemon-black-version-2.html">Pokemon Black Version 2</a>
+            </li>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/dragon-quest-ix-sentinels-of-the-starry-skies.html">Dragons
+                    Quest IX</a></li>
+        </ul>
+        <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
+        <img src="assets/fotos/pikmin.png"
+            alt="Pikmin, een klein geel poppetje bekend van de gelijknamige gameserie. De gele pikmin heeft klavertjes drie om zich heen en een rood lieveheersbeestje op zijn hoofd">
     </main>
-<!-- <footer>
+    <!-- <footer>
 
 </footer> -->
 </body>
+
 </html>

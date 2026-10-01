@@ -17,10 +17,23 @@ function saveCookieConsent(allowed) {
    localStorage.setItem("consent", allowed ? "true" : "false");
 
    if (allowed) {
+      setIframeAvailability(true);
       cookieAllow();
    } else {
+      setIframeAvailability(false);
       cookieDeny();
    }
+}
+
+// Externe embeds laden pas nadat de bezoeker toestemming heeft gegeven.
+function setIframeAvailability(allowed) {
+   document.querySelectorAll("iframe[data-consent-src]").forEach((iframe) => {
+      if (allowed) {
+         iframe.src = iframe.dataset.consentSrc;
+      } else {
+         iframe.removeAttribute("src");
+      }
+   });
 }
 
 function openCookieSettings() {
@@ -230,9 +243,13 @@ function koppelContactformulier() {
         const consent = localStorage.getItem("consent");
 
         if (consent === "true") {
+          setIframeAvailability(true);
           cookieAllow();
-        } else if (dialog && consent === null && !dialog.open) {
-          dialog.show();
+        } else {
+          setIframeAvailability(false);
+          if (dialog && consent === null && !dialog.open) {
+            dialog.show();
+          }
         }
       });
 
@@ -252,17 +269,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Scrollen met + knop
 document.addEventListener('DOMContentLoaded', () => {
-   const scrollDoel = document.getElementById('spelTekst') || document.querySelector('main');
-   const omhoog = document.getElementById('scrollUp');
-   const omlaag = document.getElementById('scrollDown');
+   const omhoog = document.getElementById('omhoog');
+   const omlaag = document.getElementById('omlaag');
 
-   if (!scrollDoel || !omhoog || !omlaag) return;
+   if (!omhoog || !omlaag) return;
+
+   const krijgScrollDoel = () => document.querySelector('aside:not([hidden])') || document.querySelector('main');
 
    omhoog.addEventListener('click', () => {
-      scrollDoel.scrollBy({ top: -scrollDoel.clientHeight * 0.5, behavior: 'smooth' });
+      const scrollDoel = krijgScrollDoel();
+      if (!scrollDoel) return;
+      scrollDoel.scrollBy({ top: -scrollDoel.clientHeight * 0.2, behavior: 'smooth' });
+   });
+   omlaag.addEventListener('click', () => {
+      const scrollDoel = krijgScrollDoel();
+      if (!scrollDoel) return;
+      scrollDoel.scrollBy({ top: scrollDoel.clientHeight * 0.2, behavior: 'smooth' });
+   });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+   const knoppen = document.querySelectorAll('[data-show-album]');
+   const paginaOnderdelen = document.querySelectorAll('.album[data-page], .spelTekst[data-page]');
+
+   knoppen.forEach((knop) => {
+      knop.addEventListener('click', () => {
+         const gewenstePagina = knop.dataset.showAlbum;
+
+         paginaOnderdelen.forEach((onderdeel) => {
+            onderdeel.hidden = onderdeel.dataset.page !== gewenstePagina;
+         });
+      });
+   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+   const knoppen = document.querySelectorAll('[data-show-album]');
+   const paginaOnderdelen = document.querySelectorAll('ul[data-page], aside[data-page]');
+   const knopNaarNummers = document.querySelector('aside[data-page="1"] [data-show-album]');
+   const mobieleWeergave = window.matchMedia('(max-width: 800px)');
+
+   const toonPagina = (pagina) => {
+      paginaOnderdelen.forEach((onderdeel) => {
+         onderdeel.hidden = onderdeel.dataset.page !== pagina;
+      });
+   };
+
+   knoppen.forEach((knop) => {
+      knop.addEventListener('click', () => {
+         toonPagina(knop.dataset.showAlbum);
+      });
    });
 
-   omlaag.addEventListener('click', () => {
-      scrollDoel.scrollBy({ top: scrollDoel.clientHeight * 0.5, behavior: 'smooth' });
-   });
+   const mobiel = () => {
+      if (!knopNaarNummers) return;
+
+      const paginaNummers = mobieleWeergave.matches ? '3' : '2';
+      const huidig = mobieleWeergave.matches ? '2' : '3';
+      const paginaIsOpen = document.querySelector(
+         `ul[data-page="${huidig}"]:not([hidden]), aside[data-page="${huidig}"]:not([hidden])`
+      );
+
+      knopNaarNummers.dataset.showAlbum = paginaNummers;
+      if (paginaIsOpen) toonPagina(paginaNummers);
+   };
+
+   mobiel();
+   mobieleWeergave.addEventListener('change', mobiel);
 });

@@ -1714,9 +1714,9 @@ CSS
 
 ## 1 Okt - Thuiswerk
 
-GISTER WERD IK ZIEK, IK HAD AL KOORTS, IK WAS BIJNA BETER, NU HEB IK GRIEP?! 
+GISTER WERD IK WEER ZIEK, IK HAD AL KOORTS, IK WAS BIJNA BETER, NU HEB IK GRIEP?! 
 
-
+Sorry voor mijn beknoptere log dan normaal, het gaat echt niet goed, ik kom morgen naar de retrospective maar ik ben zo ziek en ik vind het log bijhouden zo veel werk, mijn hoofd zit vol met snot en slijm.
 
 ### Scrollen met de + knop op de DS
 
@@ -1774,6 +1774,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
+Ik heb nu alleen 2 kleine knopjes in de hoek, ik snap ze niet dus ik geef ze de landlord special:
+```
+#scrollUp { top: 72%; opacity:0;}
+#scrollDown { top: 80%; opacity:0;}
+```
+Ik heb ze onzichtbaar gemaakt.
 
 
 BRONNEN:
@@ -1782,7 +1788,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
 ### About anders maken op mobiel
 
 Hiermee was ik tegelijkertijd bezig, maar wat ik tot nu toe op about.html heb word te klein op mobiel en onleesbaar. 
-
 
 
 CSS
@@ -1842,9 +1847,290 @@ Ik heb later de breedte naar 1000px veranderd, dit is omdat het best moeilijk le
 
 ### Spellen
 
-Alleen about.html is iets mee gedaan, de andere pagina's nog niet. 
+Alleen about.html is iets mee gedaan, de andere pagina's nog niet. Ik ben begonnen met spellen omdat ik hier al iets had, weinig maar iets. Ook kan ik als ik de spellen pagina af heb heel makkelijk de muziek pagina maken omdat die bijna dezelfde opzet heeft. Ik heb een voorsprong hierbij, ik heb dit al vaak moeten doen :p
+Ik wil graag meerdere pagina's, ik hou het simpel en doe er 2, later kunnen het er meer worden maar ik vind het leuker als het 2 pagina's zijn, 3DS en DS. 
+
+HTML:
+```
+        <!-- 3DS -->
+        <ul class="album" data-page="1">
+            <li><a href="https://hshop.erista.me/t/73">Animal Crossing Happy Home Designer</a></li>
+            <li><a href="https://hshop.erista.me/t/2335">Style Savvy 3 - Styling star</a></li>
+            <li><a href="https://hshop.erista.me/t/824">Tomodatchi Life</a></li>
+            <li><a href="https://hshop.erista.me/t/20785">Art academy</a></li> <!-- DS SPEL!-->
+        </ul>
+        <aside class="spelTekst" data-page="1">
+            <h1>Mijn favoriete spellen</h1>
+            <p>Dit zijn een paar van mijn favoriete spellen, als je op een spel klikt kan je naar de download-pagina
+                gaan waarmee je het spel kan downloaden op je (3)DS.</p>
+            <p id="divider">-=+=-</p>
+            <p>Dit zijn de 3DS spellen</p>
+            <button type="button" data-show-album="2">Naar DS spellen</button>
+        </aside>
+        <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
+        <img src="assets/fotos/pikmin.png"
+            alt="Pikmin, een klein geel poppetje bekend van de gelijknamige gameserie. De gele pikmin heeft klavertjes drie om zich heen en een rood lieveheersbeestje op zijn hoofd">>
 
 
+
+        <!-- DS -->
+        <ul class="album" data-page="2" hidden>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/rhythm-heaven.html">Rhythm Heaven</a></li>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/nintendogs-lab-friends.html">Nintendogs</a></li>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/pokemon-black-version-2.html">Pokemon Black Version 2</a>
+            </li>
+            <li><a href="https://romsfun.com/roms/nintendo-ds/dragon-quest-ix-sentinels-of-the-starry-skies.html">Dragons
+                    Quest IX</a></li>
+        </ul>
+        <aside class="spelTekst" data-page="2" hidden>
+            <h1>Mijn favoriete spellen</h1>
+            <p>Dit zijn een paar van mijn favoriete spellen, als je op een spel klikt kan je naar de download-pagina
+                gaan waarmee je het spel kan downloaden op je (3)DS.</p>
+            <p id="divider">-=+=-</p>
+            <p>Dit zijn de DS spellen</p>
+            <button type="button" data-show-album="1">Naar 3DS spellen</button>
+        </aside>
+        <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
+        <img src="assets/fotos/pikmin.png"
+            alt="Pikmin, een klein geel poppetje bekend van de gelijknamige gameserie. De gele pikmin heeft klavertjes drie om zich heen en een rood lieveheersbeestje op zijn hoofd">
+```
+
+CSS (voorbeeld van data-page="1" en data-page="2"):
+```
+.album[data-page="1"] li:nth-of-type(1) {
+    background-image: url(../fotos/ACHHD.png);
+    background-position: center;
+    background-size: cover;
+    background-color: aqua;
+}
+
+.album[data-page="2"] li:nth-of-type(1) {
+    background-image: url(../fotos/RhythmHeaven.png);
+    background-position: center;
+    background-size: cover;
+    background-color: aqua;
+}
+```
+
+JAVASCRIPT:
+```
+document.addEventListener('DOMContentLoaded', () => {
+   const wisselKnoppen = document.querySelectorAll('[data-show-album]');
+   const paginaOnderdelen = document.querySelectorAll('.album[data-page], .spelTekst[data-page]');
+
+   wisselKnoppen.forEach((knop) => {
+      knop.addEventListener('click', () => {
+         const gewenstePagina = knop.dataset.showAlbum;
+
+         paginaOnderdelen.forEach((onderdeel) => {
+            onderdeel.hidden = onderdeel.dataset.page !== gewenstePagina;
+         });
+      });
+   });
+});
+```
+
+Ook moest ik de scroll aanpassen zodat hij aside er ook bij pakt, oorspronkelijk had ik de oude gekopieerd en had ik beide, maar ik ging kijken of de andere nodig was en about werkte nog zonder die code. Ik weet niet waarom.
+
+
+JAVASCRIPT:
+```
+// Scrollen met + knop
+document.addEventListener('DOMContentLoaded', () => {
+   const omhoog = document.getElementById('scrollUp');
+   const omlaag = document.getElementById('scrollDown');
+
+   if (!omhoog || !omlaag) return;
+
+   const krijgScrollDoel = () => document.querySelector('aside:not([hidden])') || document.querySelector('main');
+
+   omhoog.addEventListener('click', () => {
+      const scrollDoel = krijgScrollDoel();
+      if (!scrollDoel) return;
+      scrollDoel.scrollBy({ top: -scrollDoel.clientHeight * 0.2, behavior: 'smooth' });
+   });
+   omlaag.addEventListener('click', () => {
+      const scrollDoel = krijgScrollDoel();
+      if (!scrollDoel) return;
+      scrollDoel.scrollBy({ top: scrollDoel.clientHeight * 0.2, behavior: 'smooth' });
+   });
+});
+```
+
+Ik had perongeluk iets erboven gezet.. ik moest alleen de z-index veranderen.
+
+#### Het eindresultaat:<br>
+DATA-PAGE 1
+![image](log/TW01A.png)
+DATA-PAGE 2
+![image](log/TW01B.png)
+
+Ik heb nog 1 probleem, je moet nu iets inklikken op het main scherm, ik wil dat je op de + naar rechts moet klikken en dan op A moet klikken om op de knop te klikken, of voor nu alleen dat je op A moet drukken?
+
+
+### Muziek
+
+Nu ik Spellen af heb kan ik een vergelijkbaar iets maken bij muziek. Ik heb nu een draaiende CD en 4 albums, maar er is zo veel meer muziek die ik leuk vind. 
+
+Dit begon heel makkelijk, ik was van plan om precies hetzelfde te doen als bij de spellen. Maar toen kwam ik achter de "embed" optie op spotify. Ik zag dit staan en ik was enthausiast, tot ik ermee moest werken. Dit was HEL. Ik HAAT iframe nu. 
+
+Ik ben UREN bezig geweest. Ik kan niet eens alles beschrijven wat ik heb gedaan, het was een bende. Ik ben ook alweer tegen mijn principes in gegaan. Ik had zo veel code geschreven en ik was dingen aan het aanpassen en er gebeurde NIKS. Ik heb AI gebruikt om alle code die niks deed eruit te halen. 64 regels eruit. 64 REGELS! en er was inderdaad niks veranderd daarna. 
+
+HTML
+```
+            <ul class="album" data-page="2" hidden>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/0s50PMr0v5BEApuFqxEC43?utm_source=generator&si=c1c729ac5fa844d1"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/1cZcQDZzx940vWz9PFRY20?utm_source=generator&si=50db82f42ce24b8f"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/2HaS8ukAb0Y7kn8cpMCasQ?utm_source=generator&si=0d31c38d46d246d6"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                 <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/6zo9Mf9ktHobjWgd10Jj0u?utm_source=generator&si=8794373699c24d94"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </ul>
+```
+
+Ik heb 3 data pages gemaakt, 1 voor de albums en 2 voor de losse nummers. Ik heb 4 albums en 4 losse nummers maar als het scherm groot is wil ik dat je de iframes aan kan klikken. Op mobiel zijn de iframes te groot en ziet het er slecht uit. Daarom gaat ie bij minder dan 800px naar data-page="3".
+
+JAVASCRIPT
+```
+document.addEventListener('DOMContentLoaded', () => {
+   const knoppen = document.querySelectorAll('[data-show-album]');
+   const paginaOnderdelen = document.querySelectorAll('ul[data-page], aside[data-page]');
+   const knopNaarNummers = document.querySelector('aside[data-page="1"] [data-show-album]');
+   const mobieleWeergave = window.matchMedia('(max-width: 800px)');
+
+   const toonPagina = (pagina) => {
+      paginaOnderdelen.forEach((onderdeel) => {
+         onderdeel.hidden = onderdeel.dataset.page !== pagina;
+      });
+   };
+
+   knoppen.forEach((knop) => {
+      knop.addEventListener('click', () => {
+         toonPagina(knop.dataset.showAlbum);
+      });
+   });
+
+   const mobiel = () => {
+      if (!knopNaarNummers) return;
+
+      const paginaNummers = mobieleWeergave.matches ? '3' : '2';
+      const huidig = mobieleWeergave.matches ? '2' : '3';
+      const paginaIsOpen = document.querySelector(
+         `ul[data-page="${huidig}"]:not([hidden]), aside[data-page="${huidig}"]:not([hidden])`
+      );
+
+      knopNaarNummers.dataset.showAlbum = paginaNummers;
+      if (paginaIsOpen) toonPagina(paginaNummers);
+   };
+
+   mobiel();
+   mobieleWeergave.addEventListener('change', mobiel);
+});
+```
+
+de javascript van deze pagina, vreselijk. Ik HOU van javascript, HTML is simpel en snel, CSS is irritant en ik ben er slecht in, JavaScript maakt het leuk. Dat is normaal mijn mening. Deze keer vond ik het irritant, dit is allemaal nieuw voor me, ik heb met data-page gewerkt maar ik heb het nooit laten weizigen gebasseerd op formaat van het scherm. Ik dacht dat het niet moeilijk ging zijn, alleen nieuw. Ik denk dat het ook deels kwam door het GEDOE met de CSS, waar ik nu over ga beginnen.
+
+CSS:
+```
+.album {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1em;
+    padding: 1em;
+    margin: 0;
+    width: 60%;
+    box-sizing: border-box;
+    list-style-type: none;
+    z-index: 2;
+}
+
+.album[data-page="1"] li, .album[data-page="3"] li {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background-color: var(--liOverlay);
+    border: 0.0625rem solid var(--border);
+    border-radius: 2.5em;
+    inset 0.0625rem 0.0625rem var(--shadow);
+    text-align: center;
+    pointer-events: auto;
+}
+
+.album iframe {
+    display: block;
+    position: static;
+    width: 100%;
+    height: 5em;
+    border: 0;
+    outline: 0;
+}
+
+.album[data-page="2"] {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.album a {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    pointer-events: auto;
+    font-size: 0;
+    text-decoration: none;
+}
+
+.album[hidden],
+aside[hidden] {
+    display: none !important;
+}
+```
+
+Ik werd GEK!! Ik bleef randjes eromheen hebben, onder de iframes stond een enorme ruimte met een border eromheen. Ik wist niet hoe, ik heb geprobeerd alles weg te halen en terug te brengen maar de ruimte en de rand bleven. Het was ingebouwd in de browser? Waar slaat dat op, doe wat ik je zeg niet wat de browser zegt? Ik probeerde ```height: 50%:``` te doen, niks. Uiteindelijk bleek ```height: 5em;``` te werken, EINDELIJK. De rest, niet hier laten zien, was simpel, alleen foto's linken aan li items.
+
+
+```
+@media (min-width: 1200px) {
+    .album[data-page="2"] {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .album[data-page="2"] iframe {
+        min-width: 0;
+        height: 100%;
+    }
+}
+```
+Als het scherm waarop je kijkt breeder is dan 1200px de layout veranderd, er was heel veel ruimte over anders en het zag er niet zo netjes uit. Misschien kan ik later meer liedjes toevoegen en dingen aanpassen, maar voor nu is dit goed en responsief!
+
+#### Foto's eindresultaat
+Albums pagina fullscreen (data-page="1")
+![image](log/TW01C.png)
+Nummers pagina fullscreen (data-page="2")
+![image](log/TW01D.png)
+Nummers pagina medium scherm (data-page="2")
+
+Nummers pagina klein scherm (data-page="3")
 
 # Reserves
 

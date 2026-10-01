@@ -1,50 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/style/normal.css" />
-        <link rel="stylesheet" href="assets/style/muziek.css" />
+    <link rel="stylesheet" href="assets/style/normal.css" />
+    <link rel="stylesheet" href="assets/style/muziek.css" />
     <script src="assets/javascript/main.js"></script>
     <link rel="icon" type="image" href="assets/fotos/laly.gif">
     <title>Document</title>
 </head>
+
 <body>
     <div id="DS">
         <a id="home" href="index.html" aria-label="Home"></a>
+        <button id="omhoog" class="ds-scroll" type="button" aria-label="Scroll omhoog"></button>
+        <button id="omlaag" class="ds-scroll" type="button" aria-label="Scroll omlaag"></button>
         <header>
-         <span id="bar">
-                    <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
-                    <button>o[]</button> <!-- groot/klein-->
-                    <button>✎</button> <!-- potlood -->
-                    <button>:]</button> <!-- smiley -->
-                    <button>☰</button> <!-- textwolk -->
-                    <button>
-                        <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-                    </button> <!-- internet wereldbol -->
-                </span>
-                <ul id="menu">
-                    <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
-                    <li><a href="about.html">About</a></li> <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
-                    <li><a href="spellen.html">Spellen</a></li>
-                    <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li> <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
-                    <li><a href="muziek.html">Muziek</a></li>
-                    <li><a href="recepten.html">Recepten</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-    </header>
+            <span id="bar">
+                <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
+                <button>o[]</button> <!-- groot/klein-->
+                <button>✎</button> <!-- potlood -->
+                <button>:]</button> <!-- smiley -->
+                <button>☰</button> <!-- textwolk -->
+                <button>
+                    <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
+                </button> <!-- internet wereldbol -->
+            </span>
+            <ul id="menu">
+                <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
+                <li><a href="spellen.html">Spellen</a></li>
+                <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
+                <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
+                <li><a href="muziek.html">Muziek</a></li>
+                <li><a href="recepten.html">Recepten</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
         <main>
+            <!-- VOLLIGE ALBUMS -->
+            <aside data-page="1">
+                <h1>Mijn favoriete muziek</h1>
+                <p>Dit zijn een paar van mijn favoriete albums. Als je op een album klikt kan je naar de Spotify-pagina
+                    gaan waarmee je het album kan afspelen!!</p>
+                <p id="divider">-=+=-</p>
+                <p>Dit zijn de volledige albums</p>
+                <button type="button" data-show-album="2">Naar losse nummers</button>
+            </aside>
+            <ul class="album" data-page="1">
+                <li><a href="https://open.spotify.com/album/4tUxQkrduOE8sfgwJ5BI2F?si=QwMFyi4sQJyQ4DzvZKJZpw">Gorillaz -
+                        Gorillaz</a></li>
+                <li><a href="https://open.spotify.com/album/3rXnMAuqzR6UQl6gBlJrDL?si=4jQfXXJaTrKPJZPUCqghig">Blur - The
+                        great escape</a></li>
+                <li><a href="https://open.spotify.com/album/01RGJSfrva3J4aB7Gu7WYQ?si=OXXdjtdjRp6g-NjAEdhaUw">Soft Cell
+                        - Non-Stop Erotic Caberet</a></li>
+                <li><a href="https://open.spotify.com/album/1d27T3U7K7WixFp0Ja6pLz?si=8UyKC-Z_SuiLa_W1bWYjvQ">Doe Maar -
+                        4us</a></li>
+            </ul>
+            <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
 
-        
-                <ul id="album"> <!-- Foto's toevoegen!!, en meer pagina's?-->
-                    <li><a href="https://open.spotify.com/album/4tUxQkrduOE8sfgwJ5BI2F?si=QwMFyi4sQJyQ4DzvZKJZpw">Gorillaz - Gorillaz</a></li>
-                    <li><a href="https://open.spotify.com/album/3rXnMAuqzR6UQl6gBlJrDL?si=4jQfXXJaTrKPJZPUCqghig">Blur - The great escape</a></li>
-                    <li><a href="https://open.spotify.com/album/01RGJSfrva3J4aB7Gu7WYQ?si=OXXdjtdjRp6g-NjAEdhaUw">Soft Cell - Non-Stop Erotic Caberet</a></li>
-                    <li><a href="https://open.spotify.com/album/1d27T3U7K7WixFp0Ja6pLz?si=8UyKC-Z_SuiLa_W1bWYjvQ">Doe Maar - 4us</a></li>
-                </ul>
-                <img src="assets/fotos/cd.png">
-            
-    </main>
+            <!-- LOSSE NUMMERS @media >800px -->
+            <aside data-page="2" hidden>
+                <h1>Mijn favoriete nummers</h1>
+                <p>Dit zijn een paar van mijn favoriete nummers, als je op een nummer klikt kan je het afspelen op deze
+                    website!!</p>
+                <p>Als hier niks verschijnt is er waarschijnlijk geen toestemming voor cookies gegeven</p>
+                <p id="divider">-=+=-</p>
+                <p>Dit zijn de losse nummers</p>
+                <button type="button" data-show-album="1">Naar volledige albums</button>
+            </aside>
+
+            <ul class="album" data-page="2" hidden>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/0s50PMr0v5BEApuFqxEC43?utm_source=generator&si=c1c729ac5fa844d1"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/1cZcQDZzx940vWz9PFRY20?utm_source=generator&si=50db82f42ce24b8f"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/2HaS8ukAb0Y7kn8cpMCasQ?utm_source=generator&si=0d31c38d46d246d6"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <iframe data-testid="embed-iframe"
+                    data-consent-src="https://open.spotify.com/embed/track/6zo9Mf9ktHobjWgd10Jj0u?utm_source=generator&si=8794373699c24d94"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </ul>
+            <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
+
+
+            <!-- LOSSE NUMMERS @media <800px -->
+            <aside data-page="3" hidden>
+                <h1>Mijn favoriete nummers</h1>
+                <p>Dit zijn een paar van mijn favoriete nummers, als je op een nummer klikt kan je naar de
+                    Spotify-pagina gaan waarmee je het nummer kan afspelen!!</p>
+                <p id="divider">-=+=-</p>
+                <p>Dit zijn de losse nummers</p>
+                <button type="button" data-show-album="1">Naar volledige albums</button>
+            </aside>
+            <ul class="album" data-page="3" hidden>
+                <li><a href="https://open.spotify.com/track/0s50PMr0v5BEApuFqxEC43?si=cf50558c727844f7">5 8 6 - New
+                        Order</a></li>
+                <li><a href="https://open.spotify.com/track/1cZcQDZzx940vWz9PFRY20?si=247a5bc07a70403b">Getting Away
+                        with It - Electronic</a></li>
+                <li><a href="https://open.spotify.com/track/2HaS8ukAb0Y7kn8cpMCasQ?si=c1a0d6703f6c4a32">Embarrassment -
+                        Madness</a></li>
+                <li><a href="https://open.spotify.com/track/6zo9Mf9ktHobjWgd10Jj0u?si=1df515ed7e294528">Hallelujah (Club
+                        Mix) - Happy Mondays</a></li>
+            </ul>
+            <img src="assets/fotos/cd.png" alt="Draaiende CD">
+        </main>
+
     </div>
 </body>
+
 </html>

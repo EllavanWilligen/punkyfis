@@ -84,6 +84,7 @@ body {
     --button: linear-gradient(to top left, #b9b9b9 -50%, #fcfcfc 110%);
     --buttonKleur: black;
     --buttonDrop: rgb(195,195,195);
+    --tekst: #6c706f;
 
     --liIcoon1: url(../fotos/MIIAbout3.png);
     --liIcoon2: url(../fotos/ACWWW.png);
@@ -106,6 +107,7 @@ body {
     --button: linear-gradient(to top left, #3b3b3b -50%, #777777 110%);
     --buttonKleur: rgb(171, 171, 171);
     --buttonDrop: rgb(27, 27, 27);
+    --tekst: rgb(171, 171, 171);
 
     --liIcoon1: url(../fotos/MIIAboutDark.png);
     --liIcoon2: url(../fotos/ACWWZ.png);
@@ -467,15 +469,22 @@ button:hover {
 .ds-scroll {
     position: absolute;
     left: 8%;
+    display: block;
     width: 6%;
     height: 5%;
-    opacity: 0;
-    cursor: pointer;    
     z-index: 4;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    opacity: 0;
+    pointer-events: auto;
+    cursor: pointer;
+    touch-action: manipulation;
 }
 
-#scrollUp { top: 72%; }
-#scrollDown { top: 80%; }
+#omhoog { top: 72%; }
+#omlaag { top: 80%; }
+
 
 .ds-scroll:focus-visible {
     opacity: 1;
