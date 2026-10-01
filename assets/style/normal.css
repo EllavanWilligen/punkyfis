@@ -185,8 +185,8 @@ header {
     background-color: var(--BSBackground);
     position: absolute;
     anchor-name: --header;
-    z-index: auto;
-    pointer-events: none;
+    z-index: 2;
+    pointer-events: auto;
     top: 55.5%;
     left: 22.8%;
     width: 54.5%;
@@ -234,8 +234,8 @@ header span {
     width: 100%;
     justify-content: space-around;
     position: relative;
-    z-index: auto;
-    pointer-events: none;
+    z-index: 3;
+    pointer-events: auto;
     flex: 0 1 auto;
     display: flex;
     align-items: center;
@@ -317,7 +317,7 @@ header li {
     padding: 0;
     background: var(--liBackground);
     border: 0.0625rem solid var(--border);
-    border-radius: 2.5em;
+    border-radius: 3rem;
     box-shadow: 0.125rem 0.1875rem 0.25rem var(--shadow), inset 0.0625rem 0.0625rem var(--shadow);
     background-size: cover;
 }
@@ -402,6 +402,7 @@ header li:focus-within::after {
     content: "";
     position: absolute;
     inset: -0.2em;
+    pointer-events: none;
     transform-origin: center;
     animation: menu-select 0.7s ease-in-out infinite alternate;
     background:
@@ -414,6 +415,18 @@ header li:focus-within::after {
         linear-gradient(var(--select), var(--select)) bottom right / 2.4em 0.8em no-repeat,
         linear-gradient(var(--select), var(--select)) bottom right / 0.8em 2.4em no-repeat;
 }
+
+@keyframes menu-select {
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0.15em var(--select));
+    }
+    to {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 0.55em var(--select));
+    }
+}
+
 
 header button:hover, 
 header button:focus-within {
@@ -431,6 +444,12 @@ header button:focus-within::after {
 }
 
 
+#home:focus-visible {
+    opacity: 1;
+    outline: 0.2rem solid rgb(224, 134, 170);
+    background: rgba(255, 134, 179, 0.25);
+}
+
 /* header a:focus-visible {
     outline: none;
 }
@@ -442,3 +461,24 @@ button:focus {
 button:hover {
     color: rebeccapurple;
 } */
+
+
+
+.ds-scroll {
+    position: absolute;
+    left: 8%;
+    width: 6%;
+    height: 5%;
+    opacity: 0;
+    cursor: pointer;    
+    z-index: 4;
+}
+
+#scrollUp { top: 72%; }
+#scrollDown { top: 80%; }
+
+.ds-scroll:focus-visible {
+    opacity: 1;
+    outline: 0.2rem solid rgb(224, 134, 170);
+    background: rgba(255, 134, 179, 0.25);
+}

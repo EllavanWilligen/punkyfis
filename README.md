@@ -1629,7 +1629,6 @@ header li:focus-within::after {
     position: absolute;
     inset: -0.2em;
     transform-origin: center;
-    animation: menu-select 0.7s ease-in-out infinite alternate;
     background:
         linear-gradient(var(--select), var(--select)) top left / 2.4em 0.8em no-repeat,
         linear-gradient(var(--select), var(--select)) top left / 0.8em 2.4em no-repeat,
@@ -1686,11 +1685,164 @@ Een klein ding waar ik me aan stoor is dat de buttons te licht zijn in dark mode
 BRONNEN:
 https://stackoverflow.com/questions/15966495/default-color-code-on-html-button
 
-### Valide HTML
 
 
 
+## 30 sep - Thuiswerk
 
+Na de aanpassingen van gister met de hover/focus had ik een probleem, ik kon ze niet meer aanklikken. Ik zocht op hoe dit zou kunnen komen:
+1. z-index was fout
+Ik denk het niet want dan zou ik eerder al problemen hebben
+2. pointer-events
+Dit was het probleem, ik wist niet wat het was maar blijkbaar moet je ```pointer-events: auto;``` doen? Ik had helemaal geen pointer-events staan en blijkbaar staat het automatisch op none? niet op auto? Waarom niet dat lijkt me toch logischer?
+
+Dat was het eigenlijk er was meer maar nummer 2 had het al gefixt!
+
+Nu ik toch al bezig was ging ik verder met de hover/focus, bij de 3DS zit er een animatie als de app geselecteerd is, ook is het wat ronder maar daar let ik voor nu niet op. Ik heb deze code geschreven om de hoekjes iets verder en dan weer iets dichterbij te laten komen, hiervoor moest ik ```animation: menu-select 0.7s ease-in-out infinite alternate;``` toevoegen in het bovenste deel (zie "Interactie Deep Dive") zodat dit elke 0.7s herhaalt en niet teleporteerd. Ik had deze code al maar ik wist niet dat ik het @keyframes nodig had dus toen had ik het weer weggehaald.
+
+CSS
+```
+@keyframes menu-select {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.08);
+    }
+}
+```
+
+## 1 Okt - Thuiswerk
+
+GISTER WERD IK ZIEK, IK HAD AL KOORTS, IK WAS BIJNA BETER, NU HEB IK GRIEP?! 
+
+
+
+### Scrollen met de + knop op de DS
+
+Ik moest het bovenste scherm scrollbaar maken, maar dit wil ik niet want je kan dat scherm niet aanraken en dus niet scrollen op een DS. Hierdoor ben ik onderzoek gaan doen en vond ik ```window.scrollTo({ top: 0, behavior: 'smooth' })```. Eerst vond ik alleen dingen die de gebruiker naar een specifieke plek sturen, maar later vond ik dat je het ook * een percentage kan doen. Dus ik heb * 0.5 gedaan. Zo moet je 2x klikken om helemaal van boven naar helemaal beneden te gaan. Ik kan ook * 1 doen, maar zo kan je vaker klikken en ik heb mn best erop gedaan.
+
+
+
+HTML
+```
+<div id="DS">
+    <a id="home" href="index.html" aria-label="Home"></a>
+    <button id="scrollUp" class="ds-scroll" type="button" aria-label="Scroll omhoog"></button>
+    <button id="scrollDown" class="ds-scroll" type="button" aria-label="Scroll omlaag"></button>
+</div>
+```
+
+CSS
+```
+.ds-scroll {
+    position: absolute;
+    left: 8%;
+    width: 6%;
+    height: 5%;
+    opacity: 0;
+    cursor: pointer;    
+    z-index: 4;
+}
+
+#scrollUp { top: 72%; }
+#scrollDown { top: 80%; }
+
+.ds-scroll:focus-visible {
+    opacity: 1;
+    outline: 0.2rem solid rgb(224, 134, 170);
+    background: rgba(255, 134, 179, 0.25);
+}
+```
+
+JAVASCRIPT
+```
+document.addEventListener('DOMContentLoaded', () => {
+   const mainScherm = document.querySelector('main');
+   const omhoog = document.getElementById('scrollUp');
+   const omlaag = document.getElementById('scrollDown');
+
+   if (!mainScherm || !omhoog || !omlaag) return;
+
+   omhoog.addEventListener('click', () => {
+      mainScherm.scrollBy({ top: -mainScherm.clientHeight * 0.5, behavior: 'smooth' });
+   });
+
+   omlaag.addEventListener('click', () => {
+      mainScherm.scrollBy({ top: mainScherm.clientHeight * 0.5, behavior: 'smooth' });
+   });
+});
+```
+
+
+
+BRONNEN:
+https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+
+### About anders maken op mobiel
+
+Hiermee was ik tegelijkertijd bezig, maar wat ik tot nu toe op about.html heb word te klein op mobiel en onleesbaar. 
+
+
+
+CSS
+```
+@media (max-width: 600px) {
+    main {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0.75rem;
+        scrollbar-width: thin;
+    }
+
+    main img {
+        position: relative;
+        top: auto;
+        left: auto;
+        float: left;
+        width: clamp(72px, 25vw, 120px);
+        max-width: 100%;
+        max-height: none;
+        margin: 0 0.75rem 0.5rem 0;
+        transform: none;
+    }
+
+    h1,
+    h2 {
+        position: static;
+        margin: 0.25rem 0;
+        font-size: clamp(0.9rem, 4vw, 1.25rem);
+        padding: 1em;
+    }
+
+    .AM {
+        position: static;
+        clear: both;
+        width: 100%;
+        max-width: none;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+    }
+
+    .AM #V,
+    .AM #A {
+        min-width: 0;
+        margin: 0;
+        padding: 0.5rem;
+        font-size: var(--step-2);
+        overflow-wrap: anywhere;
+    }
+}
+
+```
+
+Ik heb later de breedte naar 1000px veranderd, dit is omdat het best moeilijk leesbaar was vlak voordat het de 600px haalt. Ik moet bekennen dat ik fuck-all aan het doen ben met die maten, die clamps haal ik van het internet, vaak ben ik heel lang aan het proberen met die maten totdat het werkt, het is heel irritant en er moet logica achter zitten, zijn er mensen wie uit hun hoofd weten welke maat ze nodig hebben? Voor nu maakt het niet uit, maar het kost me heel veel tijd. Soms is er een groot verschil en soms is er geen verschil tussen em en rem?
+
+### Spellen
+
+Alleen about.html is iets mee gedaan, de andere pagina's nog niet. 
 
 
 

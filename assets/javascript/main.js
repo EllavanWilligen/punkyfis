@@ -247,3 +247,22 @@ document.addEventListener('DOMContentLoaded', () => {
    koppelWebring();
    koppelContactformulier();
 });
+
+
+
+// Scrollen met + knop
+document.addEventListener('DOMContentLoaded', () => {
+   const scrollDoel = document.getElementById('spelTekst') || document.querySelector('main');
+   const omhoog = document.getElementById('scrollUp');
+   const omlaag = document.getElementById('scrollDown');
+
+   if (!scrollDoel || !omhoog || !omlaag) return;
+
+   omhoog.addEventListener('click', () => {
+      scrollDoel.scrollBy({ top: -scrollDoel.clientHeight * 0.5, behavior: 'smooth' });
+   });
+
+   omlaag.addEventListener('click', () => {
+      scrollDoel.scrollBy({ top: scrollDoel.clientHeight * 0.5, behavior: 'smooth' });
+   });
+});
