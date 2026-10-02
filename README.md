@@ -2215,7 +2215,7 @@ Niet genoemd maar wel belangrijk, ik wil later nog een reduced motion modus make
 
 ## 02 okt - Retrospective
 
-
+Ik heb de verkeerde dingen gedaan, ik wist niet goed wat er moest gebeuren. 
 
 # Reserves
 
