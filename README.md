@@ -2211,6 +2211,12 @@ Iedereen met welke vorm van kleurenblindheid dan ook kan de site goed bekijken.
 4b. De opmaak is nog niet heel speciaal maar als je een bericht stuurt staat eronder eerst "bericht versturen" en als het verstuurd is staat er "bericht verstuurd"
 
 
+Niet genoemd maar wel belangrijk, ik wil later nog een reduced motion modus maken.
+
+## 02 okt - Retrospective
+
+
+
 # Reserves
 
 

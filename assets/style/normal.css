@@ -168,7 +168,8 @@ body.dark-theme::after {
 }
 
 body.dark-theme #DS::before {
-    background-image: url(../fotos/3DSBlauw2.svg);
+    background-image: url(../fotos/3DSBlauw3.svg);
+    /* waarom zit dat gat daar die is er niet in finder */
 }
 
 /* 3DS SVG */

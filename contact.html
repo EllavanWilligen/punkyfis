@@ -16,44 +16,44 @@
     <div id="DS">
         <a id="home" href="index.html" aria-label="Home"></a>
         <header>
-         <span id="bar">
-                    <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
-                    <button>o[]</button> <!-- groot/klein-->
-                    <button>✎</button> <!-- potlood -->
-                    <button>:]</button> <!-- smiley -->
-                    <button>☰</button> <!-- textwolk -->
-                    <button>
-                        <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-                    </button> <!-- internet wereldbol -->
-                </span>
-                <ul id="menu">
-                    <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
-                    <li><a href="about.html">About</a></li> <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
-                    <li><a href="spellen.html">Spellen</a></li>
-                    <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li> <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
-                    <li><a href="muziek.html">Muziek</a></li>
-                    <li><a href="recepten.html">Recepten</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-    </header>
-    <main>
+            <span id="bar">
+                <button onclick="lightDark()">O</button><!-- light/dark toggle -->
+                <button>o[]</button> <!-- groot/klein-->
+                <button>✎</button> <!-- potlood -->
+                <button>:]</button> <!-- smiley -->
+                <button>☰</button> <!-- textwolk -->
 
-        
-                <div class="contact-layout">
-                    <div class="contact-portrait">
-                        <img src="assets/fotos/MIIHoofd.png" width="500" height="500" id="miiHoofd">
-                        <h1>Ella</h1>
-                        <h2>Student Hogeschool <br> van Amsterdam</h2>
-                    </div>
-                    <form id="contactForm" action="https://formsubmit.co/ajax/ella.van.willigen@hva.nl" method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="text" name="name" required>
-                        <input type="text" name="bericht" required>
-                        <button id="submit" type="submit">Stuur</button>
-                        <p id="contactStatus" role="status"></p>
-                    </form>
-                </div>
-            
-    </main>
+                <button>
+                    <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
+                </button> <!-- internet wereldbol -->
+            </span>
+            <ul id="menu">
+                <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="spellen.html">Spellen</a></li>
+                <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
+                <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
+                <li><a href="muziek.html">Muziek</a></li>
+                <li><a href="recepten.html">Recepten</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+        <main>
+            <img src="assets/fotos/MIIHoofd.png" width="500" height="500" id="miiHoofd"
+                alt="Nintendo mii, het poppetje heeft kort bruin haar en een bleke huid" />
+            <h1>Ella</h1>
+            <h2>Student Hogeschool <br> van Amsterdam</h2>
+            <aside>
+                <form id="contactForm" action="https://formsubmit.co/ajax/ella.van.willigen@hva.nl" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <h3>Naam</h3>
+                    <input type="text" name="name" id="naam" placeholder="Naam" required>
+                    <h3>Bericht</h3>
+                    <input type="text" name="bericht" id="bericht" placeholder="Bericht" required>
+                    <button id="submit" type="submit">Stuur</button>
+                    <p id="contactStatus" role="status"></p>
+                </form>
+            </aside>
+        </main>
     </div>
 </body>

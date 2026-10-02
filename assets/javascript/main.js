@@ -25,7 +25,7 @@ function saveCookieConsent(allowed) {
    }
 }
 
-// Externe embeds laden pas nadat de bezoeker toestemming heeft gegeven.
+// Externe embeds laden pas nadat de bezoeker toestemming heeft gegeven
 function setIframeAvailability(allowed) {
    document.querySelectorAll("iframe[data-consent-src]").forEach((iframe) => {
       if (allowed) {
