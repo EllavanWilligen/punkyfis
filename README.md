@@ -2215,7 +2215,11 @@ Niet genoemd maar wel belangrijk, ik wil later nog een reduced motion modus make
 
 ## 02 okt - Retrospective
 
-Ik heb de verkeerde dingen gedaan, ik wist niet goed wat er moest gebeuren. 
+Ik heb de verkeerde dingen gedaan, ik wist niet goed wat er moest gebeuren. Ik moest alleen nog mijn HTML valideren, ook moet ik verder werken aan het uiterlijk van de cookie melding, maar dat komt later nog
+
+# Retrospective hier plakken
+
+Ik heb vandaag ook een nieuwe laptop binnen gekregen, hierdoor moet ik alleen even kijken of alles lukt met bijvoorbeeld GitHub, ik heb al een paar keer geprobeerd maar volgensmij werkt het niet goed, ik zie de commits wel maar ik zie de
 
 # Reserves
 
