@@ -2216,10 +2216,13 @@ Niet genoemd maar wel belangrijk, ik wil later nog een reduced motion modus make
 ## 02 okt - Retrospective
 
 Ik heb de verkeerde dingen gedaan, ik wist niet goed wat er moest gebeuren. Ik moest alleen nog mijn HTML valideren, ook moet ik verder werken aan het uiterlijk van de cookie melding, maar dat komt later nog
+Ik ben echt hondsberoerd, mn hartslag is gemiddeld 130 spm en ik kan amper ademen, maar ik ben op school. Ik heb de slides weer in de trein gemaakt, niet met mijn stiften maar ik heb wel paars en groen gebruikt voor de retrosspective in tegenstelling tot de vorige keer.
 
 # Retrospective hier plakken
 
 Ik heb vandaag ook een nieuwe laptop binnen gekregen, hierdoor moet ik alleen even kijken of alles lukt met bijvoorbeeld GitHub, ik heb al een paar keer geprobeerd maar volgensmij werkt het niet goed, ik zie de commits wel maar ik zie de
+
+Tijdens het wachten tot ik aan de beurt was ben ik verder gegaan met de contact pagina, contact en recepten hebben nog niet heel veel, contact heeft een werkend begin dus dat leek me het makkelijkste om mee bezig te gaan
 
 # Reserves
 
@@ -3081,7 +3084,4 @@ Ik heb vandaag ook een nieuwe laptop binnen gekregen, hierdoor moet ik alleen ev
 
 
 
-
-
-
-
+## 
