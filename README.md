@@ -2224,6 +2224,56 @@ Ik heb vandaag ook een nieuwe laptop binnen gekregen, hierdoor moet ik alleen ev
 
 Tijdens het wachten tot ik aan de beurt was ben ik verder gegaan met de contact pagina, contact en recepten hebben nog niet heel veel, contact heeft een werkend begin dus dat leek me het makkelijkste om mee bezig te gaan
 
+# Sprint 3
+
+## 03 okt - Thuiswerk
+
+1. github linken
+2. glitter
+
+
+### Glitter
+
+```
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+```
+
+```
+const sterLight = "#f199c2";
+const sterDark = "#8dbaf5";
+var colour = sterLight;
+
+function sterretjesKleur() {
+   colour = document.body.classList.contains("dark-theme")
+      ? sterDark
+      : sterLight;
+} 
+```
+
+
+MAKER:
+https://www.mf2fm.com/rv/dhtmltinkerbell.php
+
+BRONNEN:
+https://www.computerhope.com/htmcolor.htm#color-codes
+
+
+
+## 04 okt - Thuis werk (ziek)
+
+### Play the rules
+
+Als liedje kies ik Interglactic van de Beastie Boys, ik ken dit nummer van vroeger van mijn vader en vind het zelf ook een leuk nummer.
+
+## 07 okt - Woensdag les
+
+
+
 # Reserves
 
 

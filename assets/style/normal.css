@@ -61,6 +61,7 @@ html {
     "main" 
     "header"
     "footer";
+    cursor: url(../fotos/favicon.png), crosshair;
 }
 
 
@@ -93,6 +94,11 @@ body {
     --liIcoon5: url("../fotos/recept2W.png");
     --liIcoon6: url(../fotos/contactW.png);
 
+}
+
+.sparkle-star,
+.sparkle-tiny {
+    filter: drop-shadow(0 0 0.3rem var(--sterretjes-schaduw));
 }
 
 .dark-theme {
