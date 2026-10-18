@@ -2243,6 +2243,8 @@ Tijdens het wachten tot ik aan de beurt was ben ik verder gegaan met de contact 
 ****************************/
 ```
 
+
+
 ```
 const sterLight = "#f199c2";
 const sterDark = "#8dbaf5";
@@ -2268,9 +2270,882 @@ https://www.computerhope.com/htmcolor.htm#color-codes
 
 ### Play the rules
 
-Als liedje kies ik Interglactic van de Beastie Boys, ik ken dit nummer van vroeger van mijn vader en vind het zelf ook een leuk nummer.
+Als liedje kies ik Interglactic van de Beastie Boys, ik ken dit nummer van vroeger van mijn vader en vind het zelf ook een leuk nummer. Ik snap alleen de opdracht niet dus ik ga morgen proberen naar school te gaan zodat ik hulp kan vragen.
+
+
+1. Leg uit wat er met de volgende termen bedoeld wordt: kerning, tracking, leading, flush-left, flush-right, centered, justified, indent, outdent, modular scale, movable type, focus punt, vijf soorten contrast, spatial tension. (Hint, alle termen staan in de artikelen die we samen gelezen hebben)
+    A
+
+2. Wat is jouw ideale regellengte (measure)? Leg uit waarom.
+    A
+
+3. Als je in een ontwerp maar één variabele tot je beschikking had om hiërarchie aan te brengen (grootte, plaatsing, spacing, lettersoorten), welke zou je dan gebruiken en waarom?
+    A
 
 ## 07 okt - Woensdag les
+
+### Play the Rules
+
+Ik heb hulp gevraagd, dus ik kan aan de slag!
+
+# TEKENINGEN INSCANNEN
+
+
+#### HTML opzet
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intergalactic</title>
+  <link rel="stylesheet" href="intergalactic.css">
+  <meta name="copyright" content="Design by …">
+  <meta name="description" content="…">
+  <meta name="keywords" content="…">
+</head>
+
+<body>
+  <header>
+    <!-- <h1>Intergalactic Beastie Boys</h1> -->
+
+  </header>
+  <main>
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451.52 830.84">
+    BESPAARD WANT HEEL VEEL! SVG STAAT HIERONDER
+    </svg>
+
+    <!-- Intergalactic planetary, planetary intergalactic in hoofd en torso robot -->
+    <!-- Another dimension, another dimension in armen en benen -->
+    <!-- 38 section tags -> 19 sections -->
+
+    <article>
+      <section>
+        Intergalactic planetary, planetary intergalactic 
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic
+        Intergalactic planetary, planetary intergalactic
+      </section>
+      <br>
+      <section>
+        Another dimension, another dimension
+        Another dimension, another dimension
+        Another dimension, another dimension<br>
+        Another dimension, another dimension
+        Another dimension, another dimension
+        Another dimension, another dimension
+      </section>
+      <br>
+      <section>
+        Well, now, don't you tell me to <strong>smile</strong><br>
+        You stick around, I'll make it worth your <strong>while</strong><br>
+        Got numbers beyond what you can <strong>dial</strong><br>
+        Maybe it's because I'm so versa<strong>tile</strong><br>
+      </section>
+      <section>
+        <strong>Style, profile</strong><br>
+      </section>
+      <section>
+        I said it always brings me back when I hear ooh-<strong>child</strong><br>
+        From the Hudson River out to the <strong>Nile</strong><br>
+        I run the marathon 'til the very last <strong>mile</strong><br>
+      </section>
+      <br>
+      <section>
+        Well, if you battle me, I will re<strong>vile</strong><br>
+        People always saying my style is <strong>wild</strong><br>
+        You've got gall, you've got <strong>guile</strong><br>
+        To step to me, I'm a rapo<strong>phile</strong><br>
+      </section>
+      <br>
+      <section>
+        If you wanna battle, you're in de<strong>nial</strong><br>
+        Coming from Uranus to check my <strong>style</strong><br>
+        Go ahead, put my rhymes on <strong>trial</strong><br>
+        Cast you off into <strong>exile</strong><br>
+      </section>
+      <br>
+      <section>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+      </section>
+      <br>
+      <section>
+        Jazz and AWOL, that's our <strong>team</strong><br>
+        Step inside the party, disrupt the whole <strong>scene</strong><br>
+        When it comes to beats, well, I'm a <strong>fiend</strong><br>
+        I like my sugar with coffee and <strong>cream</strong><br>
+      </section>
+      <br>
+      <section>
+        Well, I gotta keep it going, keep it going full <strong>steam</strong><br>
+        Too sweet to be sour, too nice to be <strong>mean</strong><br>
+        Well, on the tough guy style, I'm not too <strong>keen</strong><br>
+        Tryna change the world, I will plot and <strong>scheme</strong><br>
+      </section>
+      <br>
+      <section>
+        Mario C likes to keep it <strong>clean</strong><br>
+        Gonna shine like a sun<strong>beam</strong><br>
+        Keep on rappin' 'cause that's my <strong>dream</strong><br>
+        Got an A from Moe Dee for sticking to the <strong>rules</strong><br>
+      </section>
+      <br>
+      <section>
+        Now when it comes to envy, y'all is <strong>green</strong><br>
+        Jealous of the rhyme and the rhyme rou<strong>tine</strong><br>
+      </section>
+      <section>
+        Another dimension, new galax<strong>y</strong><br>
+        Intergalactic planetar<strong>y</strong><br>
+      </section>
+      <br>
+      <section>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+      </section>
+      <br>
+      <section>
+        We're from the family tree of old school hip-<strong>hop</strong><br>
+        Kick off your shoes and relax your <strong>socks</strong><br>
+        The rhymes will spread just like a <strong>pox</strong><br>
+        'Cause the music is live, like an electric <strong>shock</strong><br>
+      </section>
+      <br>
+      <section>
+        I am known to do the Wop <strong>(Wop)</strong><br>
+        Also known for the Flintstone Flop <strong>(Flop)</strong><br>
+        Tammy D getting biz on the <strong>crop</strong><br>
+        Beastie Boys known to let the <strong>beat</strong><br>
+        Mmm, <em>drop</em><br>
+      </section>
+      <br>
+      <section>
+        Now when I wrote graffiti, my name was <strong>Slop</strong><br>
+        If my rap's soup, my beats is <strong>stock</strong><br>
+        Step from the table when I start to <strong>chop</strong><br>
+        I'm a lumberjack, DJ Ad-<strong>Rock</strong><br>
+      </section>
+      <br>
+      <section>
+        If you try to knock me, you'll get <strong>mocked</strong><br>
+        I'll stir fry you in my <strong>wok</strong><br>
+        Your knees'll start shaking and your fingers <strong>pop</strong><br>
+        Like a pinch on the neck of Mr. <strong>Spock</strong><br>
+      </section>
+      <br>
+      <section>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+      </section>
+      <br>
+      <section>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+      </section>
+
+
+    </article>
+  </main>
+  <footer>
+    Visual interpretation by Ella Bella Smella van Willigen
+  </footer>
+</body>
+```
+
+#### CSS opzet
+```
+/* MARK: fonts */
+@font-face {
+  font-family: 'Seraphs';
+  src: url('font/SeraphsVF.woff2') format('woff2'), /* Modern Browsers */
+}
+
+
+/* MARK: items */
+body{
+  font-family: 'Seraphs';
+}
+
+main{
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.2em;
+}
+
+strong{
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+svg{
+  width: 25%;
+  height: 25%;
+
+}
+
+article {
+  width: 70%;
+  left: 30%;
+}
+
+section{
+  margin: 1em 0;
+}
+
+/* Intro */
+/* Intergalactic */
+
+section:nth-of-type(1){
+  color: red;
+    margin: 0;
+}
+
+/* Another dimension */
+
+section:nth-of-type(2){
+  color: orange;
+    margin: 0;
+}
+
+/* III */
+
+section:nth-of-type(3){
+  color: yellow;
+}
+
+section:nth-of-type(4){
+  color: green;
+}
+
+section:nth-of-type(5){
+  color: blue;
+}
+
+section:nth-of-type(6){
+  color: indigo;
+}
+
+section:nth-of-type(7){
+  color: violet;
+}
+
+/* Intergalactic planetary */
+
+section:nth-of-type(8){
+  color: hotpink;
+}
+
+/* EEE */
+
+section:nth-of-type(9){
+  color: brown;
+}
+
+section:nth-of-type(10){
+  color: teal;
+}
+
+section:nth-of-type(11){
+  color: cyan;
+}
+
+section:nth-of-type(12){
+  color: magenta;
+}
+
+section:nth-of-type(13){
+  color: olive;
+}
+
+/* Intergalactic planetary */
+
+section:nth-of-type(14){
+  color: navy;
+}
+
+/* OOO */
+
+section:nth-of-type(15){
+  color: coral;
+}
+
+section:nth-of-type(16){
+  color: gold;
+}
+
+section:nth-of-type(17){
+  color: slateblue;
+}
+
+section:nth-of-type(18){
+  color: crimson;
+}
+
+/* Outro */
+/* Intergalactic Planetary */
+
+section:nth-of-type(19){
+  color: lime;
+}
+
+/* Another dimension */
+
+section:nth-of-type(20){
+  color: khaki;
+}
+
+```
+#### SVG
+![image](log/Asset%201.svg)
+
+
+Bronnen:
+Illustrator tutorial:
+https://www.youtube.com/watch?v=xE_W3g-rxls
+
+
+
+### Check-out
+1. Waarom is het goed om een grid in je ontwerp toe te passen? Noem een reden voor de ontwerper en een voor de bezoeker.
+    Zo word het makkelijker responsive, dan kan de gebruiker het op zowel desktop als mobiel gebruiken en is het minder gedoe voor de ontwerper om dit voor elkaar te krijgen, je kan grotendeels het grid het werk laten doen
+
+2. Noem drie manieren om chaos in je ontwerp te voorkomen.
+    Grid gebruiken, kies een paar "hoofdkleuren", duidelijke hierarchie
+
+3. Hoeveel gekkigheid moet er in je werk zitten?
+    Alle gekkigheid, als je precies hetzelfde maakt als alle anderen is er geen reden om jou specifiek aan te nemen. Als AI je idee kan bedenken en maken ben je binnenkort niet meer nodig. Je moet iets unieks maken, zelf verzinnen en persoonlijk maken. Zolang het maar leesbaar en begrijpbaar blijft.
+
+
+## 08 okt - Thuis werk
+Vandaag ben ik verder gegaan met de lyric site. Ik heb nog niet echt met CSS animatie gewerkt dus dit vind ik een hele moeilijke opdracht, ik kan alleen dingen rond laten draaien en zelfs dat moest ik opzoeken op Stack-Overflow. De documentatie word hier een beetje slap, dit komt doordat ik vergeten was dat ik nog best ziek ben en medicatie neem, dus ik was volledig vergeten wat ik erbij wou zetten.
+
+### Intergalactic
+
+
+#### HTML
+```
+    <article>
+      <section>
+        <p>
+          <span>Intergalactic planetary, planetary intergalactic</span>
+          <span>Intergalactic planetary, planetary intergalactic</span>
+          <span>Intergalactic planetary, planetary intergalactic</span>
+          <span>Intergalactic planetary, planetary intergalactic</span>
+        </p>
+      </section>
+      <br>
+      <section>
+        <!-- toen ik p gebruikte werkte het niet, toen ik er span van maakte wel -->
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+        <span>Another dimension</span>
+      </section>
+      <br>
+      <section>
+        <p>Well, now, don't you tell me to <strong>smile</strong></p>
+        <p>You stick around, I'll make it worth your <strong>while</strong></p>
+        <p>Got numbers beyond what you can <strong>dial</strong></p>
+        <p>Maybe it's because I'm so versa<strong>tile</strong></p>
+      </section>
+      <section>
+        <p>Style</p>
+        <p>profile</p>
+      </section>
+      <section>
+        <p>I said it always brings me back when I hear ooh-<strong>child</strong></p>
+        <p>From the Hudson River out to the <strong>Nile</strong><br></p>
+        <p>I run the marathon 'til the very last <strong>mile</strong><br></p>
+      </section>
+      <br>
+      <section>
+        <p>Well, if you battle me, I will re<strong>vile</strong></p>
+        <p>People always saying my style is <strong>wild</strong></p>
+        <p>You've got gall, you've got <strong>guile</strong></p>
+        <p>To step to me, I'm a rapo<strong>phile</strong></p>
+      </section>
+      <br>
+      <section>
+        If you wanna battle, you're in de<strong>nial</strong><br>
+        Coming from Uranus to check my <strong>style</strong><br>
+        Go ahead, put my rhymes on <strong>trial</strong><br>
+        Cast you off into <strong>exile</strong><br>
+      </section>
+      <br>
+      <section>
+        <p>Intergalactic planetary,<br> planetary intergalactic</p>
+        <p>Intergalactic planetary,<br> planetary intergalactic</p>
+      </section>
+      <br>
+      <section>
+        Jazz and AWOL, that's our <strong>team</strong><br>
+        Step inside the party, disrupt the whole <strong>scene</strong><br>
+        When it comes to beats, well, I'm a <strong>fiend</strong><br>
+        I like my sugar with coffee and <strong>cream</strong><br>
+      </section>
+      <br>
+      <section>
+        Well, I gotta keep it going, keep it going full <strong>steam</strong><br>
+        Too sweet to be sour, too nice to be <strong>mean</strong><br>
+        Well, on the tough guy style, I'm not too <strong>keen</strong><br>
+        Tryna change the world, I will plot and <strong>scheme</strong><br>
+      </section>
+      <br>
+      <section>
+        Mario C likes to keep it <strong>clean</strong><br>
+        Gonna shine like a sun<strong>beam</strong><br>
+        Keep on rappin' 'cause that's my <strong>dream</strong><br>
+        Got an A from Moe Dee for sticking to the <strong>rules</strong><br>
+      </section>
+      <br>
+      <section>
+        Now when it comes to envy, y'all is <strong>green</strong><br>
+        Jealous of the rhyme and the rhyme rou<strong>tine</strong><br>
+      </section>
+      <section>
+        Another dimension, new galax<strong>y</strong><br>
+        Intergalactic planetar<strong>y</strong><br>
+      </section>
+      <br>
+      <section>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+      </section>
+      <br>
+      <section>
+        We're from the family tree of old school hip-<strong>hop</strong><br>
+        Kick off your shoes and relax your <strong>socks</strong><br>
+        The rhymes will spread just like a <strong>pox</strong><br>
+        'Cause the music is live, like an electric <strong>shock</strong><br>
+      </section>
+      <br>
+      <section>
+        I am known to do the Wop <strong>(Wop)</strong><br>
+        Also known for the Flintstone Flop <strong>(Flop)</strong><br>
+        Tammy D getting biz on the <strong>crop</strong><br>
+        <!-- dit losse sectie maken? -->
+        <h2>Beastie Boys known to let the <strong>beat</strong><br></h2>
+        <!-- dit losse sectie maken? -->
+        <h1>Mmm, <em>drop</em><br> </h1>
+      </section>
+      <br>
+      <section>
+        Now when I wrote graffiti, my name was <strong>Slop</strong><br>
+        If my rap's soup, my beats is <strong>stock</strong><br>
+        Step from the table when I start to <strong>chop</strong><br>
+        I'm a lumberjack, DJ Ad-<strong>Rock</strong><br>
+      </section>
+      <br>
+      <section>
+        If you try to knock me, you'll get <strong>mocked</strong><br>
+        I'll stir fry you in my <strong>wok</strong><br>
+        Your knees'll start shaking and your fingers <strong>pop</strong><br>
+        Like a pinch on the neck of Mr. <strong>Spock</strong><br>
+      </section>
+      <br>
+      <section>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+        Intergalactic planetary, planetary intergalactic<br>
+      </section>
+      <br>
+      <section>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+        Another dimension, another dimension<br>
+      </section>
+    </article>
+  </main>
+  <footer>
+```
+Dit is de gehele tekst, de eerst 7 sections zijn gedaan, de rest moet nog.
+```
+      <section>
+        <p>Well, if you battle me, I will re<strong>vile</strong></p>
+        <p>People always saying my style is <strong>wild</strong></p>
+        <p>You've got gall, you've got <strong>guile</strong></p>
+        <p>To step to me, I'm a rapo<strong>phile</strong></p>
+      </section>
+```
+Uiteindelijk is het de bedoeling dat alle lyrics in de HTML er zo uitzien. Maar dan met andere tekst of anders is het wel een heel eentoning nummer.
+
+#### CSS
+```
+@font-face {
+  font-family: 'Seraphs';
+  src: url('font/SeraphsVF.woff2') format('woff2');
+  font-variation-settings: "wght" 126, "SRFS" 0;
+    /* Modern Browsers */
+}
+
+@keyframes showTekst {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes weg {
+  to {
+    opacity: 0;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+
+
+/* section {
+ 
+} */
+
+/* Intro */
+/* Intergalactic */
+article>section:nth-of-type(1) {
+  position: fixed;
+  width: 70%;
+  overflow: hidden;
+  height: 4rem;
+  padding-left: 75%;
+  color: red;
+  margin: 0;
+}
+
+article>section:nth-of-type(1)>p {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  margin: 0;
+  animation: IPPI 25s linear 1;
+}
+
+article>section:nth-of-type(1)>p>span {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: red;
+}
+
+/* Another dimension */
+body:not(.is-locked) section:nth-of-type(2) span {
+  display: block;
+  opacity: 0;
+  animation: showTekst 0s ease forwards;
+  color: orange;
+
+}
+
+
+/* Is dit makkelijker op te schrijven? */
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(1) {
+  animation-delay: 18s;
+  
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(2) {
+  animation-delay: 19s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(3) {
+  animation-delay: 20s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(4) {
+  animation-delay: 21s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(5) {
+  animation-delay: 22s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(6) {
+  animation-delay: 23s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(7) {
+  animation-delay: 24s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(8) {
+  animation-delay: 25s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(9) {
+  animation-delay: 26s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(10) {
+  animation-delay: 27s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(11) {
+  animation-delay: 28s;
+}
+
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(12) {
+  animation-delay: 29s;
+}
+
+
+/* III */
+/* Sectie 3 */
+body:not(.is-locked) article>section:nth-of-type(3) p {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards;
+}
+
+body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(1) {
+  animation-delay: 30s;
+}
+
+body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(2) {
+  animation-delay: 32s;
+}
+
+body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(3) {
+  animation-delay: 34s;
+}
+
+body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(4) {
+  animation-delay: 36s;
+}
+
+
+/* Sectie 4 - Style Profile */
+body:not(.is-locked) article>section:nth-of-type(4) p {
+  position: absolute;
+  color: green;
+  display: block;
+  opacity: 0;
+  font-size: 10em;
+  top: -5%;
+  left: 40%;
+  animation: showTekst 0s ease forwards;
+}
+
+body:not(.is-locked) article>section:nth-of-type(4) p:nth-child(1) {
+  animation-delay: 40s;
+  top: -5%;
+}
+
+body:not(.is-locked) article>section:nth-of-type(4) p:nth-child(2) {
+  animation-delay: 41s;
+  top: 20%;
+
+}
+
+body:not(.is-locked) article > section:nth-of-type(-n+3) {
+  animation: weg 0s linear 39s forwards;
+}
+
+
+/* Sectie 5 */
+body:not(.is-locked) article>section:nth-of-type(5) p {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards;  
+  color: blue;
+}
+
+body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(1) {
+  animation-delay: 42s;
+}
+
+body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(2) {
+  animation-delay: 44s;
+}
+
+body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(3) {
+  animation-delay: 46s;
+}
+```
+Voor een deel van de CSS moet je weten hoe de JavaScript eruit ziet dus dat staat hier niet. Dit is ook niet de hele CSS, maar hierna werd het wat eentonig. Wat ik wel nu al kan uitleggen is de animatie, ik heb op het moment 3 animaties: showTekst, weg en 
+typing.
+
+showTekst
+```
+@keyframes showTekst {
+  to {
+    opacity: 1;
+  }
+}
+```
+Ik begon makkelijk, de tekst kwam alleen tevoorschijn. De tekst is automatisch ```opacity: 0;``` en ik vertel het dan om zichtbaar te worden na een bepaalde tijd.
+
+Weg
+```
+@keyframes weg {
+  to {
+    opacity: 0;
+  }
+}
+```
+Dit is de andere kant op, heel makkelijk, maakt de tekst weer onzichtbaar.
+
+
+
+#### JavaScript
+```
+const audioToPlay = document.getElementById("audioFile");
+const playButton = document.getElementById("playButton");
+const silentButton = document.getElementById("silentButton");
+
+silentButton.addEventListener("click", () => {
+    audioToPlay.pause();
+    audioToPlay.muted = true;
+    document.body.classList.remove("is-locked");
+});
+
+playButton.addEventListener("click", async () => {
+    playButton.disabled = true;
+    playStatus.textContent = "";
+
+    try {
+        audioToPlay.muted = false;
+        await audioToPlay.play();
+        document.body.classList.remove("is-locked");
+    } catch (error) {
+        console.error("Audio playback failed:", error);
+        playButton.disabled = false;
+    }
+});
+```
+Sorry, ik hou van JavaScript. Ik was van plan om de hele site met Javascript te timen, maar dat bleek toch nog iets te moeilijk. Ik heb wel dit gemaakt voor de voorpagina. Het is hele simpele code, eerst maak ik variabelen van de id's in mijn HTML. Daarna kijk ik of er op silentButton of op playButton geklikt word, als er op silentButton geklikt word pause en mute ik de muziek en als er op play word gedrukt zeg ik dat de muziek niet gemute is en moet afspelen. Ook heb ik een console.error omdat ik bij mijn ICT jaar altijd met typescript en databases moest werken en niks werkte dus ik zette er 20 error messages bij elke check en else if totdat het werkte.
+
+
+
+#### CSS en JS
+```
+body.is-locked {
+  overflow: hidden;
+}
+
+body.is-locked * {
+  animation-play-state: paused !important;
+}
+
+body>section:nth-of-type(1) {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 0.75rem;
+  background: grey;
+}
+
+body:not(.is-locked)>section:nth-of-type(1) {
+  display: none;
+}
+
+body>section:nth-of-type(1)>button {
+  padding: 0.75rem 2rem;
+  font: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #3c3c3c;
+  color: #fff;
+}
+```
+
+Voordat je echt op de site komt kom je eerst op een voorpagina. Dit was omdat ik gek werd van dat Intergalactic elke keer door mijn muziek die ik aan het luisteren was. Hierdoor moest ik ook die pagina opmaken, maar het is geen aparte pagina dus dit heb ik niet veel gedaan, gelukkig had ik zoiets moeten doen bij een ICT jaar blok, en met ik bedoel ik mijn klasgenoot want ik begreep het niet en hij was oud en wijs (SO naar Tobias mn goat, ik ben niet cool). Gelukkig heb ik alle code nog van toen, daar heb ik dit blok veel aan gehad. 
+
+
+
+
+### Bronnen:
+https://stackoverflow.com/questions/12657029/jquery-css-make-text-inside-div-scroll-horizontally-like-a-news-ticker-no-plu 
+https://stackoverflow.com/questions/39513705/make-html-element-disappear-with-css-animation
+
+
+Heeft er niks mee temaken maar ik heb ook dit gevonden:
+Turn off auto-playing video previews:
+Open Settings > Accessibility > Per-App Settings.
+Add the app that kills your music (like Facebook, TikTok, or Instagram).
+Tap the app and set Autoplay Video Previews to Off
+
+Ik wist niet dat dat kan ik word gek van pinterest die mn muziek afkapt
+
+
+## 9 okt - Vrijdag les
+
+Ik lieg, ik had een deel van de dingen die bij gister staan vandaag gedaan, alleen het is onoverzichtelijk om het op 2 plekken te zetten.
+
+### Feedback vrijdag: 9 oktober:
+#### Song lyrics:
+Iedereen was enthusiast er over
+Nadruk op worden, keuze van de breuk van de verschillende tekst.
+Robot tekst is heel vet!
+Armen van de robot kan je animeren met transform origin, rotate.
+Heel gaaf
+Een kleuren contrast toevoegen/ zwart wit
+Visueel ziet het er gaaf uit op beide je garden en song tekst
+Je garden is vrijwel overall responsive, erg indrukwekkend.
+In je garden en song tekst zit heel veel liefde en passie.
+ 
+#### Digital garden:
+Hele vette website
+Nav om je navigatie
+article tag om je tekst/ inhoud van je pagina
+Leesbaar maken voor screenreader (optioneel)
+
+
+#### Mogelijke oplossingen op de feedback
+* ```data-page``` waren ze geen fan van, ik kan ook mss dataPages gebruiken of Lit
+    https://datatables.net <br>
+    https://lit.dev 
+* 
+
+
+
+
+## 17 okt - Thuiswerk
+
+
 
 
 

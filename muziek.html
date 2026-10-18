@@ -26,22 +26,22 @@
                 <button>
                     <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
                 </button> <!-- internet wereldbol -->
+                <button type="button" onclick="openCookieSettings()">🍪</button>
             </span>
-            <ul id="menu">
+            <nav>
                 <li><a href="about.html">About</a></li>
-                <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
                 <li><a href="spellen.html">Spellen</a></li>
                 <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
                 <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
                 <li><a href="muziek.html">Muziek</a></li>
-                <li><a href="recepten.html">Recepten</a></li>
+                <li><a href="Intergalactic/intergalactic.html">Intergalactic</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
+            </nav>
         </header>
         <main>
             <!-- VOLLIGE ALBUMS -->
             <aside data-page="1">
-                <h1>Mijn favoriete muziek</h1>
+                <h2>Mijn favoriete muziek</h2>
                 <p>Dit zijn een paar van mijn favoriete albums. Als je op een album klikt kan je naar de Spotify-pagina
                     gaan waarmee je het album kan afspelen!!</p>
                 <p id="divider">-=+=-</p>
@@ -62,7 +62,7 @@
 
             <!-- LOSSE NUMMERS @media >800px -->
             <aside data-page="2" hidden>
-                <h1>Mijn favoriete nummers</h1>
+                <h2>Mijn favoriete nummers</h2>
                 <p>Dit zijn een paar van mijn favoriete nummers, als je op een nummer klikt kan je het afspelen op deze
                     website!!</p>
                 <p>Als hier niks verschijnt is er waarschijnlijk geen toestemming voor cookies gegeven</p>
@@ -94,7 +94,7 @@
 
             <!-- LOSSE NUMMERS @media <800px -->
             <aside data-page="3" hidden>
-                <h1>Mijn favoriete nummers</h1>
+                <h2>Mijn favoriete nummers</h2>
                 <p>Dit zijn een paar van mijn favoriete nummers, als je op een nummer klikt kan je naar de
                     Spotify-pagina gaan waarmee je het nummer kan afspelen!!</p>
                 <p id="divider">-=+=-</p>
@@ -115,6 +115,25 @@
         </main>
 
     </div>
+
+        <dialog id="cookieModal">
+        <form method="dialog">
+            <p><span> Deze website gebruikt cookies, deze komen van:</span> <br>
+                De digitaal tuintje webring - dit zorgt dat je vanaf deze site naar een site kan van een andere student.
+                <br>
+                Spotify - Dit zorgt dat je vier door mij gekozen nummers af kan spelen in de site. <br>
+                Als je het goed vind dat de site deze cookies gebruikt kan je dat hieronder aanvinken, je kan deze keuze
+                altijd later veranderen door op de 🍪 knop te drukken in de applet-balk.
+            </p>
+            <div id="buttons">
+                <h3>
+                    Accepteer je de cookies op deze website?
+                </h3>
+                <button onclick="saveCookieConsent(true)">Toestaan</button>
+                <button onclick="saveCookieConsent(false)">Niet toestaan</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>

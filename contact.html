@@ -26,17 +26,17 @@
                 <button>
                     <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
                 </button> <!-- internet wereldbol -->
+                <button type="button" onclick="openCookieSettings()">🍪</button>
             </span>
-            <ul id="menu">
-                <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
+            <nav>
                 <li><a href="about.html">About</a></li>
                 <li><a href="spellen.html">Spellen</a></li>
                 <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
                 <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
                 <li><a href="muziek.html">Muziek</a></li>
-                <li><a href="recepten.html">Recepten</a></li>
+                <li><a href="Intergalactic/intergalactic.html">Intergalactic</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
+            </nav>
         </header>
         <main>
             <img src="assets/fotos/MIIHoofd.png" width="500" height="500" id="miiHoofd"
@@ -56,4 +56,22 @@
             </aside>
         </main>
     </div>
+        <dialog id="cookieModal">
+        <form method="dialog">
+            <p><span> Deze website gebruikt cookies, deze komen van:</span> <br>
+                De digitaal tuintje webring - dit zorgt dat je vanaf deze site naar een site kan van een andere student.
+                <br>
+                Spotify - Dit zorgt dat je vier door mij gekozen nummers af kan spelen in de site. <br>
+                Als je het goed vind dat de site deze cookies gebruikt kan je dat hieronder aanvinken, je kan deze keuze
+                altijd later veranderen door op de 🍪 knop te drukken in de applet-balk.
+            </p>
+            <div id="buttons">
+                <h3>
+                    Accepteer je de cookies op deze website?
+                </h3>
+                <button onclick="saveCookieConsent(true)">Toestaan</button>
+                <button onclick="saveCookieConsent(false)">Niet toestaan</button>
+            </div>
+        </form>
+    </dialog>
 </body>

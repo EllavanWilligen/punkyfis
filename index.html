@@ -34,21 +34,19 @@
             <button type="button" onclick="openCookieSettings()">🍪</button>
             <!-- Tijdelijk hier, kijken wat ik ermee ga doen -->
         </span>
-        <ul id="menu">
-            <!-- <li><a href="https://github.com/EllavanWilligen/punkyfis">-GitHub-</a></li> -->
-            <li><a href="about.html">About</a></li>
-            <!-- Hoe zorg ik dat er geen tekst staat maar dat blinde mensen het nog kunnen horen? -->
-            <li><a href="spellen.html">Spellen</a></li>
-            <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
-            <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
-            <li><a href="muziek.html">Muziek</a></li>
-            <li><a href="recepten.html">Recepten</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <nav>
+                <li><a href="about.html">About</a></li>
+                <li><a href="spellen.html">Spellen</a></li>
+                <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
+                <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
+                <li><a href="muziek.html">Muziek</a></li>
+                <li><a href="Intergalactic/intergalactic.html">Intergalactic</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </nav>
     </header>
 
     <main>
-        <ul id="TSBalk">
+        <ul>
             <li>🛜Internet__</li>
             <li>🩰 7000</li>
             <li id="currentDate">da/tum</li>
@@ -69,20 +67,19 @@
 
     <dialog id="cookieModal">
         <form method="dialog">
-            <p>
-                We use cookies to personalise content and ads, to provide social media
-                features and to analyse our traffic. We also share information about
-                your use of our site with our social media, advertising and analytics
-                partners who may combine it with other information that you’ve
-                provided to them or that they’ve collected from your use of their
-                services.
+            <p><span> Deze website gebruikt cookies, deze komen van:</span> <br>
+                De digitaal tuintje webring - dit zorgt dat je vanaf deze site naar een site kan van een andere student.
+                <br>
+                Spotify - Dit zorgt dat je vier door mij gekozen nummers af kan spelen in de site. <br>
+                Als je het goed vind dat de site deze cookies gebruikt kan je dat hieronder aanvinken, je kan deze keuze
+                altijd later veranderen door op de 🍪 knop te drukken in de applet-balk.
             </p>
             <div id="buttons">
-                <h1>
+                <h3>
                     Accepteer je de cookies op deze website?
-                </h1>
-                <button onclick="saveCookieConsent(true)">Allow</button>
-                <button onclick="saveCookieConsent(false)">Deny</button>
+                </h3>
+                <button onclick="saveCookieConsent(true)">Toestaan</button>
+                <button onclick="saveCookieConsent(false)">Niet toestaan</button>
             </div>
         </form>
     </dialog>

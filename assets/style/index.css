@@ -30,7 +30,6 @@ main {
 
 
 /* Balk main */
-
 main ul {
     position: absolute;
     width: 100%;
@@ -137,84 +136,3 @@ main li:nth-child(5) {
 }
 
 
-/* Cookies */
-
-#cookieModal {
-    position: fixed;
-    z-index: 100;
-    position-anchor: --main;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    margin: 0;
-    max-width: none;
-    max-height: none;
-    box-sizing: border-box;
-    pointer-events: none;
-}
-
-#cookieModal p {
-    position: fixed;
-    position-anchor: --main;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    margin: 0;
-    background: var(--cookie);
-    box-sizing: border-box;
-    font-family: "RodinNTLG B", sans-serif;
-    font-size: var(--step-1);
-    padding: 2%;
-    font-weight: 700;
-}
-
-#cookieModal form {
-    position: fixed;
-    position-anchor: --header;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    box-sizing: border-box;
-    background: var(--cookie);
-    border-radius: 0.5rem;
-    pointer-events: none;
-}
-
-#buttons {
-    position: absolute;
-    top: 56%;
-    left: 4.5%;
-    width: 91%;
-    display: flex;
-    align-items: center;
-    gap: 5%;
-}
-
-#buttons h1 {
-    position: absolute;
-    top: -200%;
-    font-family: "RodinNTLG B", sans-serif;
-    font-size: var(--step-1);
-}
-
-#buttons button {
-    flex: 1 1 0;
-    min-width: 0;
-    min-height: 8rem;
-    padding: 0.75rem 1rem;
-    font-size: 1.1rem;
-    font-family: "RodinNTLG B", sans-serif;
-    font-size: var(--step-1);
-    font-weight: 700;
-    border-radius: 1rem;
-    pointer-events: auto;
-}
-
-@media (max-width: 1200px) {
-    #buttons h1 {
-        top: -150%;
-    }
-}
