@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/style/about.css">
     <link rel="stylesheet" href="assets/style/normal.css">
     <script src="assets/javascript/main.js"></script>
-    <link rel="icon" type="image" href="assets/fotos/favicon.png" />
+    <link rel="icon" href="assets/fotos/favicon.png" />
     <link rel="stylesheet" href="assets/style/story.css">
     <title>About me</title>
 </head>
@@ -25,41 +25,41 @@
             <button>✎</button> <!-- potlood -->
             <button>:]</button> <!-- smiley -->
             <button>☰</button> <!-- textwolk -->
-            <button>
-                <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-            </button> <!-- internet wereldbol -->
+            <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje"
+                aria-label="Digitaal tuintje">🌐</a> <!-- internet wereldbol -->
             <button type="button" onclick="openCookieSettings()">🍪</button>
         </span>
-            <nav>
+        <nav>
+            <menu>
                 <li><a href="about.html">About</a></li>
                 <li><a href="spellen.html">Spellen</a></li>
                 <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
-                <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
                 <li><a href="muziek.html">Muziek</a></li>
                 <li><a href="Intergalactic/intergalactic.html">Intergalactic</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </nav>
+            </menu>
+        </nav>
     </header>
     <main>
-        <img src="assets/fotos/MIIHoofd.png" width="500" height="500">
-        <h1>Ella</h1>
+        <img src="assets/fotos/MIIHoofd.png" width="500" height="500"
+            alt="Hoofd van een Nintendo Mii, het is een bleek gezicht met zwarte grootte ogen en kort bruin haar. Het gezicht heeft sproeten en lacht. ">
+        <h1>About me: Ella</h1>
         <h2>Student Hogeschool <br> van Amsterdam</h2>
-        <div class="AM">
-            <p id="V">Favoriet dier</p>
-            <p id="A">Apen en zeeleuwen</p>
-            <p id="V">Ik hou van...</p>
-            <p id="A">muziek!</p>
-            <p id="V">ik wil graag...</p>
-            <p id="A">Kunstschaatsen</p>
-            <p id="V">Verjaardag Mii</p>
-            <p id="A">10/07</p>
-            <p id="V">Ontwerper</p>
-            <p id="A">Ella</p>
-        </div>
+        <ul>
+            <p class="V">Favoriet dier</p>
+            <p class="A">Apen en zeeleuwen</p>
+            <p class="V">Ik hou van...</p>
+            <p class="A">muziek!</p>
+            <p class="V">ik wil graag...</p>
+            <p class="A">Kunstschaatsen</p>
+            <p class="V">Verjaardag Mii</p>
+            <p class="A">10/07</p>
+            <p class="V">Ontwerper</p>
+            <p class="A">Ella</p>
+        </ul>
 
     </main>
-    </div>
-        <dialog id="cookieModal">
+    <dialog id="cookieModal">
         <form method="dialog">
             <p><span> Deze website gebruikt cookies, deze komen van:</span> <br>
                 De digitaal tuintje webring - dit zorgt dat je vanaf deze site naar een site kan van een andere student.

@@ -3135,7 +3135,7 @@ Leesbaar maken voor screenreader (optioneel)
 
 
 #### Mogelijke oplossingen op de feedback
-* ```data-page``` waren ze geen fan van, ik kan ook mss dataPages gebruiken of Lit
+* ```data-page``` waren ze geen fan van, ik kan ook mss dataTables gebruiken of Lit
     https://datatables.net <br>
     https://lit.dev 
 * 
@@ -3145,6 +3145,194 @@ Leesbaar maken voor screenreader (optioneel)
 
 ## 17 okt - Thuiswerk
 
+
+
+
+## 18 okt - Thuiswerk
+
+Vandaag heb ik de cookie melding aangepast en op elke pagina toegevoegd.
+
+#### HMTL
+```
+    <dialog id="cookieModal">
+        <form method="dialog">
+            <p><span> Deze website gebruikt cookies, deze komen van:</span> <br>
+                De digitaal tuintje webring - dit zorgt dat je vanaf deze site naar een site kan van een andere student.
+                <br>
+                Spotify - Dit zorgt dat je vier door mij gekozen nummers af kan spelen in de site. <br>
+                Als je het goed vind dat de site deze cookies gebruikt kan je dat hieronder aanvinken, je kan deze keuze
+                altijd later veranderen door op de 🍪 knop te drukken in de applet-balk.
+            </p>
+            <div id="buttons">
+                <h3>
+                    Accepteer je de cookies op deze website?
+                </h3>
+                <button onclick="saveCookieConsent(true)">Toestaan</button>
+                <button onclick="saveCookieConsent(false)">Niet toestaan</button>
+            </div>
+        </form>
+    </dialog>
+```
+
+Het stukje tekst aangepast, er word nu uitgelegd waarvoor de cookies zijn en waar je je keuze aan kan passen. Ik moet nog even vragen of github telt als cookies, ook moet ik eigenlijk een waarschuwing maken voordat je op "log" drukt, omdat je dan van de site afgaat.
+
+#### CSS
+```
+/* Cookie modal */
+
+#cookieModal {
+    position: fixed;
+    z-index: 100;
+    position-anchor: --main;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: none;
+    max-height: none;
+    background: transparent;
+    overflow: visible;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+#cookieModal p {
+    position: fixed;
+    position-anchor: --main;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    margin: 0;
+    background: var(--cookie);
+    box-sizing: border-box;
+    font-family: "RodinNTLG M", sans-serif;
+    font-size: var(--step-1);
+    line-height: 1.4;
+    padding: clamp(0.5rem, 2vw, 1rem);
+    font-weight: 400;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    overscroll-behavior: contain;
+    pointer-events: auto;
+}
+
+#cookieModal form {
+    position: fixed;
+    position-anchor: --header;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    box-sizing: border-box;
+    background: var(--cookie);
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+#buttons {
+    position: absolute;
+    top: 56%;
+    left: 4.5%;
+    width: 91%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+#buttons h3 {
+    position: absolute;
+    top: -200%;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+}
+
+#buttons button {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 8rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    font-weight: 700;
+    border-radius: 1rem;
+    pointer-events: auto;
+}
+
+@media (max-width: 1200px) {
+    #buttons h3 {
+        top: -150%;
+    }
+
+    #cookieModal p {
+    font-family: "RodinNTLG M", sans-serif;
+    font-size: clamp(12px, 2.5vw, 18px);
+    line-height: 1.4;
+    padding: clamp(0.5rem, 2vw, 1rem);
+    font-weight: 400;
+    }
+
+    #cookieModal span {
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    font-weight: 700;
+    }
+}
+
+#cookieModal span {
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    font-weight: 700;
+}
+
+```
+De CSS was een heel gedoe en ik heb uiteindelijk copilot gevraagd om me te helpen, daar komen de clamps vandaan. 
+
+
+
+
+
+
+## 19 okt - Maandag les (vakantie voorbij)
+
+
+
+
+Vandaag ben ik begonnen met de contact pagina responisive maken, hiervoor moest ik maar 2 dingen doen, ik heb de foto van ```width: auto;``` naar ```width: 60%;``` veranderd. en de volgende regel in de CSS gezet, dat is alles wat nodig was. Ik voel me een beetje lui dat ik dit zo lang voor me uit gesteld heb
+
+```
+@media (max-width:1200px) {
+    h1 {
+        top: 40%;
+    }
+
+    h2 {
+        top: 60%;
+    }
+}
+
+```
+
+## 20 okt - Thuis werk
+
+Ik ben vandaag begonnen met mijn html valideren met die website. Veel waren een makkelijke fix, ik moest alt-teksten weghalen bij de knoppen een een ```<menu>``` om de list items in de ```<nav>```. Alleen toen kwam ik op het volgende probleem:
+```
+Error: Element iframe not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
+
+From line 75, column 17; to line 78, column 35
+
+          <iframe data-testid="embed-iframe"↩                    data-consent-src="https://open.spotify.com/embed/track/0s50PMr0v5BEApuFqxEC43?utm_source=generator&si=c1c729ac5fa844d1"↩                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"↩                    loading="lazy"></ifra
+
+Contexts in which element iframe may be used:
+Where embedded content is expected.
+Content model for element ul:
+Zero or more li and script-supporting elements.
+```
+Dit duurde een tijdje voordat ik doorhad waardoor dit kwam, het werkte ook? Ik heb volgensmij ook list items eromheen.
 
 
 

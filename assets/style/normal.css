@@ -258,7 +258,8 @@ header span {
     box-shadow: 0 0.0625rem 0.1875rem rgb(53 63 65 / 35%);
 }
 
-header span button {
+header span button,
+header span a.digituin {
     position: relative;
     z-index: 3;
     pointer-events: auto;
@@ -275,7 +276,18 @@ header span button {
     box-shadow: inset 0 0.0625rem #ffffff, 0 0.0625rem 0.125rem rgb(53 63 65 / 35%);
 }
 
-header nav {
+header span a.digituin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    color: #425050;
+    font-size: clamp(0.5rem, 1.4vw, 0.9rem);
+    text-decoration: none;
+}
+
+header nav menu {
     display: grid;
     padding: 10px;
     gap: 1em;
@@ -296,7 +308,7 @@ header nav {
 }
 
 @media (max-width: 600px) {
-    header nav {
+    header nav menu{
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: clamp(10rem, 56vw, 14rem);

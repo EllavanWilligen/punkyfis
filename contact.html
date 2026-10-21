@@ -22,20 +22,18 @@
                 <button>✎</button> <!-- potlood -->
                 <button>:]</button> <!-- smiley -->
                 <button>☰</button> <!-- textwolk -->
-
-                <button>
-                    <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-                </button> <!-- internet wereldbol -->
+                <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje" aria-label="Digitaal tuintje">🌐</a> <!-- internet wereldbol -->
                 <button type="button" onclick="openCookieSettings()">🍪</button>
             </span>
             <nav>
+            <menu>
                 <li><a href="about.html">About</a></li>
                 <li><a href="spellen.html">Spellen</a></li>
                 <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
-                <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
                 <li><a href="muziek.html">Muziek</a></li>
                 <li><a href="Intergalactic/intergalactic.html">Intergalactic</a></li>
                 <li><a href="contact.html">Contact</a></li>
+            </menu>
             </nav>
         </header>
         <main>
@@ -49,7 +47,7 @@
                     <h3>Naam</h3>
                     <input type="text" name="name" id="naam" placeholder="Naam" required>
                     <h3>Bericht</h3>
-                    <input type="text" name="bericht" id="bericht" placeholder="Bericht" required>
+                    <textarea name="bericht" id="bericht" placeholder="Bericht" required></textarea>
                     <button id="submit" type="submit">Stuur</button>
                     <p id="contactStatus" role="status"></p>
                 </form>

@@ -27,7 +27,8 @@ main {
 
 img {
     display: block;
-    height: auto;
+    height: 60%;
+    width: auto;
 }
 
 h1 {
@@ -49,28 +50,16 @@ h2 {
     gap: 0.3rem;
 }
 
-/* form {
-    position: absolute;
-    top: 10%;
-    left: 45%;
-    width: 50%;
-    max-width: 50%;
-    gap: 0.3rem;
-} */
+@media (max-width:1200px) {
+        h1 {
+        top: 40%;
+    }
 
-/* #naam {
-    min-width: 100%;
-    max-width: 50%;
-    gap: 0.3rem;
-} */
+    h2 {
+        top: 60%;
+    }
+}
 
-
-
-/* button {
-    right: 5%; 
-    max-width: 50%;
-    gap: 0.3rem;
-} */
 
 aside {
     position: absolute;
@@ -96,7 +85,10 @@ aside {
 }
 
 #bericht {
-    min-width: 100%;
-    max-width: 50%;
-    height: 10em;
+    display: block;
+    width: 100%;
+    min-height: 10em;
+    box-sizing: border-box;
+    font: inherit;
+    resize: vertical;
 }

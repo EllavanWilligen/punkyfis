@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/style/normal.css" />
     <link rel="stylesheet" href="assets/style/spellen.css" />
     <script src="assets/javascript/main.js"></script>
-    <link rel="icon" type="image" href="assets/fotos/favicon.png" />
+    <link rel="icon" href="assets/fotos/favicon.png" />
     <title>Spellen</title>
 </head>
 
@@ -24,20 +24,20 @@
             <button>✎</button> <!-- potlood -->
             <button>:]</button> <!-- smiley -->
             <button>☰</button> <!-- textwolk -->
-            <button>
-                <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje">🌐</a>
-            </button> <!-- internet wereldbol -->
+            <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje"
+                aria-label="Digitaal tuintje">🌐</a> <!-- internet wereldbol -->
             <button type="button" onclick="openCookieSettings()">🍪</button>
         </span>
-            <nav>
+        <nav>
+            <menu>
                 <li><a href="about.html">About</a></li>
                 <li><a href="spellen.html">Spellen</a></li>
                 <li><a href="https://github.com/EllavanWilligen/punkyfis">Log</a></li>
-                <!-- Link naar Github of log, wat is link naar log pagina? https://punkyfis.nl/README.md is niet mooi, eerst had ik het perongeluk mooi? -->
                 <li><a href="muziek.html">Muziek</a></li>
                 <li><a href="Intergalactic/intergalactic.html">Intergalactic</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </nav>
+            </menu>
+        </nav>
     </header>
     <main>
         <!-- 3DS -->
@@ -56,11 +56,6 @@
             <li><a href="https://hshop.erista.me/t/20785">Art academy</a></li> <!-- DS SPEL!-->
         </ul>
 
-        <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
-        <!-- <img src="assets/fotos/pikmin.png"
-            alt="Pikmin, een klein geel poppetje bekend van de gelijknamige gameserie. De gele pikmin heeft klavertjes drie om zich heen en een rood lieveheersbeestje op zijn hoofd">> -->
-
-
         <!-- DS -->
         <aside data-page="2" hidden>
             <h1>Mijn favoriete spellen</h1>
@@ -78,13 +73,12 @@
             <li><a href="https://romsfun.com/roms/nintendo-ds/dragon-quest-ix-sentinels-of-the-starry-skies.html">Dragons
                     Quest IX</a></li>
         </ul>
-        <!-- <img src="assets/fotos/MIIZit2.png" alt="Zittend mii, de mii heeft bruin kort haar en een paars shirt" id="MiiZit"> -->
         <img src="assets/fotos/pikmin.png"
             alt="Pikmin, een klein geel poppetje bekend van de gelijknamige gameserie. De gele pikmin heeft klavertjes drie om zich heen en een rood lieveheersbeestje op zijn hoofd">
     </main>
-    <!-- <footer>
+    <footer>
 
-</footer> -->
+    </footer>
 
     <dialog id="cookieModal">
         <form method="dialog">
