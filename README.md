@@ -3392,13 +3392,11 @@ Ik heb de padding naar 0 veranderd omdat er padding aan de linker kant was gezet
 * kijken of ik voor mobiel het scherm kan forceren om te kantelen
 * focus states op applet-balk
 
-```
-
-```
+Ik ben opzoek gegaan naar of het scherm forceren om scheef te zijn zou kunnen werken, eerst vond ik hiervoor https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile 
 
 #### Bronnen
 https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile 
-
+https://stackoverflow.com/questions/10975387/mobile-site-force-landscape-only-no-auto-rotate
 
 # Reserves
 
