@@ -3145,7 +3145,7 @@ Leesbaar maken voor screenreader (optioneel)
 
 ## 17 okt - Thuiswerk
 
-
+Ik heb de vakantie gebruikt om uit te zieken. 
 
 
 ## 18 okt - Thuiswerk
@@ -3299,9 +3299,6 @@ De CSS was een heel gedoe en ik heb uiteindelijk copilot gevraagd om me te helpe
 
 ## 19 okt - Maandag les (vakantie voorbij)
 
-
-
-
 Vandaag ben ik begonnen met de contact pagina responisive maken, hiervoor moest ik maar 2 dingen doen, ik heb de foto van ```width: auto;``` naar ```width: 60%;``` veranderd. en de volgende regel in de CSS gezet, dat is alles wat nodig was. Ik voel me een beetje lui dat ik dit zo lang voor me uit gesteld heb
 
 ```
@@ -3334,7 +3331,73 @@ Zero or more li and script-supporting elements.
 ```
 Dit duurde een tijdje voordat ik doorhad waardoor dit kwam, het werkte ook? Ik heb volgensmij ook list items eromheen.
 
+Uitendelijk heb ik de meeste errors weg, alleen deze blijft:
+```
+Error: The heading h3 (with computed level 3) follows the heading h1 (with computed level 1), skipping 1 heading level.
 
+From line 93, column 17; to line 93, column 20
+
+          <h3>↩     
+```
+
+Maar ik moest juist geen H1 hebben, nu word de H3 een H1. Ik ga kijken wat ik hier kan doen als vervaning voor de H3.
+
+Welke zijn klaar:
+[X]Index
+[ ]About me
+```
+Error: Element p not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
+
+From line 49, column 13; to line 49, column 25
+
+          <p class="V">Favori
+
+Contexts in which element p may be used:
+Where flow content is expected.
+As a child of an hgroup element.
+Content model for element ul:
+Zero or more li and script-supporting elements.
+```
+Na de HTML valideren kreeg ik een nieuwe error. Ik heb van de p elementen li elementen gemaakt maar nu ziet het er heel anders uit
+Uitendelijk heb ik alleen visueel het probleem op kunnen lossen, alleen een beetje symptoombestrijding.
+Ik heb het volgende toegevoegd in de CSS voor main ul:
+```
+main ul {
+    max-width: 50%;
+    gap: 0.7rem;
+    list-style-type: none;
+    padding: 0;
+}
+```
+Ik heb de max width groter gemaakt zodat het weer vullend was.
+Ik heb de gap groter gemaakt omdat de li te dicht op elkaar stonden.
+Ik heb de list-style-type naar none gezet omdat er puntjes voor gezet waren.
+Ik heb de padding naar 0 veranderd omdat er padding aan de linker kant was gezet.
+
+[ ]Spellen
+[ ]Muziek
+[ ]Contact
+
+
+## 21 okt - Woensdag les
+
+### Bi-weekly geek
+
+# foto werkvel hier plakken
+
+### Peerfeedback
+
+# foto's formulier hier plakken
+
+* kijken of ik voor mobiel het scherm kan forceren om te kantelen
+* focus states op applet-balk
+
+```
+
+```
+
+#### Bronnen
+https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile 
 
 
 # Reserves

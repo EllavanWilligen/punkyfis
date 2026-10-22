@@ -1,12 +1,12 @@
 :root {
-  --step--2: clamp(0.4297rem, 1.0279rem + -0.6646cqi, 0.8784rem);
-  --step--1: clamp(0.6953rem, 1.0178rem + -0.3584cqi, 0.9372rem);
-  --step-0: clamp(1rem, 0.9583rem + 0.1852cqi, 1.125rem);
-  --step-1: clamp(1.067rem, 0.8159rem + 1.1159cqi, 1.8203rem);
-  --step-2: clamp(1.1385rem, 0.5363rem + 2.6766cqi, 2.9452rem);
-  --step-3: clamp(1.2148rem, 0.0313rem + 5.26cqi, 4.7653rem);
-  --step-4: clamp(1.2962rem, -0.8419rem + 9.5023cqi, 7.7102rem);
-  --step-5: clamp(1.383rem, -2.3144rem + 16.4328cqi, 12.4751rem);
+    --step--2: clamp(0.4297rem, 1.0279rem + -0.6646cqi, 0.8784rem);
+    --step--1: clamp(0.6953rem, 1.0178rem + -0.3584cqi, 0.9372rem);
+    --step-0: clamp(1rem, 0.9583rem + 0.1852cqi, 1.125rem);
+    --step-1: clamp(1.067rem, 0.8159rem + 1.1159cqi, 1.8203rem);
+    --step-2: clamp(1.1385rem, 0.5363rem + 2.6766cqi, 2.9452rem);
+    --step-3: clamp(1.2148rem, 0.0313rem + 5.26cqi, 4.7653rem);
+    --step-4: clamp(1.2962rem, -0.8419rem + 9.5023cqi, 7.7102rem);
+    --step-5: clamp(1.383rem, -2.3144rem + 16.4328cqi, 12.4751rem);
 }
 
 
@@ -23,19 +23,20 @@ main {
 }
 
 
-body{
-   --TSBackground: linear-gradient(145deg, #ffffff, #b6d2ca);
-   --aboutMe: linear-gradient(145deg, hotpink, rgb(155, 51, 103));
-   --antwoord: white;
+body {
+    --TSBackground: linear-gradient(145deg, #ffffff, #b6d2ca);
+    --aboutMe: linear-gradient(145deg, hotpink, rgb(155, 51, 103));
+    --antwoord: rgb(71, 71, 71);
 }
 
-.dark-theme{
-   --TSBackground: linear-gradient(145deg, #6a6a6a, #303030);
-   --aboutMe: linear-gradient(145deg, hotpink, rgb(155, 51, 103));
-   --antwoord: rgb(99, 99, 99);
+.dark-theme {
+    --TSBackground: linear-gradient(145deg, #6a6a6a, #303030);
+    --aboutMe: linear-gradient(145deg, rgb(105, 145, 255), rgb(51, 89, 155));
+    --antwoord: rgb(222, 222, 222);
 }
 
 main {
+    color: var(--antwoord);
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
@@ -69,10 +70,10 @@ h1 {
 }
 
 h2 {
-   position: absolute;
-   top: 83%;
-   left: 2%;
-   font-family: "RodinNTLG N", system-ui;
+    position: absolute;
+    top: 83%;
+    left: 2%;
+    font-family: "RodinNTLG N", system-ui;
     font-size: 1.6cqi;
 }
 
@@ -82,13 +83,17 @@ main ul {
     position: absolute;
     top: 10%;
     left: 45%;
-    width: 50%;
+    width: 70%;
     max-width: 50%;
-    gap: 0.3rem;
+    gap: 0.7rem;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
 }
 
+
 main ul .V {
-    color: var(--antwoord);
+    color: white;
     background: var(--aboutMe);
     padding: 1em;
     border-radius: 1em;
@@ -98,7 +103,7 @@ main ul .V {
 }
 
 main ul .A {
-    color: var(--aboutMe);
+    color: var(--antwoord);
     background: var(--TSBackground);
     padding: 1em;
     border-radius: 1em;

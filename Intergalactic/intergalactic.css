@@ -3,11 +3,22 @@
   font-family: 'Seraphs';
   src: url('font/SeraphsVF.woff2') format('woff2');
   font-variation-settings: "wght" 126, "SRFS" 0;
-    /* Modern Browsers */
+  /* Modern Browsers */
 }
 
 @keyframes showTekst {
   to {
+    opacity: 1;
+  }
+}
+
+@keyframes growTekst {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -29,6 +40,27 @@
   }
 }
 
+@keyframes wobble {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    /* Naar linksboven */
+    transform: translate(-15px, -8px) rotate(-5deg);
+  }
+  40% {
+    /* Naar rechtsonder, het begin van de S-bocht */
+    transform: translate(15px, 8px) rotate(5deg);
+  }
+  60% {
+    /* Terug naar links, maar iets lager */
+    transform: translate(-10px, 4px) rotate(-3deg);
+  }
+  80% {
+    /* Nog een kleine zwaai naar rechts */
+    transform: translate(8px, -2px) rotate(2deg);
+  }
+}
 
 /* MARK: items */
 body {
@@ -44,7 +76,44 @@ body.is-locked * {
   animation-play-state: paused !important;
 }
 
-body>section:nth-of-type(1) {
+/* Verberg tekst tot de bijbehorende muziektijd bereikt is */
+body.audio-synced article [data-audio-at] {
+  opacity: 0 !important;
+  animation: none !important;
+  transition: opacity var(--audio-duration, 0s) ease;
+}
+
+body.audio-synced article [data-audio-at].is-audio-visible {
+  opacity: 1 !important;
+}
+
+body.audio-synced article > section:nth-of-type(2) span[data-audio-at].is-audio-visible {
+  animation: growTekst 0.5s ease forwards !important;
+}
+
+body.audio-synced article p[data-audio-effect="typing"] {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: none;
+}
+
+body.audio-synced article p[data-audio-effect="typing"].is-audio-visible {
+  animation: typing var(--audio-duration) steps(40, end) forwards !important;
+}
+
+body.audio-synced article [data-audio-hide-at] {
+  opacity: 1 !important;
+  animation: none !important;
+  transition: opacity var(--audio-duration, 0s) ease;
+}
+
+body.audio-synced article [data-audio-hide-at].is-audio-hidden {
+  opacity: 0 !important;
+}
+
+/* Knoppen om de pagina met of zonder geluid te starten */
+body > section:nth-of-type(1) {
   position: fixed;
   inset: 0;
   z-index: 10;
@@ -57,17 +126,16 @@ body>section:nth-of-type(1) {
   background: grey;
 }
 
-body:not(.is-locked)>section:nth-of-type(1) {
+body:not(.is-locked) > section:nth-of-type(1) {
   display: none;
 }
 
-body>section:nth-of-type(1)>button {
+body > section:nth-of-type(1) > button {
   padding: 0.75rem 2rem;
   font: inherit;
   font-size: 1.5rem;
   cursor: pointer;
   background-color: #3c3c3c;
-  color: #fff;
 }
 
 main {
@@ -85,7 +153,8 @@ strong {
 svg {
   width: 25%;
   height: 25%;
-
+  display: inline-block;
+  animation: wobble 1s ease-in-out infinite;
 }
 
 article {
@@ -93,25 +162,44 @@ article {
   left: 30%;
 }
 
+article > section p,
+article > section span,
+article > section h2,
+article > section h3 {
+  transition: font-size 180ms ease, font-weight 180ms ease, text-shadow 180ms ease;
+}
 
+article > section p,
+article > section span {
+  position: relative;
+}
 
-/* section {
- 
-} */
+/* Dit transparante vlak maakt het hovergebied rondom de tekst groter */
+article > section p::after,
+article > section span::after {
+  position: absolute;
+  inset: -0.35em -0.5em;
+  content: "";
+}
 
-/* Intro */
-/* Intergalactic */
-article>section:nth-of-type(1) {
+/* Sectie 1: de titel beweegt over het scherm */
+article > section:nth-of-type(1) {
   position: fixed;
   width: 70%;
   overflow: hidden;
   height: 4rem;
   padding-left: 75%;
-  color: red;
   margin: 0;
 }
 
-article>section:nth-of-type(1)>p {
+article > section:nth-of-type(1) p:hover,
+article > section:nth-of-type(1) span:hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+article > section:nth-of-type(1)> p {
   display: inline-block;
   height: 4rem;
   line-height: 4rem;
@@ -121,105 +209,113 @@ article>section:nth-of-type(1)>p {
   animation: IPPI 25s linear 1;
 }
 
-article>section:nth-of-type(1)>p>span {
+article > section:nth-of-type(1)> p> span {
   display: inline-block;
   padding: 0 2rem;
   font-size: 2rem;
-  color: red;
 }
 
-
-/* Another dimension */
+/* Sectie 2: de tekstregels groeien in beeld */
 body:not(.is-locked) section:nth-of-type(2) span {
   display: block;
   opacity: 0;
-  animation: showTekst 0s ease forwards;
-  color: orange;
-
+  transform-origin: center;
+  animation: growTekst 0.5s ease forwards;
 }
 
+article > section:nth-of-type(2) span:hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
+}
 
-/* Is dit makkelijker op te schrijven? */
 body:not(.is-locked) section:nth-of-type(2) span:nth-child(1) {
-  animation-delay: 18s;
-  
+  animation-delay: 19s;
+
 }
 
 body:not(.is-locked) section:nth-of-type(2) span:nth-child(2) {
-  animation-delay: 19s;
-}
-
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(3) {
   animation-delay: 20s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(4) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(3) {
   animation-delay: 21s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(5) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(4) {
   animation-delay: 22s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(6) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(5) {
   animation-delay: 23s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(7) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(6) {
   animation-delay: 24s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(8) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(7) {
   animation-delay: 25s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(9) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(8) {
   animation-delay: 26s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(10) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(9) {
   animation-delay: 27s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(11) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(10) {
   animation-delay: 28s;
 }
 
-body:not(.is-locked) section:nth-of-type(2) span:nth-child(12) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(11) {
   animation-delay: 29s;
 }
 
-
-/* III */
-/* Sectie 3 */
-body:not(.is-locked) article>section:nth-of-type(3) p {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards;
-}
-
-body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(1) {
+body:not(.is-locked) section:nth-of-type(2) span:nth-child(12) {
   animation-delay: 30s;
 }
 
-body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(2) {
-  animation-delay: 32s;
+/* Sectie 3: de tekst verschijnt met een type-effect */
+body:not(.is-locked) article > section:nth-of-type(3) p {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 5s steps(40, end) forwards;
 }
 
-body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(3) {
-  animation-delay: 34s;
+article > section:nth-of-type(3) p:nth-child(1):hover,
+article > section:nth-of-type(3) p:nth-child(2):hover,
+article > section:nth-of-type(3) p:nth-child(3):hover,
+article > section:nth-of-type(3) p:nth-child(4):hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
 }
 
-body:not(.is-locked) article>section:nth-of-type(3) p:nth-child(4) {
+body:not(.is-locked) article > section:nth-of-type(3) p:nth-child(1) {
+  animation-delay: 30s;
+}
+
+body:not(.is-locked) article > section:nth-of-type(3) p:nth-child(2) {
+  animation-delay: 33s;
+}
+
+body:not(.is-locked) article > section:nth-of-type(3) p:nth-child(3) {
   animation-delay: 36s;
 }
 
+body:not(.is-locked) article > section:nth-of-type(3) p:nth-child(4) {
+  animation-delay: 38s;
+}
 
-/* Sectie 4 - Style Profile */
-body:not(.is-locked) article>section:nth-of-type(4) p {
+/* Sectie 4: de woorden Style en profile verschijnen */
+body:not(.is-locked) article > section:nth-of-type(4) p {
   position: absolute;
-  color: green;
   display: block;
   opacity: 0;
   font-size: 10em;
@@ -228,173 +324,166 @@ body:not(.is-locked) article>section:nth-of-type(4) p {
   animation: showTekst 0s ease forwards;
 }
 
-body:not(.is-locked) article > section:nth-of-type(-n+3) {
-  animation: weg 0s linear 39s forwards;
+article > section:nth-of-type(4) p:nth-child(1):hover,
+article > section:nth-of-type(4) p:nth-child(2):hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
 }
 
-body:not(.is-locked) article>section:nth-of-type(4) p:nth-child(1) {
-  animation-delay: 40s;
+body:not(.is-locked) article > section:nth-of-type(4) p:nth-child(1) {
+  animation-delay: 41s;
   top: -5%;
 }
 
-body:not(.is-locked) article>section:nth-of-type(4) p:nth-child(2) {
-  animation-delay: 41s;
+body:not(.is-locked) article > section:nth-of-type(4) p:nth-child(2) {
+  animation-delay: 41.5s;
   top: 20%;
 
 }
 
 body:not(.is-locked) article > section:nth-of-type(4) {
-  animation: weg 0s linear 42s forwards;
+  animation: weg 0s linear 44s forwards;
+}
+
+body:not(.is-locked) article > section:nth-of-type(1) {
+  animation: weg 0s linear 26s forwards;
+}
+
+body:not(.is-locked) article > section:nth-of-type(2) {
+  animation: weg 0s linear 31s forwards;
 }
 
 
-/* Sectie 5 */
-body:not(.is-locked) article>section:nth-of-type(5) p {
+/* Sectie 5: tekst verschijnt met een type-effect */
+body:not(.is-locked) article > section:nth-of-type(5) p {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 4s steps(40, end) forwards;  
-  color: blue;
+  animation: typing 4s steps(40, end) forwards;
+}
+article > section:nth-of-type(5) p:nth-child(1):hover,
+article > section:nth-of-type(5) p:nth-child(2):hover,
+article > section:nth-of-type(5) p:nth-child(3):hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
 }
 
-body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(1) {
+body:not(.is-locked) article > section:nth-of-type(5) p:nth-child(1) {
   animation-delay: 42s;
 }
 
-body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(2) {
+body:not(.is-locked) article > section:nth-of-type(5) p:nth-child(2) {
   animation-delay: 44s;
 }
 
-body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(3) {
+body:not(.is-locked) article > section:nth-of-type(5) p:nth-child(3) {
   animation-delay: 46s;
 }
 
-
-/* sectie 7 */
-body:not(.is-locked) article>section:nth-of-type(6) p {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards; 
-  color: indigo;
-}
-
-body:not(.is-locked) article>section:nth-of-type(6) p:nth-child(1) {
-  animation-delay: 49s;
-}
-
-body:not(.is-locked) article>section:nth-of-type(6) p:nth-child(2) {
-  animation-delay: 51.5s;
-}
-
-body:not(.is-locked) article>section:nth-of-type(6) p:nth-child(3) {
-  animation-delay: 54s;
-}
-
-body:not(.is-locked) article>section:nth-of-type(6) p:nth-child(4) {
-  animation-delay: 56.5s;
-}
-
-
-/* Sectie 7 */
-body:not(.is-locked) article>section:nth-of-type(7) p {
+/* Sectie 6: tekst verschijnt met een type-effect */
+body:not(.is-locked) article > section:nth-of-type(6) p {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
   animation: typing 4s steps(40, end) forwards;
 }
 
-body:not(.is-locked) article>section:nth-of-type(7) p:nth-child(1) {
-  animation-delay: 58s;
+article > section:nth-of-type(6) p:nth-child(1):hover,
+article > section:nth-of-type(6) p:nth-child(2):hover,
+article > section:nth-of-type(6) p:nth-child(3):hover,
+article > section:nth-of-type(6) p:nth-child(4):hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
 }
 
-body:not(.is-locked) article>section:nth-of-type(7) p:nth-child(2) {
+body:not(.is-locked) article > section:nth-of-type(6) p:nth-child(1) {
+  animation-delay: 49s;
+}
+
+body:not(.is-locked) article > section:nth-of-type(6) p:nth-child(2) {
+  animation-delay: 51.5s;
+}
+
+body:not(.is-locked) article > section:nth-of-type(6) p:nth-child(3) {
+  animation-delay: 54s;
+}
+
+body:not(.is-locked) article > section:nth-of-type(6) p:nth-child(4) {
+  animation-delay: 56.5s;
+}
+
+/* Sectie 7: tekst verschijnt met een type-effect */
+body:not(.is-locked) article > section:nth-of-type(7) p {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards;
+}
+
+article > section:nth-of-type(7) p:nth-child(1):hover,
+article > section:nth-of-type(7) p:nth-child(2):hover,
+article > section:nth-of-type(7) p:nth-child(3):hover,
+article > section:nth-of-type(7) p:nth-child(4):hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+body:not(.is-locked) article > section:nth-of-type(7) p:nth-child(1) {
+  animation-delay: 57s;
+}
+
+body:not(.is-locked) article > section:nth-of-type(7) p:nth-child(2) {
   animation-delay: 61s;
 }
 
-body:not(.is-locked) article>section:nth-of-type(7) p:nth-child(3) {
+body:not(.is-locked) article > section:nth-of-type(7) p:nth-child(3) {
   animation-delay: 64s;
 }
 
-body:not(.is-locked) article>section:nth-of-type(7) p:nth-child(4) {
+body:not(.is-locked) article > section:nth-of-type(7) p:nth-child(4) {
   animation-delay: 67s;
 }
 
-body:not(.is-locked) section:nth-of-type(7) {
-  color: violet;
+
+
+/* Sectie 8: Intergalactic Planetary */
+body:not(.is-locked) article > section:nth-of-type(8) {
+  animation: weg 0s linear 75s forwards;
 }
 
-body:not(.is-locked) article > section:nth-of-type(-n+7) {
-  animation: weg 0s linear 70s forwards;
+article > section:nth-of-type(8) > :nth-child(1):hover,
+article > section:nth-of-type(8) > :nth-child(2):hover {
+  text-shadow: 0 0 0.35rem rgb(255 255 255 / 85%);
+  font-size: 1.15em;
+  font-weight: 700;
 }
 
-
-/* Intergalactic planetary */
-
-body:not(.is-locked) section:nth-of-type(8) {
-  color: hotpink;
+body:not(.is-locked) article > section:nth-of-type(8)>:nth-child(1) {
+  animation-delay: 68s;
 }
 
-
-/* EEE */
-
-body:not(.is-locked) section:nth-of-type(9) {
-  color: brown;
+body:not(.is-locked) article > section:nth-of-type(8)>:nth-child(2) {
+  animation-delay: 70s;
 }
 
-body:not(.is-locked) section:nth-of-type(10) {
-  color: teal;
+/* Verberg tekst in de latere secties tot die aan de beurt is */
+article > section:nth-of-type(n+8)> p,
+article > section:nth-of-type(n+8)> span,
+article > section:nth-of-type(n+8)> h2,
+article > section:nth-of-type(n+8)> h3 {
+  opacity: 0;
 }
 
-body:not(.is-locked) section:nth-of-type(11) {
-  color: cyan;
+article > section:nth-of-type(8)> span,
+
+article > section:nth-of-type(14)> p> span {
+  display: block;
+  opacity: 0;
 }
-
-body:not(.is-locked) section:nth-of-type(12) {
-  color: magenta;
-}
-
-body:not(.is-locked) section:nth-of-type(13) {
-  color: olive;
-}
-
-/* Intergalactic planetary */
-
-body:not(.is-locked) section:nth-of-type(14) {
-  color: navy;
-}
-
-/* OOO */
-
-body:not(.is-locked) section:nth-of-type(15) {
-  color: coral;
-}
-
-body:not(.is-locked) section:nth-of-type(16) {
-  color: gold;
-}
-
-body:not(.is-locked) section:nth-of-type(17) {
-  color: slateblue;
-}
-
-body:not(.is-locked) section:nth-of-type(18) {
-  color: crimson;
-}
-
-/* Outro */
-/* Intergalactic Planetary */
-
-body:not(.is-locked) section:nth-of-type(19) {
-  color: lime;
-}
-
-/* Another dimension */
-
-body:not(.is-locked) section:nth-of-type(20) {
-  color: khaki;
-}
-
 
 /* Source - https://stackoverflow.com/a/30291942 */
 
