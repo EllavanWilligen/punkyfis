@@ -3392,11 +3392,95 @@ Ik heb de padding naar 0 veranderd omdat er padding aan de linker kant was gezet
 * kijken of ik voor mobiel het scherm kan forceren om te kantelen
 * focus states op applet-balk
 
-Ik ben opzoek gegaan naar of het scherm forceren om scheef te zijn zou kunnen werken, eerst vond ik hiervoor https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile 
+Ik ben opzoek gegaan naar of het scherm forceren om scheef te zijn zou kunnen werken, eerst vond ik hiervoor https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile daar zei iemand dat de andere link (https://stackoverflow.com/questions/10975387/mobile-site-force-landscape-only-no-auto-rotate) was wat er gezocht was. Alleen werd er ook gezegd dat het niet mogelijk is, dus ik denk dat ik een bericht doe als het rechtop is dat omdraaien beter is
 
 #### Bronnen
 https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile 
 https://stackoverflow.com/questions/10975387/mobile-site-force-landscape-only-no-auto-rotate
+
+
+## 22 okt - thuis werk
+
+Ik kreeg migraine dus ik moest naar bed.
+
+Gister heb ik gekeken naar de mogelijkheden, en omdat ik midden in mijn werk niet meer verder kon heb ik veel tijd gehad om na te denken. Toen bedacht ik me, waarom kantel ik het scherm niet als het te smal word. Dit heb ik niet helemaal zelf bedacht, ik zag een reactie waar iemand zei dat je het scherm kan kantelen, maar ik negeerde het want iemand had daarop gereageerd dat het een dom idee is. Maar dat is het totaal niet, het is slim en simpel, ik moest gewoon de volgende code in de normal.css zetten:
+```
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    html {
+        overflow-x: auto;
+        overflow-y: hidden;
+        font-size: clamp(6px, 1.804dvh, 16px);
+    }
+
+    html:root {
+        --step--2: clamp(0.4297rem, 1.0279rem + -0.6646dvh, 0.8784rem);
+        --step--1: clamp(0.6953rem, 1.0178rem + -0.3584dvh, 0.9372rem);
+        --step-0: clamp(1rem, 0.9583rem + 0.1852dvh, 1.125rem);
+        --step-1: clamp(1.067rem, 0.8159rem + 1.1159dvh, 1.8203rem);
+        --step-2: clamp(1.1385rem, 0.5363rem + 2.6766dvh, 2.9452rem);
+        --step-3: clamp(1.2148rem, 0.0313rem + 5.26dvh, 4.7653rem);
+        --step-4: clamp(1.2962rem, -0.8419rem + 9.5023dvh, 7.7102rem);
+        --step-5: clamp(1.383rem, -2.3144rem + 16.4328dvh, 12.4751rem);
+    }
+
+    body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100dvh;
+        height: auto;
+        overflow-x: clip;
+        overflow-y: visible;
+        transform: translateY(100dvh) rotate(-90deg);
+        transform-origin: top left;
+    }
+
+    header span {
+        gap: clamp(0.15em, 1dvh, 0.45em);
+        padding: clamp(0.2em, 1dvh, 0.45em);
+    }
+
+    header span button,
+    header span a.digituin {
+        padding: clamp(0.1em, 0.7dvh, 0.3em) clamp(0.25em, 1dvh, 0.55em);
+        font-size: clamp(0.5rem, 1.4dvh, 0.9rem);
+    }
+
+    header nav menu {
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        flex: 1 1 auto;
+        overflow: visible;
+        padding: clamp(0.35em, 2dvh, 0.85em);
+        gap: clamp(0.35em, 2.5dvh, 1.1em);
+    }
+
+    header li {
+        max-width: 100%;
+    }
+
+    #cookieModal p {
+        font-size: clamp(12px, 2.5dvh, 18px);
+        padding: clamp(0.5rem, 2dvh, 1rem);
+    }
+
+    #cookieModal span {
+        font-size: var(--step-1);
+    }
+
+    #cookieModal span {
+    font-family: "RodinNTLG B", sans-serif;
+    font-size: var(--step-1);
+    font-weight: 700;
+    }
+}
+```
+Deel hiervan heb ik van stack overflow, zoals de (orientation: portrait), ik wist niet dat dat een ding was. Helaas heb ik het niet helemaal zelf kunnen doen. Ik dacht dat het makkelijk ging zijn maar het bleef maar niet passen. Daarom heb ik uiteindelijk copilot moeten vragen wat er niet klopte en om eerlijk te zijn had ik dat echt niet zelf kunnen doen. Copilot heeft hele specifieke maten opgeschreven die precies passen, ik zou die nooit kunnen. Ik haat AI en ik weet dat dit hypocriet is maar ik heb tijdnood en dit lukte me echt niet zelf om die specifieke maten te vinden. Als de telefoon gedraaid word werkt de site nogsteeds gedraaid.
+
+
+
 
 # Reserves
 

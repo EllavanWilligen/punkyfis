@@ -8,74 +8,10 @@ body {
 }
 
 
-/* scherm draaien op mobiel test */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-    html {
-        font-size: clamp(6px, 1.804dvh, 16px);
-    }
-
-    :root {
-        --step--2: clamp(0.4297rem, 1.0279rem + -0.6646dvh, 0.8784rem);
-        --step--1: clamp(0.6953rem, 1.0178rem + -0.3584dvh, 0.9372rem);
-        --step-0: clamp(1rem, 0.9583rem + 0.1852dvh, 1.125rem);
-        --step-1: clamp(1.067rem, 0.8159rem + 1.1159dvh, 1.8203rem);
-        --step-2: clamp(1.1385rem, 0.5363rem + 2.6766dvh, 2.9452rem);
-        --step-3: clamp(1.2148rem, 0.0313rem + 5.26dvh, 4.7653rem);
-        --step-4: clamp(1.2962rem, -0.8419rem + 9.5023dvh, 7.7102rem);
-        --step-5: clamp(1.383rem, -2.3144rem + 16.4328dvh, 12.4751rem);
-    }
-
-    body {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vh;
-        width: 100dvh;
-        height: auto;
-        overflow-x: clip;
-        overflow-y: visible;
-        transform: translateY(100dvh) rotate(-90deg);
-        transform-origin: top left;
-    }
-
-    header span {
-        gap: clamp(0.15em, 1dvh, 0.45em);
-        padding: clamp(0.2em, 1dvh, 0.45em);
-    }
-
-    header span button,
-    header span a.digituin {
-        padding: clamp(0.1em, 0.7dvh, 0.3em) clamp(0.25em, 1dvh, 0.55em);
-        font-size: clamp(0.5rem, 1.4dvh, 0.9rem);
-    }
-
-    header nav menu {
-        grid-auto-flow: row;
-        grid-auto-columns: auto;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-template-rows: repeat(2, minmax(0, 1fr));
-        flex: 1 1 auto;
-        overflow: visible;
-        padding: clamp(0.35em, 2dvh, 0.85em);
-        gap: clamp(0.35em, 2.5dvh, 1.1em);
-    }
-
-    header li {
-        max-width: 100%;
-    }
-
     body main {
         overflow: visible;
         scrollbar-width: auto;
-    }
-
-    #cookieModal p {
-        font-size: clamp(12px, 2.5dvh, 18px);
-        padding: clamp(0.5rem, 2dvh, 1rem);
-    }
-
-    #cookieModal span {
-        font-size: var(--step-1);
     }
 }
 
