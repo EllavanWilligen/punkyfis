@@ -349,9 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Sterretjes
-
-
+// Sterretjes (niet door mij gemaakt, credits staan in het blok hieronder)
 
 const sterLight = "#f199c2";
 const sterDark = "#8dbaf5";

@@ -3143,7 +3143,7 @@ Leesbaar maken voor screenreader (optioneel)
 
 
 
-## 17 okt - Thuiswerk
+## 17 okt
 
 Ik heb de vakantie gebruikt om uit te zieken. 
 
@@ -3314,6 +3314,78 @@ Vandaag ben ik begonnen met de contact pagina responisive maken, hiervoor moest 
 
 ```
 
+Ik heb geprobeerd om met de javascript de timing van intergalactic accurater te maken, op het feedbackmoment werd er gezegd dat dit kon en dat CSS niet accuraat is, dit merkte ik want ik ben het hele nummer doorgegaan en heb alle tijden voor elk stukje opgschreven. In het begin is het redelijk maar na een tijdje begint de timing vreselijk te zijn. Daarom heb ik de volgende code in mijn javascript. Ik geef toe dat het een bende is, het zijn allemaal bij elkaar geplakte dingen van verschillende stack overflows. Ik snapte dit echt niet ik begreep niet wat ik aan het doen was. Eerst dacht ik dat dit iets was wat ik ging leren maar na dit is het iets wat ik nooit meer ga doen in mijn leven.
+
+JS
+```
+function maakTijdlijn() {
+  document.querySelectorAll("article p, article span, article h2, article h3, article > section").forEach((el) => {
+    const stijl = getComputedStyle(el);
+    const animatie = stijl.animationName.split(",")[0].trim();
+    const isSectie = el.matches("article > section");
+    const isTekstAnimatie = ["showTekst", "growTekst", "typing"].includes(animatie);
+
+    if (isSectie ? animatie !== "weg" : !isTekstAnimatie) return;
+
+    const vertraging = stijl.animationDelay.split(",")[0].trim();
+    const tijd = Number.parseFloat(vertraging) * (vertraging.endsWith("ms") ? 0.001 : 1);
+    if (!Number.isFinite(tijd)) return;
+
+    if (isSectie) {
+      el.dataset.audioHideAt = tijd;
+    } else {
+      el.dataset.audioAt = tijd;
+      el.dataset.audioEffect = animatie;
+      el.style.setProperty("--audio-duration", stijl.animationDuration.split(",")[0].trim());
+    }
+  });
+}
+
+function syncTekst() {
+  document.querySelectorAll("[data-audio-at], [data-audio-hide-at]").forEach((el) => {
+    const verbergVanaf = el.dataset.audioHideAt;
+    const tijd = Number(verbergVanaf ?? el.dataset.audioAt);
+
+    el.classList.toggle(verbergVanaf ? "is-audio-hidden" : "is-audio-visible", muziek.currentTime >= tijd);
+  });
+}
+
+function volgMuziek() {
+  syncTekst();
+  if (!muziek.paused && !muziek.ended) requestAnimationFrame(volgMuziek);
+}
+
+stilleKnop.addEventListener("click", () => {
+  muziek.pause();
+  muziek.muted = true;
+  document.body.classList.remove("audio-synced", "is-locked");
+});
+
+knop.addEventListener("click", async () => {
+  knop.disabled = true;
+
+  try {
+    muziek.muted = false;
+    await muziek.play();
+    document.body.classList.remove("is-locked");
+    maakTijdlijn();
+    document.body.classList.add("audio-synced");
+    volgMuziek();
+  } catch (fout) {
+    console.error("Audio playback failed:", fout);
+    knop.disabled = false;
+  }
+});
+
+["seeked", "pause", "ended"].forEach((gebeurtenis) => muziek.addEventListener(gebeurtenis, syncTekst));
+```
+Ik geef toe, ik denk dat een deel hiervan niks doet, maar ik ben bang om iets weg te halen. Misschien is het alleen een placebo maar het lijkt beter getimed. 
+
+### Bronnen
+https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance 
+https://stackoverflow.com/questions/20897555/javascript-how-can-i-fix-inaccuracy-of-animation-timer?rq=3 
+
+
 ## 20 okt - Thuis werk
 
 Ik ben vandaag begonnen met mijn html valideren met die website. Veel waren een makkelijke fix, ik moest alt-teksten weghalen bij de knoppen een een ```<menu>``` om de list items in de ```<nav>```. Alleen toen kwam ik op het volgende probleem:
@@ -3344,7 +3416,7 @@ Maar ik moest juist geen H1 hebben, nu word de H3 een H1. Ik ga kijken wat ik hi
 
 Welke zijn klaar:
 [X]Index
-[ ]About me
+[X]About me
 ```
 Error: Element p not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
 
@@ -3374,10 +3446,13 @@ Ik heb de gap groter gemaakt omdat de li te dicht op elkaar stonden.
 Ik heb de list-style-type naar none gezet omdat er puntjes voor gezet waren.
 Ik heb de padding naar 0 veranderd omdat er padding aan de linker kant was gezet.
 
-[ ]Spellen
-[ ]Muziek
-[ ]Contact
+[X]Spellen
+Alleen nog h1 toevoegen
+[X]Muziek
+Alleen nog h1 toevoegen
+[X]Contact
 
+Alleen nog h1 toevoegen op spellen en muziek, alleen weet ik niet waar omdat het data-pages zijn en geen normale site
 
 ## 21 okt - Woensdag les
 
@@ -3477,7 +3552,20 @@ Gister heb ik gekeken naar de mogelijkheden, en omdat ik midden in mijn werk nie
     }
 }
 ```
-Deel hiervan heb ik van stack overflow, zoals de (orientation: portrait), ik wist niet dat dat een ding was. Helaas heb ik het niet helemaal zelf kunnen doen. Ik dacht dat het makkelijk ging zijn maar het bleef maar niet passen. Daarom heb ik uiteindelijk copilot moeten vragen wat er niet klopte en om eerlijk te zijn had ik dat echt niet zelf kunnen doen. Copilot heeft hele specifieke maten opgeschreven die precies passen, ik zou die nooit kunnen. Ik haat AI en ik weet dat dit hypocriet is maar ik heb tijdnood en dit lukte me echt niet zelf om die specifieke maten te vinden. Als de telefoon gedraaid word werkt de site nogsteeds gedraaid.
+Deel hiervan heb ik van stack overflow, zoals de (orientation: portrait), ik wist niet dat dat een ding was. Helaas heb ik het niet helemaal zelf kunnen doen. Ik dacht dat het makkelijk ging zijn maar het bleef maar niet passen. Daarom heb ik uiteindelijk copilot moeten vragen wat er niet klopte en om eerlijk te zijn had ik dat echt niet zelf kunnen doen. Copilot heeft hele specifieke maten opgeschreven die precies passen, ik zou die nooit kunnen. Ik haat AI en ik weet dat dit hypocriet is maar ik heb tijdnood en dit lukte me echt niet zelf om die specifieke maten te vinden. Als de telefoon gedraaid word werkt de site nogsteeds gedraaid. Helaas heb ik nogsteeds de migraine dus ik heb niet alles kunnen doen wat ik gewild had. Ik wou nog de cookie melding en de Intergalactic site verder maken, dit moet ik dit weekend nog doen.
+
+### Bronnen
+https://stackoverflow.com/questions/8738072/forcing-web-site-to-show-in-landscape-mode-only 
+
+## 23 okt - Retrospective
+
+Ik vind nu een manier waarop ik de intergalactic waarschijnlijk beter en makkelijker kon stylen, https://css-irl.info/quick-tip-negative-animation-delay/ 
+Ik heb daar nu geen tijd meer voor maar dan weet ik het voor de toekomst.
+Ook vond ik deze site waar ik eerder van had willen weten: https://animejs.com/
+
+# Retrospective toevoegen
+
+
 
 
 

@@ -538,6 +538,7 @@ button:hover {
 }
 
 #cookieModal p {
+    color: var(--buttonKleur);
     position: fixed;
     position-anchor: --main;
     top: anchor(top);
@@ -582,6 +583,7 @@ button:hover {
 }
 
 #buttons h3 {
+    color: var(--buttonKleur);
     position: absolute;
     top: -200%;
     font-family: "RodinNTLG B", sans-serif;

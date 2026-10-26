@@ -23,15 +23,14 @@
     </div>
     <header>
         <span id="bar">
-            <button onclick="lightDark()">O</button> <!-- light/dark toggle-->
-            <button>o[]</button> <!-- groot/klein-->
-            <button>✎</button> <!-- potlood -->
-            <button>:]</button> <!-- smiley -->
-            <button>☰</button> <!-- textwolk -->
+            <button onclick="lightDark()" aria-label="light/dark mode toggle">O</button> <!-- light/dark toggle-->
+            <button aria-label="Nog niet in gebruik">o[]</button> <!-- groot/klein-->
+            <button aria-label="Nog niet in gebruik">✎</button> <!-- potlood -->
+            <button aria-label="Nog niet in gebruik">:]</button> <!-- smiley -->
+            <button aria-label="Nog niet in gebruik">☰</button> <!-- textwolk -->
             <a class="digituin" href="https://digitaaltuintje.nl/" title="Digitaal tuintje"
-                aria-label="Digitaal tuintje">🌐</a> <!-- internet wereldbol -->
-            <button type="button" onclick="openCookieSettings()">🍪</button>
-            <!-- Tijdelijk hier, kijken wat ik ermee ga doen -->
+                aria-label="Digitaal tuintje webring">🌐</a> <!-- internet wereldbol -->
+            <button type="button" onclick="openCookieSettings()" aria-label="Cookie instellingen">🍪</button>
         </span>
         <nav>
             <menu>
@@ -67,10 +66,11 @@
 
     <dialog id="cookieModal">
         <form method="dialog">
-            <p><span> Deze website gebruikt cookies, deze komen van:</span> <br>
+            <p><strong> Deze website gebruikt cookies, deze komen van:</strong> <br>
                 De digitaal tuintje webring - dit zorgt dat je vanaf deze site naar een site kan van een andere student.
                 <br>
                 Spotify - Dit zorgt dat je vier door mij gekozen nummers af kan spelen in de site. <br>
+                localHost - Hier worden door jou gemaakte keuzes opgeslagen zoals de cookie-voorkeuren en of je light of dark mode wil <br>
                 Als je het goed vind dat de site deze cookies gebruikt kan je dat hieronder aanvinken, je kan deze keuze
                 altijd later veranderen door op de 🍪 knop te drukken in de applet-balk.
             </p>
