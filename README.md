@@ -143,7 +143,7 @@ li:nth-of-type(2) {
 
 #### Opdracht 3 + 4
 
-![image]()
+![image](log/DD10d.png)
 
 CSS - A2 met animatie
 
@@ -353,7 +353,7 @@ button:focus {
 
 ### Schetsen
 
-# SCHETSEN SCANNEN EN HIER DOEN!!
+Ik ben deze en andere schetsen die we moesten maken in het begin kwijt geraakt door waterschade in mijn tas aangericht door mijn vriend. Mijn oprechte excuses, de techniek die ik geleerd heb voor het tekenen van rechte lijnen, schaduw en vierkanten heb ik dit hele blok gebruikt in al mijn andere schetsen.
 
 # Sprint 1
 
@@ -2218,7 +2218,10 @@ Niet genoemd maar wel belangrijk, ik wil later nog een reduced motion modus make
 Ik heb de verkeerde dingen gedaan, ik wist niet goed wat er moest gebeuren. Ik moest alleen nog mijn HTML valideren, ook moet ik verder werken aan het uiterlijk van de cookie melding, maar dat komt later nog
 Ik ben echt hondsberoerd, mn hartslag is gemiddeld 130 spm en ik kan amper ademen, maar ik ben op school. Ik heb de slides weer in de trein gemaakt, niet met mijn stiften maar ik heb wel paars en groen gebruikt voor de retrosspective in tegenstelling tot de vorige keer.
 
-# Retrospective hier plakken
+![image](log/retro2.1.jpg)
+![image](log/retro2.2.jpg)
+![image](log/retro2.3.jpg)
+![image](log/retro2.4.jpg)
 
 Ik heb vandaag ook een nieuwe laptop binnen gekregen, hierdoor moet ik alleen even kijken of alles lukt met bijvoorbeeld GitHub, ik heb al een paar keer geprobeerd maar volgensmij werkt het niet goed, ik zie de commits wel maar ik zie de
 
@@ -2288,7 +2291,19 @@ Als liedje kies ik Interglactic van de Beastie Boys, ik ken dit nummer van vroeg
 
 Ik heb hulp gevraagd, dus ik kan aan de slag!
 
-# TEKENINGEN INSCANNEN
+![image](log/IGS1.jpg)
+![image](log/IGS2.jpg)
+![image](log/IGS3.jpg)
+![image](log/IGS4.jpg)
+
+Zoals je onderaan bij het 4e A4'tje ziet heeft design A gewonnen. Alleen dacht ik dat ik er meerdere wou combineren. Hiervoor was ik dus gaan tekenen
+
+![image](log/IGS5.jpg)
+
+Tijdens het tekenen besefde ik dat ik de tekst fout had, ik dacht dat het nummer begon en eindigde met het woord "INTERGALACTIC" maar dat klopte niet. 
+
+Ik begon met werken aan design A
+
 
 
 #### HTML opzet
@@ -2521,99 +2536,18 @@ section:nth-of-type(2){
     margin: 0;
 }
 
-/* III */
 
-section:nth-of-type(3){
-  color: yellow;
-}
-
-section:nth-of-type(4){
-  color: green;
-}
-
-section:nth-of-type(5){
-  color: blue;
-}
-
-section:nth-of-type(6){
-  color: indigo;
-}
-
-section:nth-of-type(7){
-  color: violet;
-}
-
-/* Intergalactic planetary */
-
-section:nth-of-type(8){
-  color: hotpink;
-}
-
-/* EEE */
-
-section:nth-of-type(9){
-  color: brown;
-}
-
-section:nth-of-type(10){
-  color: teal;
-}
-
-section:nth-of-type(11){
-  color: cyan;
-}
-
-section:nth-of-type(12){
-  color: magenta;
-}
-
-section:nth-of-type(13){
-  color: olive;
-}
-
-/* Intergalactic planetary */
-
-section:nth-of-type(14){
-  color: navy;
-}
-
-/* OOO */
-
-section:nth-of-type(15){
-  color: coral;
-}
-
-section:nth-of-type(16){
-  color: gold;
-}
-
-section:nth-of-type(17){
-  color: slateblue;
-}
-
-section:nth-of-type(18){
-  color: crimson;
-}
-
-/* Outro */
-/* Intergalactic Planetary */
-
-section:nth-of-type(19){
-  color: lime;
-}
-
-/* Another dimension */
-
-section:nth-of-type(20){
-  color: khaki;
-}
+etc. door met elke section een andere kleur
 
 ```
 #### SVG
+<div style="background-color: rgb(209, 209, 209);">
+
 ![image](log/Asset%201.svg)
+</div>
 
 
-Bronnen:
+#### Bronnen:
 Illustrator tutorial:
 https://www.youtube.com/watch?v=xE_W3g-rxls
 
@@ -2974,31 +2908,7 @@ body:not(.is-locked) article>section:nth-of-type(4) p:nth-child(2) {
 
 }
 
-body:not(.is-locked) article > section:nth-of-type(-n+3) {
-  animation: weg 0s linear 39s forwards;
-}
-
-
-/* Sectie 5 */
-body:not(.is-locked) article>section:nth-of-type(5) p {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards;  
-  color: blue;
-}
-
-body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(1) {
-  animation-delay: 42s;
-}
-
-body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(2) {
-  animation-delay: 44s;
-}
-
-body:not(.is-locked) article>section:nth-of-type(5) p:nth-child(3) {
-  animation-delay: 46s;
-}
+enz.
 ```
 Voor een deel van de CSS moet je weten hoe de JavaScript eruit ziet dus dat staat hier niet. Dit is ook niet de hele CSS, maar hierna werd het wat eentonig. Wat ik wel nu al kan uitleggen is de animatie, ik heb op het moment 3 animaties: showTekst, weg en 
 typing.
@@ -3115,6 +3025,10 @@ Ik wist niet dat dat kan ik word gek van pinterest die mn muziek afkapt
 
 Ik lieg, ik had een deel van de dingen die bij gister staan vandaag gedaan, alleen het is onoverzichtelijk om het op 2 plekken te zetten.
 
+
+Hoe webby is mijn pagina:
+![alt text](webbyD.jpg)
+
 ### Feedback vrijdag: 9 oktober:
 #### Song lyrics:
 Iedereen was enthusiast er over
@@ -3138,14 +3052,22 @@ Leesbaar maken voor screenreader (optioneel)
 * ```data-page``` waren ze geen fan van, ik kan ook mss dataTables gebruiken of Lit
     https://datatables.net <br>
     https://lit.dev 
-* 
+*
 
+Dat zijn alle opties die ik weet.. Ik had meer opties gehoopt
 
 
 
 ## 17 okt
 
-Ik heb de vakantie gebruikt om uit te zieken. 
+Ik heb de vakantie gebruikt om uit te zieken. Vandaag ben ik ook niet veel verder gegaan, ik wou vandaag eigenlijk alleen opschrijven wat be bezig houd, de site is niet te doen op mobiel. Het is veel te klein al schaalt het goed mee, de site is zo responsive als ik deze kan krijgen maar het is nogsteeds niet responsive.
+
+![image](log/mobielS.jpeg)
+
+Hier is het grootste probleem, ik kan de tekst niet kleiner maken omdat het dan niet meer leesbaar is, maar nu is het ook slecht leesbaar omdat er zo weinig tekst op past dus je ziet 3 woorden
+
+### Opties
+
 
 
 ## 18 okt - Thuiswerk
@@ -3291,9 +3213,6 @@ Het stukje tekst aangepast, er word nu uitgelegd waarvoor de cookies zijn en waa
 
 ```
 De CSS was een heel gedoe en ik heb uiteindelijk copilot gevraagd om me te helpen, daar komen de clamps vandaan. 
-
-
-
 
 
 
@@ -3458,14 +3377,18 @@ Alleen nog h1 toevoegen op spellen en muziek, alleen weet ik niet waar omdat het
 
 ### Bi-weekly geek
 
-# foto werkvel hier plakken
+![image](log/BIgeek.jpeg)
 
 ### Peerfeedback
 
-# foto's formulier hier plakken
+![image](log/peerfeedback1.jpg)
+![image](log/peerfeedback2.jpg)
+
+Ik heb mijn top 3 niet op het formulier geschreven omdat ik zelf geen pen mee had naar school, dus de top 3 komt hieronder:
 
 * kijken of ik voor mobiel het scherm kan forceren om te kantelen
 * focus states op applet-balk
+* .. top 2
 
 Ik ben opzoek gegaan naar of het scherm forceren om scheef te zijn zou kunnen werken, eerst vond ik hiervoor https://stackoverflow.com/questions/32391467/force-horizontal-screen-on-webpage-mobile daar zei iemand dat de andere link (https://stackoverflow.com/questions/10975387/mobile-site-force-landscape-only-no-auto-rotate) was wat er gezocht was. Alleen werd er ook gezegd dat het niet mogelijk is, dus ik denk dat ik een bericht doe als het rechtop is dat omdraaien beter is
 
@@ -3554,6 +3477,12 @@ Gister heb ik gekeken naar de mogelijkheden, en omdat ik midden in mijn werk nie
 ```
 Deel hiervan heb ik van stack overflow, zoals de (orientation: portrait), ik wist niet dat dat een ding was. Helaas heb ik het niet helemaal zelf kunnen doen. Ik dacht dat het makkelijk ging zijn maar het bleef maar niet passen. Daarom heb ik uiteindelijk copilot moeten vragen wat er niet klopte en om eerlijk te zijn had ik dat echt niet zelf kunnen doen. Copilot heeft hele specifieke maten opgeschreven die precies passen, ik zou die nooit kunnen. Ik haat AI en ik weet dat dit hypocriet is maar ik heb tijdnood en dit lukte me echt niet zelf om die specifieke maten te vinden. Als de telefoon gedraaid word werkt de site nogsteeds gedraaid. Helaas heb ik nogsteeds de migraine dus ik heb niet alles kunnen doen wat ik gewild had. Ik wou nog de cookie melding en de Intergalactic site verder maken, dit moet ik dit weekend nog doen.
 
+#### Eindresultaat
+![image](log/schuin1.PNG)
+![image](log/schuinHori.PNG)
+
+Hoe je je telefoon ook houd, de website is gedraaid naar horizontale weergave
+
 ### Bronnen
 https://stackoverflow.com/questions/8738072/forcing-web-site-to-show-in-landscape-mode-only 
 
@@ -3563,7 +3492,82 @@ Ik vind nu een manier waarop ik de intergalactic waarschijnlijk beter en makkeli
 Ik heb daar nu geen tijd meer voor maar dan weet ik het voor de toekomst.
 Ook vond ik deze site waar ik eerder van had willen weten: https://animejs.com/
 
-# Retrospective toevoegen
+![image](log/retro3.1.jpg)
+![image](log/retro3.2.jpg)
+![image](log/retro3.3.jpg)
+![image](log/retro3.4.jpg)
+
+Uit het gesprek kreeg ik als feedback dat alles goed was en ik alleen nog mijn schetsen toe moet voegen aan mijn README.
+
+## 26 okt - Expo
+
+Vandaag hebben we de expo op school, hier ga ik de eindversie van mijn werk laten zien:
+
+### Screenshots van het eindproduct (laptop)
+
+#### Navigatie op elke pagina
+![image](log/navL.png)
+Light mode
+![image](log/navD.png)
+Dark mode
+
+#### index.html - Startpagina
+![image](log/indexL.png)
+Light mode
+![image](log/indexD.png)
+Dark mode
+
+#### spellen.html
+![image](log/S3DS.png)
+Pagina 3DS spellen
+![image](log/SDS.png)
+Pagina DS spellen
+
+#### muziek.html
+![image](log/MA.png)
+Albums
+![image](log/ML.png)
+Losse nummers (embedded)
+
+#### contact.html
+![image](log/C.png)
+
+#### Cookiemelding
+![image](log/CMT.png)
+Melding text
+![image](log/CMB.png)
+Onderste scherm
+
+
+### Screenshots van het eindproduct (mobiel)
+![image](log/schuin1.PNG)
+![image](log/schuinHori.PNG)
+
+Op mobiel draait het automatisch, al is het scherm verticaal of horizontaal blijft de site horizontaal om het meer een 3DS gevoel te geven.
+
+### Expo stickers
+![image](log/EXPO_s.jpeg)
+
+### Hoe webby formulier (in een groep)
+![image](log/webby2.jpg)
+
+### Learning log formulier (in een groep)
+![image](log/log2.jpg)
+
+Ik heb het zelfstandig af moeten maken omdat ik ongesteld werd in de les.
+
+
+
+# EINDE
+
+## Wat moet ik nog doen/had ik nog moeten doen:
+[ ] Icoon veranderen van recept > Intergalactic <br>
+[ ] Cookie melding verbeteren
+
+
+
+
+
 
 
 
